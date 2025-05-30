@@ -43,7 +43,11 @@ export default function Stats() {
   ]
 
   return (
-    <section className="py-12 bg-gradient-to-r from-red-600 to-red-700 dark:from-red-800 dark:to-red-900 text-white">
+    <section className="py-12 text-white"
+    style={{
+      backgroundImage: "url('/images/bgbanner.jpg')",
+      backgroundSize: "cover",
+    }}>
       <div className="container">
         <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

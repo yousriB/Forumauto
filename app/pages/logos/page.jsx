@@ -13,7 +13,7 @@ const Page = () => {
   const brands = [
     {
       name: "ISUZU",
-      image: "/marque/isuzu.png",
+      image: "/marque/secondsuzu.png",
     },
     {
       name: "CHEVROLET",

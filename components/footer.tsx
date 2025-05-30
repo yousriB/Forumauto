@@ -10,7 +10,11 @@ export default function Footer() {
   const { language, dir } = useLanguage()
 
   return (
-    <footer className="bg-red-600 dark:bg-gray-900 text-white">
+    <footer className="text-white"
+    style={{
+      backgroundImage: "url('/images/bgbanner.jpg')",
+      backgroundSize: "cover",
+    }}>
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8" style={{ direction: dir }}>
           <div className="space-y-4" style={{ textAlign: dir === "rtl" ? "right" : "left" }}>

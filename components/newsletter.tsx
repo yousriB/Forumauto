@@ -49,7 +49,12 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-16 bg-red-600 dark:bg-red-800 text-white">
+    <section className="py-16 text-white"
+    style={{
+      backgroundImage: "url('/images/bgbanner.jpg')",
+      backgroundSize: "cover",
+    }}
+    >
       <div className="container">
         <motion.div
           ref={ref}
