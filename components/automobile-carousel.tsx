@@ -190,7 +190,7 @@ export default function AutomobileCarousel() {
                             {" "}
                             {car.brand} {car.model}
                           </h3>
-                          <span className="font-bold text-xl text-red-600">
+                          <span className="font-bold text-xl text-[#E71609]">
                             {formatPrice(car.price)} DT
                           </span>
                         </div>

@@ -113,7 +113,7 @@ export default function TestimonialSlider() {
                 
                 <div className="w-2/3 flex flex-col justify-center">
                   <div className="relative">
-                    <div className="absolute -left-8 top-0 text-red-600 text-8xl opacity-20">"</div>
+                    <div className="absolute -left-8 top-0 text-[#E71609] text-8xl opacity-20">"</div>
                     <p className="text-lg text-gray-700 italic relative z-10 mb-6">
                       {testimonials[currentIndex].text}
                     </p>
@@ -159,15 +159,15 @@ export default function TestimonialSlider() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-12">
             <div className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
-              <div className="text-4xl font-bold text-red-600 mb-2">500+</div>
+              <div className="text-4xl font-bold text-[#E71609] mb-2">500+</div>
               <div className="text-gray-700 font-medium">Clients satisfaits</div>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
-              <div className="text-4xl font-bold text-red-600 mb-2">20+</div>
+              <div className="text-4xl font-bold text-[#E71609] mb-2">20+</div>
               <div className="text-gray-700 font-medium">Marques disponibles</div>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-6 text-center transform hover:-translate-y-1 transition-transform duration-300">
-              <div className="text-4xl font-bold text-red-600 mb-2">98%</div>
+              <div className="text-4xl font-bold text-[#E71609] mb-2">98%</div>
               <div className="text-gray-700 font-medium">Taux de satisfaction</div>
             </div>
           </div>

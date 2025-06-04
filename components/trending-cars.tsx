@@ -183,7 +183,7 @@ export default function TrendingCars() {
               {/* Car details */}
               <div className="p-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-gray-900 group-hover:text-red-600 transition-colors">{car.name}</h3>
+                  <h3 className="font-bold text-gray-900 group-hover:text-[#E71609] transition-colors">{car.name}</h3>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 text-amber-500 mr-1 fill-amber-500" />
                     <span className="text-sm font-medium">{car.rating}</span>
@@ -191,11 +191,11 @@ export default function TrendingCars() {
                 </div>
                 
                 <div className="flex items-center justify-between mt-3">
-                  <p className="font-semibold text-red-600">{car.price}</p>
+                  <p className="font-semibold text-[#E71609]">{car.price}</p>
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className="text-gray-600 hover:text-red-600 p-0 group-hover:translate-x-1 transition-transform"
+                    className="text-gray-600 hover:text-[#E71609] p-0 group-hover:translate-x-1 transition-transform"
                   >
                     <span className="mr-1 text-sm">Détails</span>
                     <ChevronRight className="w-4 h-4" />

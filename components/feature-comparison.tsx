@@ -96,7 +96,7 @@ export default function FeatureComparison() {
                   />
                 </div>
                 <h3 className="font-bold text-gray-900">{car.name}</h3>
-                <span className="text-red-600 font-semibold mt-1">{car.price}</span>
+                <span className="text-[#E71609] font-semibold mt-1">{car.price}</span>
               </div>
             ))}
           </div>

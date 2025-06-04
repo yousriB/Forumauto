@@ -60,10 +60,10 @@ export default function About() {
             className="md:w-1/2 space-y-6"
             style={{ textAlign: dir === "rtl" ? "right" : "left" }}
           >
-            <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-800">
+            <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white">
               {t("about.title", language)}
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-600">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#E71609]">
               {t("about.heading", language)}
             </h2>
             <p className="text-lg text-gray-600">{t("about.paragraph1", language)}</p>
@@ -81,7 +81,7 @@ export default function About() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-red-600"
+                    className="text-[#E71609]"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
@@ -103,7 +103,7 @@ export default function About() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-red-600"
+                    className="text-[#E71609]"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
@@ -125,7 +125,7 @@ export default function About() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-red-600"
+                    className="text-[#E71609]"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
@@ -147,7 +147,7 @@ export default function About() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-red-600"
+                    className="text-[#E71609]"
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>

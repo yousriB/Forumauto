@@ -36,7 +36,7 @@ export default function FloatingContact() {
                 href="tel:+21629378089"
                 className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               >
-                <Phone className="h-4 w-4 text-red-600 dark:text-red-400" />
+                <Phone className="h-4 w-4 text-[#E71609] dark:text-red-400" />
                 <span className="text-sm dark:text-gray-200">
                   +216 29 378 089
                 </span>
@@ -85,7 +85,7 @@ export default function FloatingContact() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         className={`rounded-full w-14 h-14 shadow-lg ${
-          isOpen ? "bg-red-700 hover:bg-red-800" : "bg-red-600 hover:bg-red-700"
+          isOpen ? "bg-[#E71609] hover:bg-red-800" : "bg-[#E71609] hover:bg-red-700"
         }`}
       >
         {isOpen ? (

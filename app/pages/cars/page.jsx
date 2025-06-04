@@ -178,7 +178,7 @@ function CarFiltersAndList() {
             <div className="sticky top-16">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-xl font-semibold">Filtres</h3>
-                <Button variant="link" onClick={resetFilters} className="text-red-600">
+                <Button variant="link" onClick={resetFilters} className="text-[#E71609]">
                   Réinitialiser
                 </Button>
               </div>
@@ -297,7 +297,7 @@ function CarFiltersAndList() {
                       <CardContent className="pt-0 pb-6">
                         <div className="flex flex-col mb-4">
                           <h3 className="text-black font-medium uppercase text-base"> {car.brand} {car.model}</h3>
-                          <span className="font-bold text-xl text-red-600">{formatPrice(car.price)} DT</span>
+                          <span className="font-bold text-xl text-[#E71609]">{formatPrice(car.price)} DT</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-600">
                           <div className="px-2 py-1 bg-gray-100 rounded-md">{car.fuel}</div>

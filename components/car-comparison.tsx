@@ -82,10 +82,10 @@ export default function CarComparison() {
     <section id="comparison" className="py-20 md:py-28">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-800 mb-4 dark:bg-red-900 dark:text-red-200">
+          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4 dark:bg-red-900 dark:text-red-200">
             {t("comparison.title", language)}
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-red-600 dark:text-red-500">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#E71609] dark:text-red-500">
             {t("comparison.heading", language)}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">{t("comparison.description", language)}</p>

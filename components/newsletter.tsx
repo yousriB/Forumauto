@@ -84,7 +84,7 @@ export default function Newsletter() {
                 required
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-white"
               />
-              <Button type="submit" className="bg-white text-red-600 hover:bg-white/90 dark:bg-white dark:text-red-700">
+              <Button type="submit" className="bg-white text-[#E71609] hover:bg-white/90 dark:bg-white dark:text-red-700">
                 {t("newsletter.subscribe", language)}
               </Button>
             </form>

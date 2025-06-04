@@ -60,10 +60,10 @@ export default function Contact() {
     >
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-800 mb-4 dark:bg-red-900 dark:text-red-200">
+          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4 dark:bg-red-900 dark:text-red-200">
             {t("contact.us", language)}
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-red-600 dark:text-red-500">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#E71609] dark:text-red-500">
             {t("contact.us", language)}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -117,7 +117,7 @@ export default function Contact() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white"
+                className="w-full bg-[#E71609] hover:bg-red-700 text-white"
               >
                 {t("contact.send", language)}
               </Button>
@@ -128,7 +128,7 @@ export default function Contact() {
                 className="flex items-start gap-3"
                 style={{ flexDirection: dir === "rtl" ? "row-reverse" : "row" }}
               >
-                <MapPin className="h-5 w-5 text-red-600 mt-1" />
+                <MapPin className="h-5 w-5 text-[#E71609] mt-1" />
                 <div>
                   <h3 className="font-semibold">
                     {t("contact.address", language)}
@@ -142,7 +142,7 @@ export default function Contact() {
                 className="flex items-start gap-3"
                 style={{ flexDirection: dir === "rtl" ? "row-reverse" : "row" }}
               >
-                <Phone className="h-5 w-5 text-red-600 mt-1" />
+                <Phone className="h-5 w-5 text-[#E71609] mt-1" />
                 <div>
                   <h3 className="font-semibold">
                     {t("contact.phone", language)}
@@ -159,7 +159,7 @@ export default function Contact() {
                 className="flex items-start gap-3"
                 style={{ flexDirection: dir === "rtl" ? "row-reverse" : "row" }}
               >
-                <Mail className="h-5 w-5 text-red-600 mt-1" />
+                <Mail className="h-5 w-5 text-[#E71609] mt-1" />
                 <div>
                   <h3 className="font-semibold">
                     {t("contact.email", language)}
@@ -173,10 +173,10 @@ export default function Contact() {
                 className="flex items-start gap-3"
                 style={{ flexDirection: dir === "rtl" ? "row-reverse" : "row" }}
               >
-                <Facebook className="h-5 w-5 text-red-600 mt-1" />
+                <Facebook className="h-5 w-5 text-[#E71609] mt-1" />
                 <div>
                   <h3 className="font-semibold">Facebook</h3>
-                  <a href="#" className="text-red-600 hover:underline">
+                  <a href="#" className="text-[#E71609] hover:underline">
                     Forum Auto Gabès
                   </a>
                 </div>

@@ -41,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-block rounded-lg bg-red-600 px-4 py-2 text-lg font-bold text-white shadow-lg"
+            className="inline-block rounded-lg bg-[#E71609] px-4 py-2 text-lg font-bold text-white shadow-lg"
           >
             Forum Auto Gabès
           </motion.div>
@@ -73,7 +73,7 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white font-bold shadow-lg transition-all duration-300 group"
+              className="bg-[#E71609] hover:bg-[#E71609] text-white font-bold shadow-lg transition-all duration-300 group"
             >
               <ScrollLink href="#appointment" className="flex items-center">
                 {t("hero.cta.appointment", language)}

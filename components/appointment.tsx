@@ -121,10 +121,10 @@ export default function Appointment() {
     <section id="appointment" className="py-20 md:py-28 bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-800 mb-4">
+          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
             Rendez-vous
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-red-600">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#E71609]">
             Prendre un rendez-vous
           </h2>
           <p className="text-lg text-gray-600">
@@ -155,7 +155,7 @@ export default function Appointment() {
               {step === 1 && (
                 <div className="space-y-6">
                   <h4 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
-                    <User className="mr-2 h-5 w-5 text-red-600" />
+                    <User className="mr-2 h-5 w-5 text-[#E71609]" />
                     Vos informations
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -206,7 +206,7 @@ export default function Appointment() {
               {step === 2 && (
                 <div className="space-y-6">
                   <h4 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
-                    <Car className="mr-2 h-5 w-5 text-red-600" />
+                    <Car className="mr-2 h-5 w-5 text-[#E71609]" />
                     Informations du véhicule
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -315,7 +315,7 @@ export default function Appointment() {
               {step === 3 && (
                 <div className="space-y-6">
                   <h4 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
-                    <Clock className="mr-2 h-5 w-5 text-red-600" />
+                    <Clock className="mr-2 h-5 w-5 text-[#E71609]" />
                     Date et heure
                   </h4>
 

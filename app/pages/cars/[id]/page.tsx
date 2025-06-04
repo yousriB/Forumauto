@@ -134,7 +134,7 @@ const handleSubmit = async (e: FormEvent) => {
     return (
       <section className="py-12 bg-gray-50 min-h-screen flex justify-center items-center">
         <div className="flex items-center space-x-2">
-          <Loader2 className="h-6 w-6 animate-spin text-red-600" />
+          <Loader2 className="h-6 w-6 animate-spin text-[#E71609]" />
           <p className="text-xl text-gray-600">Chargement...</p>
         </div>
       </section>
@@ -174,7 +174,7 @@ const handleSubmit = async (e: FormEvent) => {
             <h2 className="text-3xl font-bold text-slate-900 mb-2">
               {car.brand} {car.model}
             </h2>
-            <p className="text-3xl text-red-600 font-bold mb-4">
+            <p className="text-3xl text-[#E71609] font-bold mb-4">
               {car.price ? `${car.price.toLocaleString()} TND` : "Prix non disponible"}
             </p>
           </div>
@@ -210,10 +210,10 @@ const handleSubmit = async (e: FormEvent) => {
             <section className="bg-white shadow-md">
               <div className="sm:container p-1">
                 <div className="text-center mb-10">
-                  <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-800 mb-4">
+                  <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
                     Rendez-vous / Demande
                   </div>
-                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-3 text-red-600">
+                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-3 text-[#E71609]">
                     Vos Coordonnées
                   </h2>
                   <p className="text-base text-gray-600">
@@ -232,7 +232,7 @@ const handleSubmit = async (e: FormEvent) => {
                     <form onSubmit={handleSubmit}>
                       <div className="space-y-5 p-1 text-start">
                         <h4 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
-                          <User className="mr-2 h-5 w-5 text-red-600" />
+                          <User className="mr-2 h-5 w-5 text-[#E71609]" />
                           Informations Personnelles
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

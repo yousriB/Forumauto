@@ -64,8 +64,8 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-800 mb-4">Témoignages</div>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl mb-4 text-red-600">
+          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">Témoignages</div>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl mb-4 text-[#E71609]">
             Ce que disent nos clients
           </h2>
           <p className="text-lg text-gray-600">Découvrez les expériences de nos clients satisfaits avec Forum Auto Gabès.</p>

@@ -196,19 +196,19 @@ export default function AdvancedSearch() {
                 <h3 className="font-medium text-gray-900 mb-3">Plus de filtres</h3>
                 <div className="space-y-2">
                   <div className="flex items-center">
-                    <input type="checkbox" id="new" className="rounded text-red-600 focus:ring-red-500" />
+                    <input type="checkbox" id="new" className="rounded text-[#E71609] focus:ring-red-500" />
                     <label htmlFor="new" className="ml-2 text-sm text-gray-700">Seulement les nouveaux</label>
                   </div>
                   <div className="flex items-center">
-                    <input type="checkbox" id="electric" className="rounded text-red-600 focus:ring-red-500" />
+                    <input type="checkbox" id="electric" className="rounded text-[#E71609] focus:ring-red-500" />
                     <label htmlFor="electric" className="ml-2 text-sm text-gray-700">Véhicules électriques</label>
                   </div>
                   <div className="flex items-center">
-                    <input type="checkbox" id="offers" className="rounded text-red-600 focus:ring-red-500" />
+                    <input type="checkbox" id="offers" className="rounded text-[#E71609] focus:ring-red-500" />
                     <label htmlFor="offers" className="ml-2 text-sm text-gray-700">Offres spéciales</label>
                   </div>
                   <div className="flex items-center">
-                    <input type="checkbox" id="financing" className="rounded text-red-600 focus:ring-red-500" />
+                    <input type="checkbox" id="financing" className="rounded text-[#E71609] focus:ring-red-500" />
                     <label htmlFor="financing" className="ml-2 text-sm text-gray-700">Options de financement</label>
                   </div>
                 </div>

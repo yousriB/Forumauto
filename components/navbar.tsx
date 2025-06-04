@@ -1,62 +1,75 @@
-"use client"
-import { useState, useEffect } from "react"
-import { Menu, X, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/i18n"
-import { useRouter, usePathname } from "next/navigation"  // Import usePathname
+"use client";
+import { useState, useEffect } from "react";
+import { Menu, X, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/contexts/language-context";
+import { t } from "@/lib/i18n";
+import { useRouter, usePathname } from "next/navigation"; // Import usePathname
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const { language, setLanguage, dir } = useLanguage()
-  const router = useRouter()
-  const pathname = usePathname() // Use usePathname to get the current path
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { language, setLanguage, dir } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname(); // Use usePathname to get the current path
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setScrolled(true)
+        setScrolled(true);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navItems = [
     { name: t("home", language), href: "#hero" },
-    { name: t("services", language), href: "#services" },
+    {
+      name: t("services", language),
+      href: "#services",
+      children: [
+        { name: t("Assurance", language), href: "/pages/assurence" },
+        { name: t("Magasin", language), href: "/pages/magasin" },
+        { name: t("Atelier", language), href: "/pages/atelier" },
+        { name: t("Vente vehicle neuf", language), href: "/pages/logos" },
+      ],
+    },
     { name: t("nosreferences", language), href: "#gallery" },
-    { name: t("gallery", language), href: "/pages/gallery" }, // External page
+    { name: t("gallery", language), href: "/pages/gallery" },
     { name: t("contact", language), href: "#contact" },
-  ]
+  ];
 
   const handleLinkClick = (href: string) => {
     if (href.startsWith("/")) {
       router.push(href); // Navigate to a full page
     } else {
-      if (pathname !== '/') {
-        router.push('/');
+      if (pathname !== "/") {
+        router.push("/");
         setTimeout(() => {
-          document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+          document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
         }, 100);
       } else {
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
-  
 
   return (
     <header
@@ -64,53 +77,99 @@ export default function Navbar() {
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
           ? "bg-black backdrop-blur supports-[backdrop-filter]:bg-black/60 border-b shadow-sm"
-          : "bg-black",
+          : "bg-black"
       )}
     >
       <div className="container flex h-20 items-center justify-between">
-        <div className="flex items-center gap-2 w-44">
+        <div className="flex items-center gap-2 sm:w-32 w-28">
           <a href="/" className="">
-           <img src="/images/logoo.png" alt="" />
+            <img src="/images/logoo.png" alt="" />
           </a>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6" style={{ direction: dir }}>
-          {navItems.map((item) => (
-            <button
-              key={item.name}
-              onClick={() => handleLinkClick(item.href)}
-              className="text-lg font-medium text-gray-100 transition-colors hover:text-red-600"
-            >
-              {item.name}
-            </button>
-          ))}
+          {navItems.map((item) =>
+            item.children ? (
+              <DropdownMenu key={item.name}>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className="text-base font-medium text-gray-100 hover:text-[#E71609]"
+                  >
+                    {item.name}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  {item.children.map((child) => (
+                    <DropdownMenuItem
+                      key={child.name}
+                      onClick={() => handleLinkClick(child.href)}
+                    >
+                      {child.name}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <button
+                key={item.name}
+                onClick={() => handleLinkClick(item.href)}
+                className="text-base font-medium text-gray-100 hover:text-[#E71609]"
+              >
+                {item.name}
+              </button>
+            )
+          )}
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-9 w-9 rounded-full"
+              >
                 <Globe className="h-4 w-4 text-gray-300" />
                 <span className="sr-only">Toggle language</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setLanguage("fr")}>Français</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("ar")}>العربية</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("en")}>English</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setLanguage("fr")}>
+                Français
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setLanguage("ar")}>
+                العربية
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setLanguage("en")}>
+                English
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button  size="sm" className="bg-red-600 hover:bg-red-700 text-white ml-2" onClick={() => handleLinkClick("#appointment")}>
+          <Button
+            size="sm"
+            className="bg-[#E71609] hover:bg-red-700 text-white ml-2"
+            onClick={() => handleLinkClick("#appointment")}
+          >
             {t("appointment.title", language)}
           </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex md:hidden items-center gap-2 group">
-          <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle Menu">
-            {isOpen ? <X className="h-6 w-6 text-white group-hover:text-red-600" /> : <Menu className="h-6 w-6 text-white group-hover:text-red-600" />}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? (
+              <X className="h-6 w-6 text-white group-hover:text-[#E71609]" />
+            ) : (
+              <Menu className="h-6 w-6 text-white group-hover:text-[#E71609]" />
+            )}
           </Button>
         </div>
 
@@ -118,32 +177,51 @@ export default function Navbar() {
         <div
           className={cn(
             "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in md:hidden bg-white",
-            isOpen ? "slide-in-from-top-2" : "hidden",
+            isOpen ? "slide-in-from-top-2" : "hidden"
           )}
           style={{ direction: dir }}
         >
           <div className="relative z-20 grid gap-6 rounded-md p-4">
             <nav className="grid grid-flow-row auto-rows-max text-sm">
               {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleLinkClick(item.href)}
-                  className="flex w-full items-center rounded-md p-2 text-sm font-medium hover:bg-gray-100"
-                >
-                  {item.name}
-                </button>
+                <div key={item.name}>
+                  <button
+                    onClick={() => !item.children && handleLinkClick(item.href)}
+                    className="flex w-full items-center rounded-md p-2 text-sm font-medium hover:bg-gray-100"
+                  >
+                    {item.name}
+                  </button>
+                  {item.children && (
+                    <div className="ml-4 mt-1 space-y-1">
+                      {item.children.map((child) => (
+                        <button
+                          key={child.name}
+                          onClick={() => handleLinkClick(child.href)}
+                          className="w-full text-left text-sm text-gray-700 hover:text-[#E71609]"
+                        >
+                          {child.name}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
+
               <div className="mt-4 border-t pt-4">
                 <div className="flex items-center gap-2 mb-2">
                   <Globe className="h-4 w-4" />
-                  <span className="text-sm font-medium text-gray-600">{t("language", language)}</span>
+                  <span className="text-sm font-medium text-gray-600">
+                    {t("language", language)}
+                  </span>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
                   <Button
                     variant={language === "fr" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setLanguage("fr")}
-                    className={language === "fr" ? "bg-red-600 hover:bg-red-700" : ""}
+                    className={
+                      language === "fr" ? "bg-red-600 hover:bg-red-700" : ""
+                    }
                   >
                     FR
                   </Button>
@@ -151,7 +229,9 @@ export default function Navbar() {
                     variant={language === "ar" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setLanguage("ar")}
-                    className={language === "ar" ? "bg-red-600 hover:bg-red-700" : ""}
+                    className={
+                      language === "ar" ? "bg-red-600 hover:bg-red-700" : ""
+                    }
                   >
                     AR
                   </Button>
@@ -159,7 +239,9 @@ export default function Navbar() {
                     variant={language === "en" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setLanguage("en")}
-                    className={language === "en" ? "bg-red-600 hover:bg-red-700" : ""}
+                    className={
+                      language === "en" ? "bg-red-600 hover:bg-red-700" : ""
+                    }
                   >
                     EN
                   </Button>
@@ -170,5 +252,5 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  )
+  );
 }

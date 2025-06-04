@@ -64,7 +64,7 @@ export default function VersionSelectionPage() {
                     <h3 className="text-black font-medium uppercase text-base">
                       {car.brand} {car.model} {car.version}
                     </h3>
-                    <span className="font-bold text-xl text-red-600">
+                    <span className="font-bold text-xl text-[#E71609]">
                       {formatPrice(car.price)} DT
                     </span>
                   </div>
