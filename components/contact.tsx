@@ -29,10 +29,10 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/send-contact-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-contact-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -44,12 +44,12 @@ export default function Contact() {
         // Show success message
         alert("Message envoyé avec succès!");
       } else {
-        console.error('Failed to send contact email:', response.status);
-        alert('Failed to send contact email. Please try again.');
+        console.error("Failed to send contact email:", response.status);
+        alert("Failed to send contact email. Please try again.");
       }
     } catch (error) {
-      console.error('Error submitting contact form:', error);
-      alert('Error submitting contact form. Please try again.');
+      console.error("Error submitting contact form:", error);
+      alert("Error submitting contact form. Please try again.");
     }
   };
 
@@ -148,10 +148,10 @@ export default function Contact() {
                     {t("contact.phone", language)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                  +216 29 378 089
+                    +216 29 378 089
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
-                  +216 29 514 066
+                    +216 29 514 066
                   </p>
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function Contact() {
                     {t("contact.email", language)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                  contact.forumautogabes@gmail.com
+                    contact.forumautogabes@gmail.com
                   </p>
                 </div>
               </div>
