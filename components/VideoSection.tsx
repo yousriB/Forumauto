@@ -29,17 +29,8 @@ const videos = [
 
 export default function VideoSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-2 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Vidéos de Présentation
-          </h2>
-          <p className="text-xl text-gray-600">
-            Plongez dans l'univers de notre concession à travers nos vidéos
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {videos.map((video) => (
             <div
@@ -75,32 +66,6 @@ export default function VideoSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Featured Video */}
-        <div className="mt-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Vidéo à la Une
-            </h3>
-            <p className="text-gray-600">
-              Découvrez notre dernière présentation
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative pb-9/16 h-0 overflow-hidden rounded-xl shadow-2xl">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Vidéo de présentation"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{ aspectRatio: "16/9" }}
-              ></iframe>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -103,12 +103,8 @@ export default function ImageGallery() {
     : null;
 
   return (
-    <section className="py-16">
+    <section className="py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Photos de Notre Établissement
-        </h2>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -117,7 +113,7 @@ export default function ImageGallery() {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
-                  ? "bg-blue-600 text-white"
+                  ? "bg-[#E71609] text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
               }`}
             >
@@ -146,7 +142,7 @@ export default function ImageGallery() {
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                  <span className="bg-[#E71609] text-white px-3 py-1 rounded-full text-sm">
                     {image.category}
                   </span>
                 </div>
@@ -186,7 +182,7 @@ export default function ImageGallery() {
                 className="max-w-full max-h-full object-contain"
               />
 
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 text-black">
                 <p className="text-lg font-medium">{selectedImageData.alt}</p>
                 <p className="text-sm opacity-75">
                   {selectedImageData.category}

@@ -6,7 +6,13 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const Fallback = () => (
@@ -51,26 +57,32 @@ function CarFiltersAndList() {
     }, {})
   );
 
-  const brands = [...new Set(uniqueCars.map(car => car.brand))];
-  const fuelTypes = [...new Set(uniqueCars.map(car => car.fuel))];
-  const gearboxTypes = [...new Set(uniqueCars.map(car => car.gearbox))];
+  const brands = [...new Set(uniqueCars.map((car) => car.brand))];
+  const fuelTypes = [...new Set(uniqueCars.map((car) => car.fuel))];
+  const gearboxTypes = [...new Set(uniqueCars.map((car) => car.gearbox))];
 
   useEffect(() => {
-    const filtered = uniqueCars.filter(car => {
-      return (
-        (filters.brand === "all" || car.brand === filters.brand) &&
-        (car.price >= filters.minPrice && car.price <= filters.maxPrice) &&
-        (filters.fuel.length === 0 || filters.fuel.includes(car.fuel)) &&
-        (filters.gearbox.length === 0 || filters.gearbox.includes(car.gearbox))
-      );
-    })
-    // Sort by price from min to max
-    .sort((a, b) => a.price - b.price);
-    
+    const filtered = uniqueCars
+      .filter((car) => {
+        return (
+          (filters.brand === "all" || car.brand === filters.brand) &&
+          car.price >= filters.minPrice &&
+          car.price <= filters.maxPrice &&
+          (filters.fuel.length === 0 || filters.fuel.includes(car.fuel)) &&
+          (filters.gearbox.length === 0 ||
+            filters.gearbox.includes(car.gearbox))
+        );
+      })
+      // Sort by price from min to max
+      .sort((a, b) => a.price - b.price);
+
     setFilteredCars(filtered);
     setCurrentPage(1); // Reset to first page when filters change
-  
-    const query = filters.brand !== "all" ? `?brand=${encodeURIComponent(filters.brand)}` : "";
+
+    const query =
+      filters.brand !== "all"
+        ? `?brand=${encodeURIComponent(filters.brand)}`
+        : "";
     router.replace(`/pages/cars${query}`, { scroll: false });
   }, [filters, router]);
 
@@ -85,14 +97,14 @@ function CarFiltersAndList() {
   };
 
   const handleFilterChange = (key, value) => {
-    setFilters(prev => ({ ...prev, [key]: value }));
+    setFilters((prev) => ({ ...prev, [key]: value }));
   };
 
   const handleCheckboxChange = (type, value) => {
-    setFilters(prev => {
+    setFilters((prev) => {
       const currentValues = prev[type];
       const newValues = currentValues.includes(value)
-        ? currentValues.filter(item => item !== value)
+        ? currentValues.filter((item) => item !== value)
         : [...currentValues, value];
       return { ...prev, [type]: newValues };
     });
@@ -113,13 +125,13 @@ function CarFiltersAndList() {
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -145,9 +157,9 @@ function CarFiltersAndList() {
   const handlePriceChange = (type, value) => {
     const parsedValue = parseInt(value);
     if (type === "minPrice" && parsedValue <= filters.maxPrice) {
-      setFilters(prev => ({ ...prev, minPrice: parsedValue }));
+      setFilters((prev) => ({ ...prev, minPrice: parsedValue }));
     } else if (type === "maxPrice" && parsedValue >= filters.minPrice) {
-      setFilters(prev => ({ ...prev, maxPrice: parsedValue }));
+      setFilters((prev) => ({ ...prev, maxPrice: parsedValue }));
     }
     updateRangeBackground();
   };
@@ -160,7 +172,9 @@ function CarFiltersAndList() {
     if (versions.length > 1) {
       // Navigate to version selection page
       router.push(
-        `/pages/cars/versions/${encodeURIComponent(car.brand)}/${encodeURIComponent(car.model.trim())}`
+        `/pages/cars/versions/${encodeURIComponent(
+          car.brand
+        )}/${encodeURIComponent(car.model.trim())}`
       );
     } else {
       // Navigate directly to car details page
@@ -171,14 +185,20 @@ function CarFiltersAndList() {
   return (
     <section className="py-12 bg-white min-h-screen">
       <div className="container px-4 mx-auto">
-        <h2 className="text-3xl font-bold text-slate-800 mb-8">Nos Voitures Disponibles</h2>
+        <h2 className="text-3xl font-bold text-slate-800 mb-8">
+          Nos Voitures Disponibles
+        </h2>
 
         <div className="flex flex-col md:flex-row gap-5">
           <div className="p-6 rounded-lg shadow-md md:w-1/3 relative min-h-screen">
             <div className="sticky top-16">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-xl font-semibold">Filtres</h3>
-                <Button variant="link" onClick={resetFilters} className="text-[#E71609]">
+                <Button
+                  variant="link"
+                  onClick={resetFilters}
+                  className="text-[#E71609]"
+                >
                   Réinitialiser
                 </Button>
               </div>
@@ -194,8 +214,10 @@ function CarFiltersAndList() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">Toutes les marques</SelectItem>
-                    {brands.map(brand => (
-                      <SelectItem key={brand} value={brand}>{brand}</SelectItem>
+                    {brands.map((brand) => (
+                      <SelectItem key={brand} value={brand}>
+                        {brand}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -211,7 +233,9 @@ function CarFiltersAndList() {
                       max="600000"
                       step="1000"
                       value={filters.minPrice}
-                      onChange={(e) => handlePriceChange("minPrice", e.target.value)}
+                      onChange={(e) =>
+                        handlePriceChange("minPrice", e.target.value)
+                      }
                       className="w-full h-2 cursor-pointer hidden"
                       ref={minPriceRef}
                     />
@@ -221,7 +245,9 @@ function CarFiltersAndList() {
                       max="600000"
                       step="1000"
                       value={filters.maxPrice}
-                      onChange={(e) => handlePriceChange("maxPrice", e.target.value)}
+                      onChange={(e) =>
+                        handlePriceChange("maxPrice", e.target.value)
+                      }
                       className="absolute w-full h-2 cursor-pointer"
                       ref={maxPriceRef}
                     />
@@ -236,30 +262,43 @@ function CarFiltersAndList() {
               <div className="mb-6">
                 <Label className="block mb-2 font-medium">Carburant</Label>
                 <div className="space-y-2">
-                  {fuelTypes.map(fuel => (
+                  {fuelTypes.map((fuel) => (
                     <div key={fuel} className="flex items-center">
                       <Checkbox
                         id={`fuel-${fuel}`}
                         checked={filters.fuel.includes(fuel)}
-                        onCheckedChange={() => handleCheckboxChange("fuel", fuel)}
+                        onCheckedChange={() =>
+                          handleCheckboxChange("fuel", fuel)
+                        }
                       />
-                      <label htmlFor={`fuel-${fuel}`} className="ml-2 text-sm">{fuel}</label>
+                      <label htmlFor={`fuel-${fuel}`} className="ml-2 text-sm">
+                        {fuel}
+                      </label>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="mb-6">
-                <Label className="block mb-2 font-medium">Boîte de vitesse</Label>
+                <Label className="block mb-2 font-medium">
+                  Boîte de vitesse
+                </Label>
                 <div className="space-y-2">
-                  {gearboxTypes.map(gearbox => (
+                  {gearboxTypes.map((gearbox) => (
                     <div key={gearbox} className="flex items-center">
                       <Checkbox
                         id={`gearbox-${gearbox}`}
                         checked={filters.gearbox.includes(gearbox)}
-                        onCheckedChange={() => handleCheckboxChange("gearbox", gearbox)}
+                        onCheckedChange={() =>
+                          handleCheckboxChange("gearbox", gearbox)
+                        }
                       />
-                      <label htmlFor={`gearbox-${gearbox}`} className="ml-2 text-sm">{gearbox}</label>
+                      <label
+                        htmlFor={`gearbox-${gearbox}`}
+                        className="ml-2 text-sm"
+                      >
+                        {gearbox}
+                      </label>
                     </div>
                   ))}
                 </div>
@@ -270,7 +309,9 @@ function CarFiltersAndList() {
           <div className="w-full">
             {filteredCars.length === 0 ? (
               <div className="text-center py-12">
-                <p className="text-gray-600 text-lg">Aucune voiture ne correspond aux critères sélectionnés.</p>
+                <p className="text-gray-600 text-lg">
+                  Aucune voiture ne correspond aux critères sélectionnés.
+                </p>
                 <Button variant="link" onClick={resetFilters} className="mt-4">
                   Réinitialiser les filtres
                 </Button>
@@ -278,7 +319,7 @@ function CarFiltersAndList() {
             ) : (
               <>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentCars.map(car => (
+                  {currentCars.map((car) => (
                     <Card
                       key={car.id}
                       className="overflow-hidden border-none duration-300 cursor-pointer"
@@ -296,12 +337,27 @@ function CarFiltersAndList() {
                       </div>
                       <CardContent className="pt-0 pb-6">
                         <div className="flex flex-col mb-4">
-                          <h3 className="text-black font-medium uppercase text-base"> {car.brand} {car.model}</h3>
-                          <span className="font-bold text-xl text-[#E71609]">{formatPrice(car.price)} DT</span>
+                          <h3 className="text-black font-medium uppercase text-base">
+                            {" "}
+                            {car.brand} {car.model}
+                          </h3>
+                          <span className="font-bold text-xl text-[#E71609]">
+                            {cars.filter(
+                              (c) =>
+                                c.brand === car.brand &&
+                                c.model.trim() === car.model.trim()
+                            ).length > 1
+                              ? `À partir de ${formatPrice(car.price)} DT`
+                              : `${formatPrice(car.price)} DT`}
+                          </span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <div className="px-2 py-1 bg-gray-100 rounded-md">{car.fuel}</div>
-                          <div className="px-2 py-1 bg-gray-100 rounded-md">{car.gearbox}</div>
+                          <div className="px-2 py-1 bg-gray-100 rounded-md">
+                            {car.fuel}
+                          </div>
+                          <div className="px-2 py-1 bg-gray-100 rounded-md">
+                            {car.gearbox}
+                          </div>
                         </div>
                       </CardContent>
                     </Card>
@@ -319,17 +375,21 @@ function CarFiltersAndList() {
                       >
                         Précédent
                       </Button>
-                      
-                      {Array.from({ length: totalPages }, (_, i) => i + 1).map(number => (
-                        <Button
-                          key={number}
-                          variant={currentPage === number ? "default" : "outline"}
-                          onClick={() => paginate(number)}
-                        >
-                          {number}
-                        </Button>
-                      ))}
-                      
+
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                        (number) => (
+                          <Button
+                            key={number}
+                            variant={
+                              currentPage === number ? "default" : "outline"
+                            }
+                            onClick={() => paginate(number)}
+                          >
+                            {number}
+                          </Button>
+                        )
+                      )}
+
                       <Button
                         variant="outline"
                         onClick={nextPage}
