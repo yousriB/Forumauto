@@ -42,7 +42,7 @@ function CarFiltersAndList() {
   });
   const [filteredCars, setFilteredCars] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [carsPerPage] = useState(9); // Number of cars to display per page
+  const [carsPerPage] = useState(12); // Number of cars to display per page
 
   const cars = require("../../../data/cars.json");
 
@@ -183,7 +183,7 @@ function CarFiltersAndList() {
   };
 
   return (
-    <section className="py-12 bg-white min-h-screen">
+    <section className="py-7 bg-white min-h-screen">
       <div className="container px-4 mx-auto">
         <h2 className="text-3xl font-bold text-slate-800 mb-8">
           Nos Voitures Disponibles
@@ -192,7 +192,7 @@ function CarFiltersAndList() {
         <div className="flex flex-col md:flex-row gap-5">
           <div className="p-6 rounded-lg shadow-md md:w-1/3 relative min-h-screen">
             <div className="sticky top-16">
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center mb-6 pt-4">
                 <h3 className="text-xl font-semibold">Filtres</h3>
                 <Button
                   variant="link"

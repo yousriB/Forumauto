@@ -35,12 +35,6 @@ const showroomFeatures = [
     description:
       "Ouvert 7j/7 avec des créneaux adaptés à vos besoins, y compris le dimanche matin.",
   },
-  {
-    icon: Camera,
-    title: "Visite Virtuelle",
-    description:
-      "Explorez notre showroom en ligne grâce à une visite virtuelle immersive disponible 24/7.",
-  },
 ];
 
 export default function MagasinPage() {
@@ -65,7 +59,7 @@ export default function MagasinPage() {
               exceptionnelle.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {showroomFeatures.map((feature, index) => (
               <div
                 key={index}
@@ -121,66 +115,6 @@ export default function MagasinPage() {
                 alt="Parking showroom"
                 className="w-full h-64 object-cover"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hours and Location */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Hours */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-[#E71609] mb-6">
-                Horaires d'Ouverture
-              </h3>
-              <div className="space-y-4">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Lundi - Vendredi</span>
-                  <span className="font-semibold">9h00 - 19h00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Samedi</span>
-                  <span className="font-semibold">9h00 - 18h00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Dimanche</span>
-                  <span className="font-semibold text-[#E71609]">
-                    10h00 - 13h00
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Location */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-[#E71609] mb-6">
-                Nous Trouver
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-[#E71609] mt-1" />
-                  <div>
-                    <p className="font-semibold">Adresse</p>
-                    <p className="text-gray-600">
-                      123 Avenue des Automobiles
-                      <br />
-                      75001 Paris, France
-                    </p>
-                  </div>
-                </div>
-                <div className="pt-4">
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-[#E71609] text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center"
-                  >
-                    <MapPin className="mr-2 h-5 w-5" /> Voir sur Google Maps
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

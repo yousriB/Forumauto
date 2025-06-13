@@ -186,7 +186,7 @@ export default function Contact() {
 
           <div className="h-[400px] lg:h-full min-h-[400px] rounded-xl overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53480.49668485016!2d10.0900!3d33.8848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12556e49a2e95eb9%3A0x4024bba21a1c3c6c!2sN%C2%B01%20Route%20Nationale,%20Bouchamma%206031!5e0!3m2!1sfr!2stn!4v1650000000000!5m2!1sfr!2stn&zoom=21"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.8760042593576!2d10.068591175170155!3d33.8985178258327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x125571f45c5f8bcb%3A0x7d4f2e0b0abddec5!2sFORUM%20AUTO%20Gab%C3%A8s!5e1!3m2!1sfr!2stn!4v1749810941861!5m2!1sfr!2stn"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -200,3 +200,4 @@ export default function Contact() {
     </section>
   );
 }
+  

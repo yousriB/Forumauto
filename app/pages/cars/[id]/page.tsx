@@ -92,37 +92,37 @@ const CarDetailsPage = () => {
   };
 
   // Handle form submission
- // Handle form submission
-const handleSubmit = async (e: FormEvent) => {
-  e.preventDefault();
-  try {
-    const response = await fetch('/api/send-quote-request', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ car, formData }),
-    });
-
-    if (response.ok) {
-      alert('Votre demande de devis a été envoyée avec succès !');
-      setShowForm(false);
-      setFormData({
-        email: '',
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        cinOrNf: '',
+  // Handle form submission
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/send-quote-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ car, formData }),
       });
-    } else {
-      const errorData = await response.json();
-      alert(`Erreur lors de l'envoi de la demande : ${errorData.message}`);
+
+      if (response.ok) {
+        alert("Votre demande de devis a été envoyée avec succès !");
+        setShowForm(false);
+        setFormData({
+          email: "",
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          cinOrNf: "",
+        });
+      } else {
+        const errorData = await response.json();
+        alert(`Erreur lors de l'envoi de la demande : ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error("Erreur lors de la soumission du formulaire :", error);
+      alert("Une erreur est survenue. Veuillez réessayer plus tard.");
     }
-  } catch (error) {
-    console.error('Erreur lors de la soumission du formulaire :', error);
-    alert('Une erreur est survenue. Veuillez réessayer plus tard.');
-  }
-};
+  };
 
   // Handle image loading errors
   const handleImageError = () => {
@@ -168,14 +168,15 @@ const handleSubmit = async (e: FormEvent) => {
     <section className="py-7 bg-white min-h-screen">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 gap-8">
-          
           {/* Car Basic Info */}
           <div className="bg-white p-6 text-center uppercase">
             <h2 className="text-3xl font-bold text-slate-900 mb-2">
               {car.brand} {car.model}
             </h2>
             <p className="text-3xl text-[#E71609] font-bold mb-4">
-              {car.price ? `${car.price.toLocaleString()} TND` : "Prix non disponible"}
+              {car.price
+                ? `${car.price.toLocaleString()} TND`
+                : "Prix non disponible"}
             </p>
           </div>
           {/* Car Image */}
@@ -201,7 +202,7 @@ const handleSubmit = async (e: FormEvent) => {
         <div className="bg-white p-6 rounded-lg  my-5 text-center">
           {!showForm ? (
             <Button
-              className="w-fit bg-red-600 hover:bg-red-700 text-white py-3 px-6 text-base"
+              className="w-fit bg-[#E71609] hover:bg-[#E71609]/90 text-white py-3 px-6 text-base"
               onClick={() => setShowForm(true)}
             >
               Demander un devis
@@ -224,7 +225,9 @@ const handleSubmit = async (e: FormEvent) => {
                 <motion.div
                   ref={ref}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={
+                    inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
                   transition={{ duration: 0.5 }}
                   className="mx-auto bg-white rounded-xl overflow-hidden"
                 >
@@ -303,7 +306,7 @@ const handleSubmit = async (e: FormEvent) => {
                         <div className="pt-4 flex justify-end space-x-4">
                           <Button
                             type="submit"
-                            className="bg-red-600 hover:bg-red-700 px-6 py-2.5"
+                            className="bg-[#E71609] hover:bg-[#E71609]/90 px-6 py-2.5"
                           >
                             Envoyer la demande
                           </Button>
@@ -326,7 +329,6 @@ const handleSubmit = async (e: FormEvent) => {
 
         {/* Technical Specifications */}
         {car.technicalSpecs && <Technicalinfo car={car} />}
-
       </div>
     </section>
   );
