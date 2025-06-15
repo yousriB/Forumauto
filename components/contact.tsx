@@ -56,7 +56,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900"
+      className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900"
     >
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -200,4 +200,3 @@ export default function Contact() {
     </section>
   );
 }
-  

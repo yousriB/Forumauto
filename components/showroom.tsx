@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
+import LogoCarousel from "./LogoCarousel";
 
 export default function Showroom() {
   const router = useRouter();
@@ -77,7 +78,6 @@ export default function Showroom() {
       name: "NISSAN",
       image: "/marque/nissan.webp",
     },
-   
   ];
 
   const containerVariants = {
@@ -96,11 +96,11 @@ export default function Showroom() {
   };
 
   return (
-    <section className="py-16 bg-white" id="gallery">
-      <div className="container mx-auto">
+    <section className="py-12 bg-white" id="gallery">
+      <div className="">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold text-slate-800 mb-2">
-            Showroom Auto
+            Nos Marques
           </h2>
           <h3 className="text-xl font-medium text-slate-600 mb-4">
             Toutes les marques automobiles
@@ -111,38 +111,7 @@ export default function Showroom() {
             </div>
           </div>
         </div>
-
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto cursor-pointer"
-        >
-          {brands.map((brand, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="flex flex-col items-center"
-              onClick={() =>
-                router.push(
-                  `/pages/cars?brand=${encodeURIComponent(brand.name)}`
-                )
-              }
-            >
-              <div className="bg-white rounded-lg shadow-md p-8 h-52 w-full flex items-center justify-center hover:shadow-lg transition-shadow duration-300">
-                <div className="relative h-full w-full group">
-                  <Image
-                    src={brand.image}
-                    alt={brand.name}
-                    fill
-                    className="object-contain transition-all duration-300 group-hover:filter-none filter grayscale"
-                  />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <LogoCarousel />
       </div>
     </section>
   );

@@ -1,25 +1,35 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Calendar } from "@/components/ui/calendar"
-import { CalendarIcon, Clock, Car, User } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { format } from "date-fns"
-import { fr } from "date-fns/locale"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { Checkbox } from "@/components/ui/checkbox"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Calendar } from "@/components/ui/calendar";
+import { CalendarIcon, Clock, Car, User } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export default function Appointment() {
-  const [date, setDate] = useState<Date | null>(null)
-  const [time, setTime] = useState("")
-  const [step, setStep] = useState(1)
+  const [date, setDate] = useState<Date | null>(null);
+  const [time, setTime] = useState("");
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -30,95 +40,115 @@ export default function Appointment() {
     carChassis: "",
     serviceType: [] as string[], // Changed to array
     message: "",
-  })
+  });
 
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleServiceTypeChange = (value: string, checked: boolean) => {
     setFormData((prev) => {
       const newServiceTypes = checked
         ? [...prev.serviceType, value]
-        : prev.serviceType.filter((type) => type !== value)
-      return { ...prev, serviceType: newServiceTypes }
-    })
-  }
+        : prev.serviceType.filter((type) => type !== value);
+      return { ...prev, serviceType: newServiceTypes };
+    });
+  };
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-  
+
     // Prepare form data
     const appointmentData = { ...formData, date, time };
-  
+
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(appointmentData),
       });
-  
+
       const result = await response.json();
-  
+
       if (response.ok) {
-        alert('Rendez-vous pris avec succès! Nous vous contacterons bientôt pour confirmer.');
+        alert(
+          "Rendez-vous pris avec succès! Nous vous contacterons bientôt pour confirmer."
+        );
         setFormData({
-          name: '',
-          phone: '',
-          email: '',
-          carBrand: '',
-          carModel: '',
-          carYear: '',
-          carChassis: '',
+          name: "",
+          phone: "",
+          email: "",
+          carBrand: "",
+          carModel: "",
+          carYear: "",
+          carChassis: "",
           serviceType: [],
-          message: '',
+          message: "",
         });
         setDate(null);
-        setTime('');
+        setTime("");
         setStep(1);
       } else {
         alert(`Erreur: ${result.message}`);
       }
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error sending email:", error);
     }
   };
 
   const nextStep = () => {
-    setStep(step + 1)
-  }
+    setStep(step + 1);
+  };
 
   const prevStep = () => {
-    setStep(step - 1)
-  }
+    setStep(step - 1);
+  };
 
-  const timeSlots = ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00",]
+  const timeSlots = [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+  ];
 
   const serviceOptions = [
     { value: "maintenance", label: "Entretien régulier", id: "maintenance" },
-    { value: "electrical-repair", label: "Réparation électrique", id: "electrical-repair" },
+    {
+      value: "electrical-repair",
+      label: "Réparation électrique",
+      id: "electrical-repair",
+    },
     { value: "ac-charge", label: "Charge climatiseur", id: "ac-charge" },
-    { value: "mechanical-repair", label: "Réparation mécanique", id: "mechanical-repair" },
+    {
+      value: "mechanical-repair",
+      label: "Réparation mécanique",
+      id: "mechanical-repair",
+    },
     { value: "diagnostic", label: "Diagnostic", id: "diagnostic" },
     { value: "body-repair", label: "Réparation tôlerie", id: "body-repair" },
-  ]
+  ];
 
   // Map service values to labels for display in summary
   const getServiceLabel = (value: string) => {
-    const service = serviceOptions.find((opt) => opt.value === value)
-    return service ? service.label : value
-  }
+    const service = serviceOptions.find((opt) => opt.value === value);
+    return service ? service.label : value;
+  };
 
   return (
-    <section id="appointment" className="py-20 md:py-28 bg-white">
+    <section id="appointment" className="py-12 md:py-28 bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
@@ -128,7 +158,7 @@ export default function Appointment() {
             Prendre un rendez-vous
           </h2>
           <p className="text-lg text-gray-600">
-            Réservez facilement un créneau pour l'entretien de votre véhicule ou pour discuter d'un achat.
+            Réservez facilement un créneau pour l'entretien de votre véhicule.
           </p>
         </div>
 
@@ -141,13 +171,35 @@ export default function Appointment() {
         >
           <div className="p-6 md:p-8">
             <div className="flex justify-between items-center mb-8">
-              <h3 className="text-xl font-semibold text-gray-900">Formulaire de rendez-vous</h3>
+              <h3 className="text-xl font-semibold text-gray-900">
+                Formulaire de rendez-vous
+              </h3>
               <div className="flex items-center">
-                <div className={`w-3 h-3 rounded-full ${step >= 1 ? "bg-red-600" : "bg-gray-300"}`}></div>
-                <div className={`w-12 h-1 ${step >= 2 ? "bg-red-600" : "bg-gray-300"}`}></div>
-                <div className={`w-3 h-3 rounded-full ${step >= 2 ? "bg-red-600" : "bg-gray-300"}`}></div>
-                <div className={`w-12 h-1 ${step >= 3 ? "bg-red-600" : "bg-gray-300"}`}></div>
-                <div className={`w-3 h-3 rounded-full ${step >= 3 ? "bg-red-600" : "bg-gray-300"}`}></div>
+                <div
+                  className={`w-3 h-3 rounded-full ${
+                    step >= 1 ? "bg-red-600" : "bg-gray-300"
+                  }`}
+                ></div>
+                <div
+                  className={`w-12 h-1 ${
+                    step >= 2 ? "bg-red-600" : "bg-gray-300"
+                  }`}
+                ></div>
+                <div
+                  className={`w-3 h-3 rounded-full ${
+                    step >= 2 ? "bg-red-600" : "bg-gray-300"
+                  }`}
+                ></div>
+                <div
+                  className={`w-12 h-1 ${
+                    step >= 3 ? "bg-red-600" : "bg-gray-300"
+                  }`}
+                ></div>
+                <div
+                  className={`w-3 h-3 rounded-full ${
+                    step >= 3 ? "bg-red-600" : "bg-gray-300"
+                  }`}
+                ></div>
               </div>
             </div>
 
@@ -196,7 +248,16 @@ export default function Appointment() {
                     </div>
                   </div>
                   <div className="pt-4 flex justify-end">
-                    <Button disabled={formData.name === "" || formData.phone === "" || formData.email === ""} type="button" onClick={nextStep} className="bg-red-600 hover:bg-red-700">
+                    <Button
+                      disabled={
+                        formData.name === "" ||
+                        formData.phone === "" ||
+                        formData.email === ""
+                      }
+                      type="button"
+                      onClick={nextStep}
+                      className="bg-red-600 hover:bg-red-700"
+                    >
                       Suivant
                     </Button>
                   </div>
@@ -214,7 +275,9 @@ export default function Appointment() {
                       <Label htmlFor="carBrand">Marque</Label>
                       <Select
                         value={formData.carBrand}
-                        onValueChange={(value) => setFormData((prev) => ({ ...prev, carBrand: value }))}
+                        onValueChange={(value) =>
+                          setFormData((prev) => ({ ...prev, carBrand: value }))
+                        }
                       >
                         <SelectTrigger id="carBrand">
                           <SelectValue placeholder="Sélectionner" />
@@ -273,12 +336,20 @@ export default function Appointment() {
                     <Label>Type de service</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {serviceOptions.map((option) => (
-                        <div key={option.id} className="flex items-center space-x-2">
+                        <div
+                          key={option.id}
+                          className="flex items-center space-x-2"
+                        >
                           <Checkbox
                             id={option.id}
-                            checked={formData.serviceType.includes(option.value)}
+                            checked={formData.serviceType.includes(
+                              option.value
+                            )}
                             onCheckedChange={(checked) =>
-                              handleServiceTypeChange(option.value, checked as boolean)
+                              handleServiceTypeChange(
+                                option.value,
+                                checked as boolean
+                              )
                             }
                           />
                           <Label htmlFor={option.id} className="cursor-pointer">
@@ -305,7 +376,18 @@ export default function Appointment() {
                     <Button type="button" variant="outline" onClick={prevStep}>
                       Précédent
                     </Button>
-                    <Button disabled={formData.carBrand === "" || formData.carModel === "" || formData.carChassis === "" || formData.carYear === "" || formData.serviceType.length === 0} type="button" onClick={nextStep} className="bg-red-600 hover:bg-red-700">
+                    <Button
+                      disabled={
+                        formData.carBrand === "" ||
+                        formData.carModel === "" ||
+                        formData.carChassis === "" ||
+                        formData.carYear === "" ||
+                        formData.serviceType.length === 0
+                      }
+                      type="button"
+                      onClick={nextStep}
+                      className="bg-red-600 hover:bg-red-700"
+                    >
                       Suivant
                     </Button>
                   </div>
@@ -328,11 +410,15 @@ export default function Appointment() {
                             variant={"outline"}
                             className={cn(
                               "w-full justify-start text-left font-normal",
-                              !date && "text-muted-foreground",
+                              !date && "text-muted-foreground"
                             )}
                           >
                             <CalendarIcon className="mr-2 h-4 w-4" />
-                            {date ? format(date, "PPP", { locale: fr }) : <span>Sélectionner une date</span>}
+                            {date ? (
+                              format(date, "PPP", { locale: fr })
+                            ) : (
+                              <span>Sélectionner une date</span>
+                            )}
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0">
@@ -347,7 +433,9 @@ export default function Appointment() {
                             initialFocus
                             disabled={(date) => {
                               const day = date.getDay();
-                              const isPastDate = date < new Date(new Date().setHours(0, 0, 0, 0));
+                              const isPastDate =
+                                date <
+                                new Date(new Date().setHours(0, 0, 0, 0));
                               return day === 0 || day === 6 || isPastDate;
                             }}
                           />
@@ -357,7 +445,11 @@ export default function Appointment() {
 
                     <div className="space-y-2">
                       <Label>Heure du rendez-vous</Label>
-                      <Select value={time} onValueChange={setTime} disabled={!date}>
+                      <Select
+                        value={time}
+                        onValueChange={setTime}
+                        disabled={!date}
+                      >
                         <SelectTrigger>
                           <SelectValue placeholder="Sélectionner une heure" />
                         </SelectTrigger>
@@ -373,38 +465,51 @@ export default function Appointment() {
                   </div>
 
                   <div className="pt-6 mt-6 border-t">
-                    <h4 className="text-lg font-medium text-gray-900 mb-4">Récapitulatif</h4>
+                    <h4 className="text-lg font-medium text-gray-900 mb-4">
+                      Récapitulatif
+                    </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <p className="text-gray-500">Nom:</p>
-                        <p className="font-medium text-gray-900">{formData.name}</p>
+                        <p className="font-medium text-gray-900">
+                          {formData.name}
+                        </p>
                       </div>
                       <div>
                         <p className="text-gray-500">Téléphone:</p>
-                        <p className="font-medium text-gray-900">{formData.phone}</p>
+                        <p className="font-medium text-gray-900">
+                          {formData.phone}
+                        </p>
                       </div>
                       <div>
                         <p className="text-gray-500">Email:</p>
-                        <p className="font-medium text-gray-900">{formData.email}</p>
+                        <p className="font-medium text-gray-900">
+                          {formData.email}
+                        </p>
                       </div>
                       <div>
                         <p className="text-gray-500">Véhicule:</p>
                         <p className="font-medium text-gray-900">
-                          {formData.carBrand} {formData.carModel} ({formData.carYear})
+                          {formData.carBrand} {formData.carModel} (
+                          {formData.carYear})
                         </p>
                       </div>
                       <div>
                         <p className="text-gray-500">Services:</p>
                         <p className="font-medium text-gray-900">
                           {formData.serviceType.length > 0
-                            ? formData.serviceType.map(getServiceLabel).join(", ")
+                            ? formData.serviceType
+                                .map(getServiceLabel)
+                                .join(", ")
                             : "Aucun sélectionné"}
                         </p>
                       </div>
                       <div>
                         <p className="text-gray-500">Date et heure:</p>
                         <p className="font-medium text-gray-900">
-                          {date ? `${format(date, "PPP", { locale: fr })} à ${time}` : "Non sélectionné"}
+                          {date
+                            ? `${format(date, "PPP", { locale: fr })} à ${time}`
+                            : "Non sélectionné"}
                         </p>
                       </div>
                     </div>
@@ -417,7 +522,9 @@ export default function Appointment() {
                     <Button
                       type="submit"
                       className="bg-red-600 hover:bg-red-700"
-                      disabled={!date || !time || formData.serviceType.length === 0}
+                      disabled={
+                        !date || !time || formData.serviceType.length === 0
+                      }
                     >
                       Confirmer le rendez-vous
                     </Button>
@@ -429,5 +536,5 @@ export default function Appointment() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -20,12 +20,13 @@ export default function Home() {
         <Navbar />
         <main>
           <Hero />
+          <Services />
+
           <AutomobileCarousel />
           <Showroom />
-          <Services />
           <Stats />
           <Testimonials />
-          <Appointment />
+          {/* <Appointment /> */}
           <Newsletter />
           <Contact />
         </main>

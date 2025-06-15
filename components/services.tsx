@@ -1,149 +1,117 @@
-"use client"
+"use client";
 
-import { Wrench, Cpu, Car, Droplets, ArrowRight, Settings } from "lucide-react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/i18n"
-import ScrollLink from "@/components/scroll-link"
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Services() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
-  const { language, dir } = useLanguage()
-
-  const services = [
-    {
-      titleKey: "services.maintenance.title",
-      descriptionKey: "services.maintenance.desc",
-      icon: Wrench,
-      link: "/pages/magasin",
-      features: ["Vidange et filtres", "Freins et suspension", "Climatisation", "Batterie"],
-    },
-    {
-      titleKey: "services.diagnostic.title",
-      descriptionKey: "services.diagnostic.desc",
-      icon: Cpu,
-      link: "/pages/assurence",
-      features: ["Lecture codes défaut", "Réinitialisation voyants", "Programmation", "Mise à jour logiciel"],
-    },
-    {
-      titleKey: "services.repair.title",
-      descriptionKey: "services.repair.desc",
-      icon: Settings,
-      link: "/pages/atelier",
-      features: ["Moteur", "Transmission", "Suspension", "Système électrique"],
-    },
-    {
-      titleKey: "services.sales.title",
-      descriptionKey: "services.sales.desc",
-      icon: Car,
-      link: "/pages/logos",
-      features: ["Garantie incluse", "Historique vérifié", "Financement", "Reprise possible"],
-    },
-    // {
-    //   titleKey: "services.cleaning.title",
-    //   descriptionKey: "services.cleaning.desc",
-    //   icon: Droplets,
-    //   features: ["Lavage extérieur", "Nettoyage intérieur", "Polissage", "Traitement céramique"],
-    // },
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
-
+  const router = useRouter();
   return (
-    <section id="services" className="py-20 md:py-28">
-      <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4 dark:bg-red-900 dark:text-red-200">
-            {t("services.title", language)}
+    <section id="services" className="py-12 min-h-screen">
+      <div className="container h-auto">
+        <section className="grid grid-cols-3 grid-rows-2 gap-6 p-6">
+          {/* Card 1 - spans 2 rows, 1 column */}
+          <div
+            className="rounded-3xl p-6 text-gray-50 row-span-2 flex flex-col items-center justify-center cursor-pointer"
+            style={{
+              background: "linear-gradient(135deg, #E71609, #000000)",
+            }}
+          >
+            <div className="flex flex-col justify-center items-center">
+              <h2 className="text-2xl font-semibold mb-4">
+                Envie de prendre le volant ?
+              </h2>
+              <Image
+                src="/images/supercar.png"
+                alt="Cupra Leon"
+                width={300}
+                height={50}
+                className="filter brightness-0 invert"
+              />
+              <a
+                className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md cursor-pointer"
+                onClick={() => router.push("/pages/rendevouz")}
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#E71609] dark:text-red-500">
-            {t("services.heading", language)}
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">{t("services.description", language)}</p>
-        </div>
+          {/* Card 4 - spans 2 rows, 1 column */}
+          <div
+            className="rounded-3xl p-6 flex flex-col justify-around items-center text-gray-50 row-span-2 cursor-pointer"
+            style={{
+              background: "url('/images/bgbanner.jpg') no-repeat",
+              backgroundSize: "cover",
+            }}
+            onClick={() => router.push("/pages/logos")}
+          >
+            <div className="text-center">
+              <h2 className="text-4xl font-semibold mb-4">Nos marques</h2>
+              <p className="text-gray-50 text-lg font-medium">
+                Achetez un véhicule neuf avec
+              </p>
+            </div>
+            <Image
+              src="/images/logoo.png"
+              alt="Cupra Leon"
+              width={250}
+              height={160}
+              className="filter brightness-0 invert"
+            />
+            <Image
+              src="/images/supercar.png"
+              alt="Cupra Leon"
+              width={300}
+              height={50}
+              className="filter brightness-0 invert"
+            />
+          </div>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          style={{ direction: dir }}
-        >
-          {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader className="pb-2">
-                  <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-[#E71609]" />
-                  </div>
-                  <CardTitle className="text-[#E71609]">{t(service.titleKey, language)}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base mb-4">
-                    {t(service.descriptionKey, language)}
-                  </CardDescription>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                        <div className="h-5 w-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="12"
-                            height="12"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-[#E71609]"
-                          >
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button
-                    asChild
-                    variant="ghost"
-                    className="p-0 h-auto text-[#E71609] hover:text-red-700"
-                  >
-                    <a href={service.link} className="flex items-center">
-                      <span>{t("services.more", language)}</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+          {/* Card 2 - 1 row, 1 column */}
+          <div
+            className="rounded-3xl p-6 flex flex-col justify-between items-center text-gray-50 cursor-pointer"
+            style={{ background: "linear-gradient(135deg, #E71609, #000000)" }}
+            onClick={() => router.push("/pages/demanderdevis")}
+          >
+            <span className="text-4xl font-semibold mb-2 block">
+              Demandez votre devis personnalisé
+            </span>
+            <h2 className="text-gray-50 text-lg font-medium mb-2">
+              Obtenez une estimation rapide et sur-mesure pour votre véhicule.
+            </h2>
+            <a
+              className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md"
+              href="#"
+            >
+              Demander mon devis
+            </a>
+          </div>
+
+          {/* Card 3 - 1 row, 1 column */}
+          <div
+            className="rounded-3xl p-6 text-gray-50 relative"
+            style={{ background: "#000000" }}
+          >
+            <div className="flex flex-col items-center mb-4">
+              {/* icon or Image here */}
+              <Image
+                src="/marque/rondala.png"
+                alt="Rendez-vous"
+                width={50}
+                height={50}
+              />
+              <h2 className="text-2xl font-semibold mb-3 text-center mt-4 ">
+                Prenez rendez-vous <br /> pour l’entretien de votre véhicule
+              </h2>
+              <a
+                className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md cursor-pointer"
+                onClick={() => router.push("/pages/rendevouz")}
+              >
+                Cliquez ici
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
-  )
+  );
 }
