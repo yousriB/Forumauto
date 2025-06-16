@@ -11,9 +11,7 @@ export default function Services() {
   // Sample car images array - replace with your actual car images
   const carImages = [
     "https://catalogue.automobile.tn/big/2024/10/47244.webp?t=1730749863",
-    "https://catalogue.automobile.tn/big/2024/05/46809.webp?t=1715243311",
-    "https://catalogue.automobile.tn/big/2024/05/47143.webp?t=1728034036",
-    "https://catalogue.automobile.tn/big/2022/03/46718.webp?t=1713019608",
+    "https://catalogue.automobile.tn/big/2025/06/47403.webp?t=1750093651",
 
     // Add more car images as needed
   ];
@@ -65,7 +63,7 @@ export default function Services() {
                     e.stopPropagation();
                     prevImage();
                   }}
-                  className="absolute -left-5 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  className="absolute left-0 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +87,7 @@ export default function Services() {
                   alt="Car"
                   width={800}
                   height={100}
-                  className="filter w-[300px] md:w-[300px] transition-opacity duration-300"
+                  className="filter w-[300px] md:w-[250px] transition-opacity duration-300"
                 />
 
                 {/* Right Arrow */}
@@ -98,7 +96,7 @@ export default function Services() {
                     e.stopPropagation();
                     nextImage();
                   }}
-                  className="absolute -right-5 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+                  className="absolute right-0 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

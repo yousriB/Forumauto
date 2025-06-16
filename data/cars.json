@@ -2783,15 +2783,18 @@
     "brand": "CHERY",
     "model": "Tiggo 7 Pro",
     "version": "1.5 T CVT",
-    "price": 102580,
-    "image": "https://catalogue.automobile.tn/big/2021/09/46646.webp?t=1737112774",
+    "price": 105900,
+    "image": "https://catalogue.automobile.tn/big/2025/06/47403.webp?t=1750093651",
     "fuel": "Essence",
     "gearbox": "Automatique",
     "technicalSpecs": [
       {
         "title": "Caractéristiques",
         "specs": [
-         
+          {
+            "label": "Disponibilité",
+            "value": "Disponible"
+          },
           {
             "label": "Carrosserie",
             "value": "SUV"
@@ -2861,19 +2864,23 @@
         "specs": [
           {
             "label": "Longueur",
-            "value": "4500 mm"
+            "value": "4513 mm"
           },
           {
             "label": "Largeur",
-            "value": "1842 mm"
+            "value": "1862 mm"
           },
           {
             "label": "Hauteur",
-            "value": "1705 mm"
+            "value": "1696 mm"
           },
           {
             "label": "Volume du coffre",
             "value": "475 L"
+          },
+          {
+            "label": "Volume du coffre maximal",
+            "value": "1500 L"
           }
         ]
       },
@@ -2940,32 +2947,24 @@
             "value": "ESP"
           },
           {
-            "label": "Aide au démarrage en côte",
-            "value": ""
-          },
-          {
             "label": "Aide au stationnement",
-            "value": "Radar de recul | Système de caméras 360"
+            "value": "Radar de recul | Radar avant | Système de caméras 360"
           },
           {
             "label": "Assistance au freinage",
             "value": "EBA | EBD"
           },
           {
-            "label": "Détecteur de fatigue",
+            "label": "Alerte de franchissement de ligne",
             "value": ""
           },
           {
             "label": "Direction assistée",
-            "value": "EPS"
-          },
-          {
-            "label": "Régulateur de vitesse",
             "value": ""
           },
           {
-            "label": "Système de descente en côte",
-            "value": "HDC"
+            "label": "Régulateur de vitesse",
+            "value": "Adaptatif"
           }
         ]
       },
@@ -2986,7 +2985,7 @@
           },
           {
             "label": "Eléments extérieurs couleur carrosserie",
-            "value": "Poignées de portes | Rétroviseurs"
+            "value": ""
           },
           {
             "label": "Feux à LED",
@@ -2997,12 +2996,8 @@
             "value": "En aluminium | 18''"
           },
           {
-            "label": "Peinture",
-            "value": "Métallisée"
-          },
-          {
             "label": "Phares",
-            "value": "Full LED"
+            "value": "Matrix LED"
           },
           {
             "label": "Spoiler arrière",
@@ -3015,15 +3010,15 @@
         "specs": [
           {
             "label": "Autoradio",
-            "value": "6 haut-parleurs | Commandes au volant"
+            "value": "6 haut-parleurs | Commandes au volant | Sony"
           },
           {
             "label": "Connectivité",
-            "value": "2 USB | Android Auto | Apple Carplay | Bluetooth | Commande vocale | Chargeur de téléphone sans fil"
+            "value": "3 USB | Android Auto | Apple Carplay | Bluetooth | Commande vocale | Wifi | Chargeur de téléphone sans fil"
           },
           {
             "label": "Ecran central",
-            "value": "Tactile | 10.1 pouces"
+            "value": "Tactile | 12.3 pouces"
           }
         ]
       },
@@ -3032,35 +3027,23 @@
         "specs": [
           {
             "label": "Accoudoirs",
-            "value": "Avant | Arrière"
+            "value": "Avant | Réfrigéré | Arrière"
           },
           {
             "label": "Appuis têtes arrières",
             "value": "3"
           },
           {
-            "label": "Kit fumeurs",
-            "value": ""
-          },
-          {
-            "label": "Kit rangement",
-            "value": "Porte-lunettes"
-          },
-          {
             "label": "Lumières d'ambiance",
             "value": ""
           },
           {
-            "label": "Pommeau de levier de vitesse",
+            "label": "Sellerie",
             "value": "Cuir"
           },
           {
-            "label": "Sellerie",
-            "value": "Cuir perforé"
-          },
-          {
             "label": "Sièges",
-            "value": "Conducteur à réglage électrique | 6 directions | Réglage lombaire | Passager partiellement électrique"
+            "value": "Électriques | 6 directions | Chauffants | Ventilés | Réglage lombaire | Fonction mémoire"
           },
           {
             "label": "Sièges réglables en hauteur",
@@ -3075,12 +3058,8 @@
             "value": "Ouvrant | Panoramique"
           },
           {
-            "label": "Vitres",
-            "value": "Lunette et vitres arrières sur-teintées"
-          },
-          {
             "label": "Volant",
-            "value": "Cuir | Multi-fonctions | à méplat"
+            "value": "Cuir | Multi-fonctions"
           },
           {
             "label": "Volant réglable",
@@ -3101,11 +3080,11 @@
           },
           {
             "label": "Coffre à bagages",
-            "value": "Ouverture et fermeture motorisées | Ouverture mains libres | Ouverture à distance"
+            "value": "Ouverture et fermeture motorisées"
           },
           {
             "label": "Climatisation",
-            "value": "Automatique | Bizone"
+            "value": "Automatique | Bizone | Ventilation arrière"
           },
           {
             "label": "Fermeture centralisée",
@@ -3129,7 +3108,7 @@
           },
           {
             "label": "Instrumentation digitale",
-            "value": "7 pouces"
+            "value": "12.3''"
           },
           {
             "label": "Vitres électriques",
