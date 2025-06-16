@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -61,7 +61,7 @@ export default function Testimonials() {
     );
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: SetStateAction<number>) => {
     setAutoplay(false);
     setCurrentIndex(index);
   };
@@ -99,7 +99,7 @@ export default function Testimonials() {
                 <CardContent className="p-0">
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/3 h-60 md:h-auto relative bg-red-600">
-                      <Image
+                      {/* <Image
                         src={
                           testimonials[currentIndex].image || "/placeholder.svg"
                         }
@@ -110,7 +110,7 @@ export default function Testimonials() {
                           const target = e.target as HTMLImageElement;
                           target.src = "/placeholder.svg?height=300&width=200";
                         }}
-                      />
+                      /> */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 right-4 text-white">
                         <h3 className="font-bold text-xl">

@@ -20,9 +20,8 @@ export default function Home() {
         <Navbar />
         <main>
           <Hero />
-          <Services />
-
           <AutomobileCarousel />
+          <Services />
           <Showroom />
           <Stats />
           <Testimonials />

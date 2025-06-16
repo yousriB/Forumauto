@@ -69,7 +69,7 @@ export default function FloatingContact() {
               </a>
 
               <a
-                href="mailto:contact.forumautogabes@gmail.com"
+                href="mailto:contact@forumautogabes.com"
                 className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               >
                 <MessageSquare className="h-4 w-4 text-blue-600 dark:text-blue-400" />
@@ -85,7 +85,9 @@ export default function FloatingContact() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         className={`rounded-full w-14 h-14 shadow-lg ${
-          isOpen ? "bg-[#E71609] hover:bg-red-800" : "bg-[#E71609] hover:bg-red-700"
+          isOpen
+            ? "bg-[#E71609] hover:bg-red-800"
+            : "bg-[#E71609] hover:bg-red-700"
         }`}
       >
         {isOpen ? (

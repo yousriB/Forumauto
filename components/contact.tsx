@@ -165,7 +165,7 @@ export default function Contact() {
                     {t("contact.email", language)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    contact.forumautogabes@gmail.com
+                    contact@forumautogabes.com
                   </p>
                 </div>
               </div>

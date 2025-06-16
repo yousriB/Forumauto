@@ -111,7 +111,9 @@ export default function Showroom() {
             </div>
           </div>
         </div>
-        <LogoCarousel />
+        <div className="w-full h-full grayscale">
+          <LogoCarousel />
+        </div>
       </div>
     </section>
   );

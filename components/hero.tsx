@@ -7,13 +7,17 @@ import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { t } from "@/lib/i18n";
 import ScrollLink from "@/components/scroll-link";
+import Stats from "@/components/stats";
 
 export default function Hero() {
   const { language, dir } = useLanguage();
 
   return (
-    <section id="hero" className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
-     <video
+    <section
+      id="hero"
+      className="relative h-[90vh] min-h-[600px] w-full overflow-auto"
+    >
+      <video
         autoPlay
         loop
         muted
@@ -93,7 +97,9 @@ export default function Hero() {
               size="lg"
               className="bg-white/10 text-white border-white/20 hover:bg-white/20 font-bold shadow-lg transition-all duration-300"
             >
-              <ScrollLink href="#services">{t("hero.cta.services", language)}</ScrollLink>
+              <ScrollLink href="#services">
+                {t("hero.cta.services", language)}
+              </ScrollLink>
             </Button>
           </motion.div>
         </motion.div>

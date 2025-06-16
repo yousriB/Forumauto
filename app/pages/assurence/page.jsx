@@ -243,7 +243,7 @@ export default function AssurancePage() {
                 className="inline-flex items-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#E71609] transition-colors"
               >
                 <Mail className="mr-2 h-5 w-5" />
-                contact.forumautogabes@gmail.com
+                contact@forumautogabes.com
               </a>
             </div>
           </div>

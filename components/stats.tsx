@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { Car, Users, Calendar, Award } from "lucide-react"
-import { useLanguage } from "@/contexts/language-context"
-import { t } from "@/lib/i18n"
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Car, Users, Calendar, Award } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
+import { t } from "@/lib/i18n";
 
 export default function Stats() {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
-  const { language } = useLanguage()
+  const { language } = useLanguage();
 
   const stats = [
     {
@@ -40,46 +40,54 @@ export default function Stats() {
       labelKey: "stats.brands",
       suffix: "",
     },
-  ]
+  ];
 
   return (
-    <section className="py-12 text-white"
-    style={{
-      backgroundImage: "url('/images/bgbanner.jpg')",
-      backgroundSize: "cover",
-    }}>
+    <section
+      className="py-12 text-white"
+      style={{
+        backgroundImage: "url('/images/bgbanner.jpg')",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="container">
         <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <StatItem key={index} stat={stat} inView={inView} index={index} language={language} />
+            <StatItem
+              key={index}
+              stat={stat}
+              inView={inView}
+              index={index}
+              language={language}
+            />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function StatItem({ stat, inView, index, language }) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (inView) {
-      const duration = 2000 // ms
-      const interval = 20 // ms
-      const steps = duration / interval
-      const increment = stat.value / steps
-      let current = 0
+      const duration = 2000; // ms
+      const interval = 20; // ms
+      const steps = duration / interval;
+      const increment = stat.value / steps;
+      let current = 0;
       const timer = setInterval(() => {
-        current += increment
+        current += increment;
         if (current >= stat.value) {
-          current = stat.value
-          clearInterval(timer)
+          current = stat.value;
+          clearInterval(timer);
         }
-        setCount(Math.floor(current))
-      }, interval)
-      return () => clearInterval(timer)
+        setCount(Math.floor(current));
+      }, interval);
+      return () => clearInterval(timer);
     }
-  }, [inView, stat.value])
+  }, [inView, stat.value]);
 
   return (
     <motion.div
@@ -97,5 +105,5 @@ function StatItem({ stat, inView, index, language }) {
       </div>
       <div className="text-sm opacity-80">{t(stat.labelKey, language)}</div>
     </motion.div>
-  )
+  );
 }
