@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 const brands = [
-  { name: "ISUZU", image: "/newmarque/Isuzu.png" },
-  { name: "CHEVROLET", image: "/newmarque/chevrolet.png" },
-  { name: "CHERY", image: "/newmarque/chery.png" },
-  { name: "GREAT WALL", image: "/newmarque/gwm.png" },
-  { name: "HAVAL", image: "/newmarque/haval.png" },
-  { name: "GAC", image: "/newmarque/gac.png" },
-  { name: "TOYOTA", image: "/newmarque/toyota.png" },
-  { name: "SUZUKI", image: "/newmarque/suzuki.png" },
-  { name: "MG", image: "/newmarque/mg.png" },
-  { name: "FORD", image: "/newmarque/ford.png" },
-  { name: "DFSK", image: "/newmarque/dfsk.png" },
-  { name: "DONGFENG", image: "/newmarque/dongfeng.png" },
-  { name: "DACIA", image: "/newmarque/dacia.png" },
-  { name: "RENAULT", image: "/newmarque/renault.png" },
+  { name: "ISUZU", image: "/carlogos/isuzu.png" },
+  { name: "CHEVROLET", image: "/carlogos/chevrolet.png" },
+  { name: "CHERY", image: "/carlogos/chery.png" },
+  { name: "GREAT WALL", image: "/carlogos/gwm.png" },
+  { name: "HAVAL", image: "/carlogos/haval.png" },
+  { name: "GAC", image: "/carlogos/gac.png" },
+  { name: "TOYOTA", image: "/carlogos/toyota.png" },
+  { name: "SUZUKI", image: "/carlogos/suzuki.png" },
+  { name: "MG", image: "/carlogos/mg.png" },
+  { name: "FORD", image: "/carlogos/ford.png" },
+  { name: "DFSK", image: "/carlogos/dfsk.png" },
+  { name: "DONGFENG", image: "/carlogos/dongfeng.png" },
+  { name: "DACIA", image: "/carlogos/dacia.png" },
+  { name: "RENAULT", image: "/carlogos/renault.png" },
 ];
 
 export default function LogoCarousel() {
@@ -125,7 +125,7 @@ export default function LogoCarousel() {
                 <img
                   src={brand.image}
                   alt={brand.name}
-                  className="w-full max-w-12 h-full object-contain p-4 grayscale hover:grayscale-0 transition duration-300"
+                  className="w-full max-w-12 h-full object-contain p-4 transition duration-300"
                 />
               </div>
             ))}

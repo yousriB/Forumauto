@@ -58,9 +58,28 @@ const galleryImages = [
     alt: "Parking client",
     category: "Showroom",
   },
+  {
+    id: 10,
+    src: "/placeholder.svg?height=400&width=600",
+    alt: "Open day",
+    category: "Events",
+  },
+  {
+    id: 11,
+    src: "/placeholder.svg?height=400&width=600",
+    alt: "La Cor de Gabès",
+    category: "Events",
+  },
 ];
 
-const categories = ["Tous", "Showroom", "Véhicules", "Atelier", "Services"];
+const categories = [
+  "Tous",
+  "Showroom",
+  "Véhicules",
+  "Atelier",
+  "Services",
+  "Events",
+];
 
 export default function ImageGallery() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");

@@ -9,73 +9,21 @@ import { useRouter } from "next/navigation";
 const Page = () => {
   const router = useRouter();
 
-
   const brands = [
-    {
-      name: "ISUZU",
-      image: "/marque/secondsuzu.png",
-    },
-    {
-      name: "CHEVROLET",
-      image: "/marque/chevrolet.webp",
-    },
-    {
-      name: "CHERY",
-      image: "/marque/chery.webp",
-    },
-    {
-      name: "GREAT WALL",
-      image: "/marque/gwm.webp",
-    },
-    {
-      name: "HAVAL",
-      image: "/marque/haval.webp",
-    },
-    {
-      name: "GAC",
-      image: "/marque/gac.webp",
-    },
-    {
-      name: "TOYOTA",
-      image: "/marque/toyota.webp",
-    },
-    {
-      name: "SUZUKI",
-      image: "/marque/suzuki.webp",
-    },
-    {
-      name: "MG",
-      image: "/marque/mg.webp",
-    },
-    {
-      name: "FORD",
-      image: "/marque/ford.webp",
-    },
-    {
-      name: "DFSK",
-      image: "/marque/dfsk.webp",
-    },
-    {
-      name: "DONGFENG",
-      image: "/marque/dongfong.webp",
-    },
-    {
-      name: "BYD",
-      image: "/marque/byd.webp",
-    },
-    {
-      name: "RENAULT",
-      image: "/marque/renault.webp",
-    },
-    {
-      name: "DACIA",
-      image: "/marque/dacia.webp",
-    },
-    {
-      name: "NISSAN",
-      image: "/marque/nissan.webp",
-    },
-   
+    { name: "ISUZU", image: "/carlogos/isuzu.png" },
+    { name: "CHEVROLET", image: "/carlogos/chevrolet.png" },
+    { name: "CHERY", image: "/carlogos/chery.png" },
+    { name: "GREAT WALL", image: "/carlogos/gwm.png" },
+    { name: "HAVAL", image: "/carlogos/haval.png" },
+    { name: "GAC", image: "/carlogos/gac.png" },
+    { name: "TOYOTA", image: "/carlogos/toyota.png" },
+    { name: "SUZUKI", image: "/carlogos/suzuki.png" },
+    { name: "MG", image: "/carlogos/mg.png" },
+    { name: "FORD", image: "/carlogos/ford.png" },
+    { name: "DFSK", image: "/carlogos/dfsk.png" },
+    { name: "DONGFENG", image: "/carlogos/dongfeng.png" },
+    { name: "DACIA", image: "/carlogos/dacia.png" },
+    { name: "RENAULT", image: "/carlogos/renault.png" },
   ];
 
   const [ref, inView] = useInView({
@@ -126,16 +74,20 @@ const Page = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex flex-col items-center cursor-pointer"
-              onClick={() => router.push(`/pages/cars?brand=${encodeURIComponent(brand.name)}`)}
+              className="flex flex-col items-center cursor-pointer group"
+              onClick={() =>
+                router.push(
+                  `/pages/cars?brand=${encodeURIComponent(brand.name)}`
+                )
+              }
             >
-               <div className="bg-white rounded-lg shadow-md p-8 h-52 w-full flex items-center justify-center hover:shadow-lg transition-shadow duration-300">
-               <div className="relative h-full w-full group">
+              <div className="bg-white rounded-lg shadow-md p-8 h-52 w-full flex items-center justify-center hover:shadow-lg transition-shadow duration-300">
+                <div className="relative w-full h-full">
                   <Image
                     src={brand.image}
                     alt={brand.name}
                     fill
-                    className="object-contain transition-all duration-300 group-hover:filter-none filter grayscale"
+                    className="object-contain transition-all duration-300 group-hover:scale-110"
                   />
                 </div>
               </div>

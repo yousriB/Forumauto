@@ -4,10 +4,29 @@ import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { t } from "@/lib/i18n";
 import ScrollLink from "@/components/scroll-link";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { language, dir } = useLanguage();
+  const router = useRouter();
+
+  // Helper for navigation
+  const handleNav =
+    (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      if (href.startsWith("#")) {
+        if (window.location.pathname !== "/") {
+          router.push("/" + href);
+        } else {
+          const id = href.replace("#", "");
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState({}, "", href);
+        }
+      } else {
+        router.push(href);
+      }
+    };
 
   return (
     <footer
@@ -64,36 +83,40 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <ScrollLink
+                <a
                   href="#hero"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("#hero")}
                 >
                   {t("home", language)}
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
+                <a
                   href="#about"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("#about")}
                 >
                   {t("about", language)}
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
+                <a
                   href="#services"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("#services")}
                 >
                   {t("services", language)}
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
+                <a
                   href="#gallery"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("/pages/gallery")}
                 >
                   {t("gallery", language)}
-                </ScrollLink>
+                </a>
               </li>
             </ul>
           </div>
@@ -104,44 +127,49 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <ScrollLink
-                  href="#services"
+                <a
+                  href="/pages/logos"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("/pages/logos")}
                 >
                   Vente de véhicule neuf
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
-                  href="#services"
+                <a
+                  href="/pages/atelier"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("/pages/atelier")}
                 >
                   Diagnostic automobile
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
-                  href="#services"
+                <a
+                  href="/pages/atelier"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("/pages/atelier")}
                 >
                   Réparation mécanique
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
-                  href="#services"
+                <a
+                  href="/pages/atelier"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("/pages/atelier")}
                 >
                   Réparation électrique
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
-                  href="#services"
+                <a
+                  href="/pages/atelier"
                   className="text-red-100 hover:text-white"
+                  onClick={handleNav("/pages/atelier")}
                 >
                   Carrosserie
-                </ScrollLink>
+                </a>
               </li>
             </ul>
           </div>

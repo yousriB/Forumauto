@@ -11,12 +11,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { useLanguage } from "@/contexts/language-context";
 import { t } from "@/lib/i18n";
 import { useRouter, usePathname } from "next/navigation"; // Import usePathname
@@ -24,7 +18,7 @@ import { useRouter, usePathname } from "next/navigation"; // Import usePathname
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { language, setLanguage, dir } = useLanguage();
+  const { language, dir } = useLanguage();
   const router = useRouter();
   const pathname = usePathname(); // Use usePathname to get the current path
 
@@ -53,7 +47,7 @@ export default function Navbar() {
       name: t("services", language),
       href: "#services",
       children: [
-        { name: t("Vente vehicle neuf", language), href: "/pages/logos" },
+        // { name: t("Vente vehicle neuf", language), href: "/pages/logos" },
         { name: t("Atelier", language), href: "/pages/atelier" },
 
         {
@@ -63,7 +57,7 @@ export default function Navbar() {
         { name: t("Service assurance", language), href: "/pages/assurence" },
       ],
     },
-    { name: t("nosreferences", language), href: "/pages/logos" },
+    { name: t("Vente vehicle neuf", language), href: "/pages/logos" },
     { name: t("gallery", language), href: "/pages/gallery" },
     { name: t("contact", language), href: "#contact" },
   ];
@@ -161,30 +155,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-9 w-9 rounded-full"
-              >
-                <Globe className="h-4 w-4 text-gray-300" />
-                <span className="sr-only">Toggle language</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setLanguage("fr")}>
-                Français
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("ar")}>
-                العربية
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setLanguage("en")}>
-                English
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           <Button
             size="sm"
             className="bg-[#E71609] hover:bg-red-700 text-white ml-2"
@@ -242,47 +212,6 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-
-              <div className="mt-4 border-t pt-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Globe className="h-4 w-4" />
-                  <span className="text-sm font-medium text-gray-600">
-                    {t("language", language)}
-                  </span>
-                </div>
-                <div className="grid grid-cols-3 gap-2">
-                  <Button
-                    variant={language === "fr" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setLanguage("fr")}
-                    className={
-                      language === "fr" ? "bg-red-600 hover:bg-red-700" : ""
-                    }
-                  >
-                    FR
-                  </Button>
-                  <Button
-                    variant={language === "ar" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setLanguage("ar")}
-                    className={
-                      language === "ar" ? "bg-red-600 hover:bg-red-700" : ""
-                    }
-                  >
-                    AR
-                  </Button>
-                  <Button
-                    variant={language === "en" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setLanguage("en")}
-                    className={
-                      language === "en" ? "bg-red-600 hover:bg-red-700" : ""
-                    }
-                  >
-                    EN
-                  </Button>
-                </div>
-              </div>
             </nav>
           </div>
         </div>

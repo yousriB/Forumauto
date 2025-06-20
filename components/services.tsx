@@ -10,8 +10,13 @@ export default function Services() {
 
   // Sample car images array - replace with your actual car images
   const carImages = [
-    "https://catalogue.automobile.tn/big/2024/10/47244.webp?t=1730749863",
-    "https://catalogue.automobile.tn/big/2025/06/47403.webp?t=1750093651",
+    "/testdrive/1.png",
+    "/testdrive/3.png",
+    "/testdrive/4.png",
+    "/testdrive/7.png",
+    "/testdrive/5.png",
+    "/testdrive/2.png",
+    "/testdrive/6.png",
 
     // Add more car images as needed
   ];
@@ -87,7 +92,7 @@ export default function Services() {
                   alt="Car"
                   width={800}
                   height={100}
-                  className="filter w-[300px] md:w-[250px] transition-opacity duration-300"
+                  className="filter w-[300px]  md:w-[280px] transition-opacity duration-300"
                 />
 
                 {/* Right Arrow */}
