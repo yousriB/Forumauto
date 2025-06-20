@@ -63,7 +63,7 @@ export default function Navbar() {
         { name: t("Service assurance", language), href: "/pages/assurence" },
       ],
     },
-    { name: t("nosreferences", language), href: "#gallery" },
+    { name: t("nosreferences", language), href: "/pages/logos" },
     { name: t("gallery", language), href: "/pages/gallery" },
     { name: t("contact", language), href: "#contact" },
   ];
@@ -99,7 +99,7 @@ export default function Navbar() {
               <img src="/images/logoo.png" alt="" />
             </a>
           </div>
-          {/* <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <a
               href="https://facebook.com"
               target="_blank"
@@ -124,7 +124,7 @@ export default function Navbar() {
             >
               <Linkedin className="h-6 w-6" />
             </a>
-          </div> */}
+          </div>
         </div>
 
         {/* Desktop Navigation */}

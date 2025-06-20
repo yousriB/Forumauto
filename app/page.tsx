@@ -21,8 +21,8 @@ export default function Home() {
         <main>
           <Hero />
           <Services />
-          <AutomobileCarousel />
           <Showroom />
+          <AutomobileCarousel />
           <Stats />
           <Testimonials />
           {/* <Appointment /> */}
