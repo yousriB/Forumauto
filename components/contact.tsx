@@ -176,7 +176,10 @@ export default function Contact() {
                 <Facebook className="h-5 w-5 text-[#E71609] mt-1" />
                 <div>
                   <h3 className="font-semibold">Facebook</h3>
-                  <a href="#" className="text-[#E71609] hover:underline">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61550915821033&locale=fr_FR"
+                    className="text-[#E71609] hover:underline"
+                  >
                     Forum Auto Gabès
                   </a>
                 </div>

@@ -10,13 +10,13 @@ export default function Services() {
 
   // Sample car images array - replace with your actual car images
   const carImages = [
+    "/testdrive/7.png",
     "/testdrive/1.png",
     "/testdrive/2.png",
     "/testdrive/3.png",
     "/testdrive/4.png",
     "/testdrive/5.png",
     "/testdrive/6.png",
-    "/testdrive/7.png",
 
     // Add more car images as needed
   ];

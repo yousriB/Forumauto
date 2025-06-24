@@ -61,14 +61,14 @@ export default function Footer() {
                 <span className="sr-only">Facebook</span>
               </a>
               <a
-                href="https://www.instagram.com/forumautogabes/"
+                href="https://www.instagram.com/forum_auto_gabes/"
                 className="text-white hover:text-red-200"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href="https://www.linkedin.com/company/forum-auto-gabes/"
+                href="https://www.linkedin.com/company/103198669/admin/dashboard/"
                 className="text-white hover:text-red-200"
               >
                 <Linkedin className="h-5 w-5" />

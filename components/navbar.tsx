@@ -95,7 +95,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61550915821033&locale=fr_FR"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-[#E71609]"
@@ -103,7 +103,7 @@ export default function Navbar() {
               <Facebook className="h-6 w-6" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/forum_auto_gabes/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-[#E71609]"
@@ -111,7 +111,7 @@ export default function Navbar() {
               <Instagram className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/103198669/admin/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-[#E71609]"
