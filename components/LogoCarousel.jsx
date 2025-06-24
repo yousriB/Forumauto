@@ -16,8 +16,10 @@ const brands = [
   { name: "FORD", image: "/carlogos/ford.png" },
   { name: "DFSK", image: "/carlogos/dfsk.png" },
   { name: "DONGFENG", image: "/carlogos/dongfeng.png" },
-  { name: "DACIA", image: "/carlogos/dacia.png" },
+  { name: "BYD", image: "/carlogos/byd.png" },
   { name: "RENAULT", image: "/carlogos/renault.png" },
+  { name: "DACIA", image: "/carlogos/dacia.png" },
+  { name: "NISSAN", image: "/carlogos/nissan.png" },
 ];
 
 export default function LogoCarousel() {
@@ -119,13 +121,13 @@ export default function LogoCarousel() {
             {extendedFirstRow.map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
-                className="flex-shrink-0 w-40 bg-white flex items-center justify-center rounded-xl cursor-pointer transition"
+                className="flex-shrink-0 h-56 w-56 bg-white flex items-center justify-center rounded-xl cursor-pointer transition"
                 onClick={() => router.push(`/pages/cars?brand=${brand.name}`)}
               >
                 <img
                   src={brand.image}
                   alt={brand.name}
-                  className="w-full max-w-12 h-full object-contain p-4 transition duration-300"
+                  className="w-full max-w-12 h-full object-cover p-4 transition duration-300"
                 />
               </div>
             ))}

@@ -11,12 +11,12 @@ export default function Services() {
   // Sample car images array - replace with your actual car images
   const carImages = [
     "/testdrive/1.png",
+    "/testdrive/2.png",
     "/testdrive/3.png",
     "/testdrive/4.png",
-    "/testdrive/7.png",
     "/testdrive/5.png",
-    "/testdrive/2.png",
     "/testdrive/6.png",
+    "/testdrive/7.png",
 
     // Add more car images as needed
   ];
@@ -120,6 +120,9 @@ export default function Services() {
                 </button>
               </div>
             </div>
+            <h1 className="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
+              Test Drive
+            </h1>
             <a
               className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md cursor-pointer mt-4"
               onClick={() => router.push("/pages/rendevouz")}

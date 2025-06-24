@@ -22,8 +22,10 @@ const Page = () => {
     { name: "FORD", image: "/carlogos/ford.png" },
     { name: "DFSK", image: "/carlogos/dfsk.png" },
     { name: "DONGFENG", image: "/carlogos/dongfeng.png" },
-    { name: "DACIA", image: "/carlogos/dacia.png" },
+    { name: "BYD", image: "/carlogos/byd.png" },
     { name: "RENAULT", image: "/carlogos/renault.png" },
+    { name: "DACIA", image: "/carlogos/dacia.png" },
+    { name: "NISSAN", image: "/carlogos/nissan.png" },
   ];
 
   const [ref, inView] = useInView({
