@@ -22,7 +22,7 @@ export default function Newsletter() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/subscribe-newsletter", {
+      const response = await fetch("/api/newsletter-subscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
