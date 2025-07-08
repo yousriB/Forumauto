@@ -68,7 +68,7 @@ export default function Appointment() {
     const appointmentData = { ...formData, date, time };
 
     try {
-      const response = await fetch("/api/send-email", {
+      const response = await fetch("/api/appointment-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export default function Appointment() {
 
       const result = await response.json();
 
-      if (response.ok) {
+      if (response.ok && result.success) {
         alert(
           "Rendez-vous pris avec succès! Nous vous contacterons bientôt pour confirmer."
         );
@@ -97,10 +97,11 @@ export default function Appointment() {
         setTime("");
         setStep(1);
       } else {
-        alert(`Erreur: ${result.message}`);
+        alert(`Erreur: ${result.error || result.message}`);
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error sending appointment request:", error);
+      alert("Erreur lors de l'envoi de la demande de rendez-vous.");
     }
   };
 

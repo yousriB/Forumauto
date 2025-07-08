@@ -25,7 +25,6 @@ export default function Home() {
           <AutomobileCarousel />
           <Stats />
           <Testimonials />
-          {/* <Appointment /> */}
           <Newsletter />
           <Contact />
         </main>

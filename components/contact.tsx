@@ -29,7 +29,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/send-contact-email", {
+      const response = await fetch("/api/contact-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

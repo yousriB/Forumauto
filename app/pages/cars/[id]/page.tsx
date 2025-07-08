@@ -96,7 +96,7 @@ const CarDetailsPage = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/send-quote-request", {
+      const response = await fetch("/api/devis-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

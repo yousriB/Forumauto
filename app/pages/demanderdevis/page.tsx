@@ -129,9 +129,40 @@ const page = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    // Handle form submission here
-    console.log("Form Submitted!", formData);
-    // Perform API call if necessary
+    try {
+      const response = await fetch("/api/custom-devis-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Success: show a message or reset the form
+        alert("Votre demande a été envoyée avec succès !");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          cinOrNf: "",
+          email: "",
+          marque: "",
+          model: "",
+          version: "",
+          region: "",
+        });
+        setFilteredModels([]);
+        setFilteredVersions([]);
+      } else {
+        // Error: show error message
+        alert(data.error || "Une erreur est survenue lors de l'envoi.");
+      }
+    } catch (error) {
+      alert("Erreur réseau ou serveur.");
+    }
   };
 
   return (
