@@ -3,154 +3,17 @@
 import Image from "next/image";
 import { useMemo, useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { galleryImages } from "../data/galleryImages";
 
-const galleryImages = [
-  // Showroom images
-  {
-    id: 1,
-    src: "/gallery/showroom/1.jpg",
-    alt: "Showroom 1",
-    category: "Showroom",
-  },
-  {
-    id: 2,
-    src: "/gallery/showroom/2.jpg",
-    alt: "Showroom 2",
-    category: "Showroom",
-  },
-  {
-    id: 3,
-    src: "/gallery/showroom/3.jpg",
-    alt: "Showroom 3",
-    category: "Showroom",
-  },
-  {
-    id: 4,
-    src: "/gallery/showroom/4.jpg",
-    alt: "Showroom 4",
-    category: "Showroom",
-  },
-  {
-    id: 5,
-    src: "/gallery/showroom/5.jpg",
-    alt: "Showroom 5",
-    category: "Showroom",
-  },
-  {
-    id: 6,
-    src: "/gallery/showroom/6.jpg",
-    alt: "Showroom 6",
-    category: "Showroom",
-  },
-  // Véhicules images
-  {
-    id: 7,
-    src: "/gallery/vehicules/1.jpg",
-    alt: "Véhicule 1",
-    category: "Véhicules",
-  },
-  {
-    id: 8,
-    src: "/gallery/vehicules/2.jpg",
-    alt: "Véhicule 2",
-    category: "Véhicules",
-  },
-  {
-    id: 9,
-    src: "/gallery/vehicules/3.jpg",
-    alt: "Véhicule 3",
-    category: "Véhicules",
-  },
-  {
-    id: 10,
-    src: "/gallery/vehicules/4.jpg",
-    alt: "Véhicule 4",
-    category: "Véhicules",
-  },
-  {
-    id: 11,
-    src: "/gallery/vehicules/5.jpg",
-    alt: "Véhicule 5",
-    category: "Véhicules",
-  },
-  {
-    id: 12,
-    src: "/gallery/vehicules/6.jpg",
-    alt: "Véhicule 6",
-    category: "Véhicules",
-  },
-  {
-    id: 13,
-    src: "/gallery/vehicules/7.jpg",
-    alt: "Véhicule 7",
-    category: "Véhicules",
-  },
-  // Atelier images
-  {
-    id: 14,
-    src: "/gallery/atelier/1.jpg",
-    alt: "Atelier 1",
-    category: "Atelier",
-  },
-  {
-    id: 15,
-    src: "/gallery/atelier/2.jpg",
-    alt: "Atelier 2",
-    category: "Atelier",
-  },
-  {
-    id: 16,
-    src: "/gallery/atelier/3.jpg",
-    alt: "Atelier 3",
-    category: "Atelier",
-  },
-  {
-    id: 17,
-    src: "/gallery/atelier/4.jpg",
-    alt: "Atelier 4",
-    category: "Atelier",
-  },
-  {
-    id: 18,
-    src: "/gallery/atelier/5.jpg",
-    alt: "Atelier 5",
-    category: "Atelier",
-  },
-  {
-    id: 19,
-    src: "/gallery/atelier/6.jpg",
-    alt: "Atelier 6",
-    category: "Atelier",
-  },
-  {
-    id: 20,
-    src: "/gallery/atelier/7.jpg",
-    alt: "Atelier 7",
-    category: "Atelier",
-  },
-  // Events images
-  { id: 21, src: "/gallery/events/1.jpg", alt: "Event 1", category: "Events" },
-  { id: 22, src: "/gallery/events/2.jpg", alt: "Event 2", category: "Events" },
-  { id: 23, src: "/gallery/events/3.jpg", alt: "Event 3", category: "Events" },
-  { id: 24, src: "/gallery/events/4.jpg", alt: "Event 4", category: "Events" },
-  { id: 25, src: "/gallery/events/5.jpg", alt: "Event 5", category: "Events" },
-  { id: 26, src: "/gallery/events/6.jpg", alt: "Event 6", category: "Events" },
-  // Services (empty for now)
-];
+const CLOUDINARY_BASE_URL =
+  "https://res.cloudinary.com/dnyturru8/image/upload/f_auto,q_auto";
 
-const categories = [
-  "Tous",
-  "Showroom",
-  "Véhicules",
-  "Atelier",
-  "Services",
-  "Events",
-];
+const categories = ["Showroom", "Véhicules", "Atelier", "Events"];
 
 const IMAGES_PER_PAGE = 6;
 
 export default function ImageGallery() {
-  const [selectedCategory, setSelectedCategory] = useState("Tous");
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -160,9 +23,7 @@ export default function ImageGallery() {
   }, [selectedCategory]);
 
   const filteredImages = useMemo(() => {
-    return selectedCategory === "Tous"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === selectedCategory);
+    return galleryImages.filter((img) => img.category === selectedCategory);
   }, [selectedCategory]);
 
   const totalPages = Math.ceil(filteredImages.length / IMAGES_PER_PAGE);
