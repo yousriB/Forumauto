@@ -28,25 +28,6 @@ export default function GalleryPage() {
           <ImageGallery />
         </div>
       </section>
-
-      {/* Video Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <div className="inline-block rounded-full bg-[#E71609] px-4 py-2 text-sm font-medium text-white mb-4">
-              Vidéos
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl mb-4 text-[#E71609]">
-              Nos Vidéos
-            </h2>
-            <p className="text-lg text-gray-600">
-              Découvrez nos vidéos présentant nos installations et nos véhicules
-              en action.
-            </p>
-          </div>
-          <VideoSection />
-        </div>
-      </section>
     </ServiceLayout>
   );
 }

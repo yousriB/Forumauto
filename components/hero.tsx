@@ -7,7 +7,6 @@ import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { t } from "@/lib/i18n";
 import ScrollLink from "@/components/scroll-link";
-import Stats from "@/components/stats";
 
 export default function Hero() {
   const { language, dir } = useLanguage();
@@ -25,7 +24,7 @@ export default function Hero() {
         className="absolute inset-0 object-cover object-center w-full h-full"
       >
         <source
-          src="https://res.cloudinary.com/dr54sd7mx/video/upload/v1747224933/forumautogabes/hero.mp4"
+          src="https://res.cloudinary.com/dnyturru8/video/upload/v1752399792/0514_hxsfcu.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.

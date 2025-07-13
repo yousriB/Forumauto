@@ -45,7 +45,7 @@ export default function MagasinPage() {
       icon={Building2}
     >
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block rounded-full bg-[#E71609] px-4 py-2 text-sm font-medium text-white mb-4">
@@ -61,10 +61,7 @@ export default function MagasinPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {showroomFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-              >
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md">
                 <div className="flex items-center mb-4">
                   <div className="bg-red-100 p-3 rounded-full">
                     <feature.icon className="h-6 w-6 text-[#E71609]" />
@@ -76,46 +73,6 @@ export default function MagasinPage() {
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block rounded-full bg-[#E71609] px-4 py-2 text-sm font-medium text-white mb-4">
-              Galerie
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl mb-4 text-[#E71609]">
-              Galerie du Showroom
-            </h2>
-            <p className="text-lg text-gray-600">
-              Découvrez notre espace à travers des images captivantes.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img
-                src="/placeholder.svg?height=300&width=400"
-                alt="Showroom intérieur"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img
-                src="/placeholder.svg?height=300&width=400"
-                alt="Voitures exposées"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img
-                src="/placeholder.svg?height=300&width=400"
-                alt="Parking showroom"
-                className="w-full h-64 object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>
