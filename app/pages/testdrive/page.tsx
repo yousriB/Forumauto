@@ -13,15 +13,16 @@ import {
 } from "@/components/ui/select";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { User } from "lucide-react";
 
 const carOptions = [
-  { brand: "CHEVROLET", model: "Groove" },
-  { brand: "CHEVROLET", model: "Captiva" },
-  { brand: "CHERY", model: "Tiggo 2 Pro" },
-  { brand: "GWM", model: "Haval Jolion" },
-  { brand: "BYD", model: "Atto 3" },
-  { brand: "MG", model: "ZS" },
-  { brand: "FORD", model: "Focus" },
+  { brand: "FORD", model: "Ranger" },
+  { brand: "FORD", model: "Ranger Wildtrak" },
+  { brand: "FORD", model: "Ranger Raptor" },
+  { brand: "DFSK", model: "Glory 500" },
+  { brand: "DONGFENG", model: "Forthing T5 EVO" },
+  { brand: "GAC", model: "Emzoom" },
+  { brand: "SUZUKI", model: "Jimny" },
 ];
 
 export default function TestDrivePage() {
@@ -76,10 +77,14 @@ export default function TestDrivePage() {
           className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
         >
           <div className="p-6 md:p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-8 text-center">
+            <h3 className="text-xl font-semibold text-gray-900 mb-8 text-start">
               Formulaire de test drive
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
+              <h4 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
+                <User className="mr-2 h-5 w-5 text-[#E71609]" />
+                Vos informations
+              </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nom complet</Label>
