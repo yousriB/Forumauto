@@ -125,7 +125,7 @@ export default function Services() {
             </h1>
             <a
               className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md cursor-pointer mt-4"
-              onClick={() => router.push("/pages/rendevouz")}
+              onClick={() => router.push("/pages/testdrive")}
             >
               Prendre rendez-vous
             </a>
@@ -190,13 +190,6 @@ export default function Services() {
             style={{ background: "#000000" }}
           >
             <div className="flex flex-col items-center mb-4">
-              <Image
-                src="/marque/rondala.png"
-                alt="Rendez-vous"
-                width={50}
-                height={50}
-                className="w-[40px] md:w-[50px]"
-              />
               <h2 className="text-xl md:text-2xl font-semibold mb-3 text-center mt-4">
                 Prenez rendez-vous <br /> pour l'entretien de votre véhicule
               </h2>

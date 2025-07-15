@@ -158,7 +158,7 @@ export default function Navbar() {
           <Button
             size="sm"
             className="bg-[#E71609] hover:bg-red-700 text-white ml-2"
-            onClick={() => handleLinkClick("#appointment")}
+            onClick={() => handleLinkClick("/pages/rendevouz")}
           >
             {t("appointment.title", language)}
           </Button>
