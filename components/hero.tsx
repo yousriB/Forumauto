@@ -7,9 +7,11 @@ import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { t } from "@/lib/i18n";
 import ScrollLink from "@/components/scroll-link";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
   const { language, dir } = useLanguage();
+  const router = useRouter();
 
   return (
     <section
@@ -74,11 +76,11 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 pt-6"
           >
             <Button
-              asChild
               size="lg"
               className="bg-[#E71609] hover:bg-[#E71609] text-white font-bold shadow-lg transition-all duration-300 group"
+              onClick={() => router.push("/pages/rendevouz")}
             >
-              <ScrollLink href="#appointment" className="flex items-center">
+              <span className="flex items-center">
                 {t("hero.cta.appointment", language)}
                 <ChevronRight
                   className={`${
@@ -87,7 +89,7 @@ export default function Hero() {
                     dir === "rtl" ? "-translate-x-1" : "translate-x-1"
                   }`}
                 />
-              </ScrollLink>
+              </span>
             </Button>
 
             <Button

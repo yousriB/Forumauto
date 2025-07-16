@@ -212,7 +212,7 @@ const CarDetailsPage = () => {
               <div className="sm:container p-1">
                 <div className="text-center mb-10">
                   <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
-                    Rendez-vous / Demande
+                    Demander un devis
                   </div>
                   <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-3 text-[#E71609]">
                     Vos Coordonnées
