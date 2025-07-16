@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { User } from "lucide-react";
+import SuccessMessage from "@/components/SuccessMessage";
 
 const carOptions = [
   { brand: "FORD", model: "Ranger" },
@@ -33,6 +34,8 @@ export default function TestDrivePage() {
     carModel: "",
   });
 
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -47,17 +50,42 @@ export default function TestDrivePage() {
     setFormData((prev) => ({ ...prev, carModel: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(
-      `Demande de test drive envoyée!\nNom: ${formData.name}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nModèle: ${formData.carModel}`
-    );
-    setFormData({ name: "", email: "", phone: "", carModel: "" });
+
+    try {
+      const response = await fetch("/api/test_drive_requests", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullname: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          model: formData.carModel,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setFormData({ name: "", email: "", phone: "", carModel: "" });
+      } else {
+        alert("Erreur lors de l'envoi : " + (data.error || "Inconnue"));
+      }
+    } catch (error) {
+      alert("Erreur réseau ou serveur.");
+    }
   };
 
   return (
     <section id="testdrive" className="py-12 md:py-28 bg-white">
       <div className="container">
+        {showSuccess && (
+          <SuccessMessage message="Demande de test drive envoyée avec succès !" />
+        )}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
             Test Drive

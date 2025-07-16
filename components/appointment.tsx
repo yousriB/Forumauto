@@ -25,6 +25,7 @@ import {
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Checkbox } from "@/components/ui/checkbox";
+import SuccessMessage from "@/components/SuccessMessage";
 
 export default function Appointment() {
   const [date, setDate] = useState<Date | null>(null);
@@ -41,6 +42,7 @@ export default function Appointment() {
     serviceType: [] as string[], // Changed to array
     message: "",
   });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -79,9 +81,7 @@ export default function Appointment() {
       const result = await response.json();
 
       if (response.ok && result.success) {
-        alert(
-          "Rendez-vous pris avec succès! Nous vous contacterons bientôt pour confirmer."
-        );
+        setShowSuccess(true);
         setFormData({
           name: "",
           phone: "",
@@ -152,6 +152,9 @@ export default function Appointment() {
     <section id="appointment" className="py-12 md:py-28 bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          {showSuccess && (
+            <SuccessMessage message="Rendez-vous pris avec succès! Nous vous contacterons bientôt pour confirmer." />
+          )}
           <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
             Rendez-vous
           </div>

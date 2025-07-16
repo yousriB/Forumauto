@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { t } from "@/lib/i18n";
+import SuccessMessage from "@/components/SuccessMessage";
 
 export default function Contact() {
   const { language, dir } = useLanguage();
@@ -18,6 +19,8 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -39,10 +42,8 @@ export default function Contact() {
 
       if (response.ok) {
         console.log("Contact form submitted:", formData);
-        // Reset form
         setFormData({ name: "", email: "", message: "" });
-        // Show success message
-        alert("Message envoyé avec succès!");
+        setShowSuccess(true);
       } else {
         console.error("Failed to send contact email:", response.status);
         alert("Failed to send contact email. Please try again.");
@@ -60,6 +61,9 @@ export default function Contact() {
     >
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          {showSuccess && (
+            <SuccessMessage message="Message envoyé avec succès!" />
+          )}
           <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4 dark:bg-red-900 dark:text-red-200">
             {t("contact.us", language)}
           </div>

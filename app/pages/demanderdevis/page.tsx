@@ -13,6 +13,7 @@ import {
 import { User } from "lucide-react";
 import { motion } from "framer-motion";
 import React, { FormEvent, useState } from "react";
+import SuccessMessage from "@/components/SuccessMessage";
 
 // 24 governorates of Tunisia
 const regions = [
@@ -89,6 +90,7 @@ const page = () => {
 
   const [filteredModels, setFilteredModels] = useState<string[]>([]);
   const [filteredVersions, setFilteredVersions] = useState<string[]>([]);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   // Function to check if all required fields are filled
   const isFormValid = () => {
@@ -141,8 +143,7 @@ const page = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Success: show a message or reset the form
-        alert("Votre demande a été envoyée avec succès !");
+        setShowSuccess(true);
         setFormData({
           firstName: "",
           lastName: "",
@@ -157,7 +158,6 @@ const page = () => {
         setFilteredModels([]);
         setFilteredVersions([]);
       } else {
-        // Error: show error message
         alert(data.error || "Une erreur est survenue lors de l'envoi.");
       }
     } catch (error) {
@@ -168,6 +168,9 @@ const page = () => {
   return (
     <section className="bg-white shadow-md">
       <div className="sm:container p-1">
+        {showSuccess && (
+          <SuccessMessage message="Votre demande a été envoyée avec succès !" />
+        )}
         <div className="text-center mb-10">
           <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
             Demande de devis

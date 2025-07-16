@@ -10,6 +10,7 @@ import React, { FormEvent, useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter, useParams } from "next/navigation";
 import Technicalinfo from "@/components/technicalinfo";
+import SuccessMessage from "@/components/SuccessMessage";
 
 // Define the Car interface to match the JSON structure
 interface Car {
@@ -28,6 +29,7 @@ const CarDetailsPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [showForm, setShowForm] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -92,7 +94,6 @@ const CarDetailsPage = () => {
   };
 
   // Handle form submission
-  // Handle form submission
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
@@ -105,7 +106,7 @@ const CarDetailsPage = () => {
       });
 
       if (response.ok) {
-        alert("Votre demande de devis a été envoyée avec succès !");
+        setShowSuccess(true);
         setShowForm(false);
         setFormData({
           email: "",
@@ -200,6 +201,9 @@ const CarDetailsPage = () => {
         </div>
         {/* Form Section */}
         <div className="bg-white p-6 rounded-lg  my-5 text-center">
+          {showSuccess && (
+            <SuccessMessage message="Votre demande de devis a été envoyée avec succès !" />
+          )}
           {!showForm ? (
             <Button
               className="w-fit bg-[#E71609] hover:bg-[#E71609]/90 text-white py-3 px-6 text-base"
