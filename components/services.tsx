@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Services() {
   const router = useRouter();
@@ -87,13 +88,27 @@ export default function Services() {
                 </button>
 
                 {/* Car Image */}
-                <Image
-                  src={carImages[currentImageIndex]}
-                  alt="Car"
-                  width={800}
-                  height={100}
-                  className="filter w-[300px]  md:w-[280px] transition-opacity duration-300"
-                />
+                <div className="relative w-[300px] md:w-[280px] h-[280px] flex items-center justify-center overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={carImages[currentImageIndex]}
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -50 }}
+                      transition={{ duration: 0.4 }}
+                      className="absolute w-full  h-[280px] flex items-center justify-center"
+                    >
+                      <Image
+                        src={carImages[currentImageIndex]}
+                        alt="Car"
+                        width={800}
+                        height={100}
+                        className="filter w-[300px] md:w-[280px]"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
 
                 {/* Right Arrow */}
                 <button
