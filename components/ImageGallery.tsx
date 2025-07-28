@@ -5,10 +5,7 @@ import { useMemo, useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { galleryImages } from "../data/galleryImages";
 
-const CLOUDINARY_BASE_URL =
-  "https://res.cloudinary.com/dnyturru8/image/upload/f_auto,q_auto";
-
-const categories = ["Showroom", "Véhicules", "Atelier", "Events"];
+const categories = ["Showroom", "Atelier", "Events", "Magasin", "Labo"];
 
 const IMAGES_PER_PAGE = 6;
 
