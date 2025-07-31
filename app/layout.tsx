@@ -16,6 +16,11 @@ export const metadata = {
   description:
     "Service professionnel, véhicules de qualité, clients satisfaits.",
   generator: "v0.dev",
+  icons: {
+    icon: "/images/icon.png",
+    shortcut: "/images/icon.png",
+    apple: "/images/icon.png",
+  },
 };
 
 export default function RootLayout({
