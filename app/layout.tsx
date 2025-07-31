@@ -32,6 +32,8 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="light dark" />
+        <link rel="icon" href="/images/icon.png" />
+        <meta property="og:image" content="/images/icon.png" />
       </head>
       <body className={`${inter.variable} dark-mode-transition font-sans`}>
         <ThemeProvider
