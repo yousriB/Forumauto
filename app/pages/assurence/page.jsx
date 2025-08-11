@@ -2,12 +2,10 @@ import { Shield, CheckCircle, Phone, Mail } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 
 const assuranceFeatures = [
-  "Couverture tous risques complète",
-  "Assistance dépannage 24h/24 et 7j/7",
-  "Véhicule de remplacement inclus",
-  "Protection juridique automobile",
-  "Garantie valeur à neuf",
-  "Couverture des accessoires et équipements",
+  "Un accompagnement personnalisé",
+  "Une prise en charge rapide",
+  "Des réparations de qualité",
+  "Des partenariats avec les plus grandes compagnies d'assurance",
 ];
 
 const assuranceTypes = [
@@ -85,21 +83,30 @@ export default function AssurancePage() {
       description="Protégez votre véhicule avec nos solutions d'assurance complètes et adaptées à vos besoins."
       icon={Shield}
     >
-      {/* Features Section */}
+      {/* Main Content Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block rounded-full bg-[#E71609] px-4 py-2 text-sm font-medium text-white mb-4">
-              Nos Garanties
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl mb-4 text-[#E71609]">
-              Protection Complète
+          <div className="prose lg:prose-xl max-w-none">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl mb-8 text-[#E71609]">
+              Notre Service d'Assurance
             </h2>
-            <p className="text-lg text-gray-600">
-              Des garanties adaptées à tous les besoins et budgets
+            <p className="text-lg text-gray-700 mb-6">
+              Notre société est spécialisée dans les services liés à l'assurance automobile et la réparation de véhicules. Grâce à notre expérience et à notre professionnalisme, nous avons su établir plusieurs conventions avec différentes compagnies d'assurance, afin de garantir à nos clients un service rapide, fiable et conforme aux normes du secteur.
             </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Nous vous accompagnons tout au long du processus, de la déclaration du sinistre jusqu'à la réparation complète de votre véhicule. Que ce soit pour un accident, un bris de glace, ou tout autre dommage, notre équipe est là pour vous assister.
+            </p>
+            <p className="text-lg text-gray-700 mb-8">
+              Nous proposons également un service complet de réparation de véhicules, assuré par des techniciens qualifiés et utilisant des équipements de dernière génération, afin de vous offrir un résultat optimal et sécurisé.
+            </p>
+            
+            <h3 className="text-2xl font-semibold text-[#E71609] mb-4 flex items-center space-x-4">                   <CheckCircle className="h-7 w-7 text-[#E71609]" />
+            <span>Nos engagements</span> </h3>
+         
+            
+           
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {assuranceFeatures.map((feature, index) => (
               <div
                 key={index}
@@ -115,103 +122,7 @@ export default function AssurancePage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-100 to-[#E71609]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block rounded-full bg-[#E71609] px-4 py-2 text-sm font-medium text-white mb-4">
-              Nos Formules
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl mb-4 text-[#E71609]">
-              Formules d'Assurance
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Choisissez la formule qui correspond le mieux à vos besoins et à
-              votre budget
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {assuranceTypes.map((type, index) => (
-              <div
-                key={index}
-                className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                  type.popular ? "border-2 border-[#E71609]" : ""
-                }`}
-                style={{
-                  background: `linear-gradient(135deg, ${type.color}/10 0%, white 100%)`,
-                }}
-              >
-                {type.popular && (
-                  <span className="absolute top-0 left-0 bg-[#E71609] text-white text-xs font-bold px-3 py-1 rounded-br-lg">
-                    Populaire
-                  </span>
-                )}
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-[#E71609] mb-2">
-                      {type.name}
-                    </h3>
-                    <p className="text-lg font-medium text-gray-600 mb-2">
-                      {type.subtitle}
-                    </p>
-                    <p className="text-gray-500 text-sm">{type.description}</p>
-                  </div>
-                  <div className="text-center mb-6">
-                    <div className="inline-block bg-[#E71609] text-white rounded-lg px-5 py-3">
-                      <span className="text-3xl font-bold">{type.price}</span>
-                      <span className="text-base ml-1">{type.period}</span>
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                      <span className="w-2 h-2 bg-[#E71609] rounded-full mr-2"></span>
-                      Garanties incluses
-                    </h4>
-                    <ul className="space-y-3">
-                      {type.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className="flex items-center text-sm text-gray-700"
-                        >
-                          <CheckCircle className="h-5 w-5 text-[#E71609] mr-3" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  {type.notIncluded.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                        <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
-                        Non inclus
-                      </h4>
-                      <ul className="space-y-2">
-                        {type.notIncluded.map((feature, featureIndex) => (
-                          <li
-                            key={featureIndex}
-                            className="flex items-center text-sm text-gray-500"
-                          >
-                            <span className="w-5 h-5 mr-3"></span>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  <div className="space-y-3">
-                    <button className="w-full bg-[#E71609] text-white py-3 px-4 rounded-lg font-medium hover:bg-[#D11408] transition-colors">
-                      Demander un devis gratuit
-                    </button>
-                    <button className="w-full border-2 border-gray-300 text-gray-700 py-3 px-4 rounded-lg font-medium hover:border-[#E71609] hover:text-[#E71609] transition-colors">
-                      En savoir plus
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Contact Section */}
       <section className="py-16">
