@@ -17,7 +17,7 @@ import { User } from "lucide-react";
 import SuccessMessage from "@/components/SuccessMessage";
 
 const carOptions = [
-  { brand: "FORD", model: "Ranger" },
+  { brand: "FORD", model: "Ranger XLT" },
   { brand: "FORD", model: "Ranger Wildtrak" },
   { brand: "FORD", model: "Ranger Raptor" },
   { brand: "DFSK", model: "Glory 500" },

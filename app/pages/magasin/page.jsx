@@ -19,9 +19,9 @@ const showroomFeatures = [
   },
   {
     icon: Users,
-    title: "Experts Certifiés",
+    title: "Pièces des rechange d'origines",
     description:
-      "Une équipe de conseillers expérimentés pour un accompagnement personnalisé et professionnel.",
+      "Vente de pièces de rechange d'origine, toutes marques, avec garantie.",
   },
   {
     icon: MapPin,
@@ -33,7 +33,7 @@ const showroomFeatures = [
     icon: Clock,
     title: "Horaires Flexibles",
     description:
-      "Ouvert 7j/7 avec des créneaux adaptés à vos besoins, y compris le dimanche matin.",
+      "Ouvert 6j/7 avec des créneaux adaptés à vos besoins.",
   },
 ];
 
