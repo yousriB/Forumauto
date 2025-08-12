@@ -119,6 +119,10 @@ export default function AssurancePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10">
+            <img src="/images/assurance.jpg" alt="" />
+          </div>
         </div>
       </section>
 
