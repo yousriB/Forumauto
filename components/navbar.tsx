@@ -57,7 +57,7 @@ export default function Navbar() {
         { name: t("Service assurance", language), href: "/pages/assurence" },
       ],
     },
-    { name: t("Vente vehicle neuf", language), href: "/pages/logos" },
+    { name: t("Vente véhicule neuf", language), href: "/pages/logos" },
     { name: t("gallery", language), href: "/pages/gallery" },
     { name: t("contact", language), href: "#contact" },
   ];
