@@ -27,6 +27,7 @@ export async function POST(request) {
         car_model: model,
         car_version: version,
         region,
+        status:"pending",
       },
     ]);
 
