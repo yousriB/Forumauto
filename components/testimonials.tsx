@@ -14,7 +14,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Ahmed Ben Ali",
-      position: "Client depuis 2019",
+      position: "Client fidèle",
       rating: 5,
       text: "Service exceptionnel ! J'ai acheté ma voiture chez Forum Auto Gabès et je suis très satisfait. L'équipe est professionnelle et attentionnée. Le processus d'achat a été simple et transparent. Je recommande vivement.",
       image: "/images/testimonial-1.jpg",
