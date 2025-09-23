@@ -3,11 +3,11 @@ import { supabase } from "../../../lib/supabase";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body;
+    const { email } = body;
 
     const { data, error } = await supabase
-      .from("contact_messages")
-      .insert([{ name, email, message }])
+      .from("newsletter_subscriptions")
+      .insert([{ email }])
       .select();
 
     if (error) {
