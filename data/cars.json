@@ -3406,6 +3406,342 @@
       }
     ]
   },
+  {
+    "id": 134,
+    "brand": "CHERY",
+    "model": "Arrizo 8",
+    "version": "1.6 T-GDi Luxury BVA",
+    "price": 119900,
+    "image": "https://catalogue.automobile.tn/big/2025/07/47408.webp?t=1758275146",
+    "fuel": "Essence",
+    "gearbox": "Automatique",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "Disponible"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Berline"
+          },
+          {
+            "label": "Garantie",
+            "value": "7 ans ou 200000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "4"
+          },
+          {
+            "label": "Energie",
+            "value": "Essence"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "10 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "185 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "275 nm 2000 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1598 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Automatique"
+          },
+          {
+            "label": "Nombre de rapports",
+            "value": "7"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "4757 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1832 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1471 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "520 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "9.8 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "195 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation mixte",
+            "value": "6.2 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux | Genoux"
+          },
+          {
+            "label": "Alarme antivol",
+            "value": ""
+          },
+          {
+            "label": "Alerte de franchissement de ligne",
+            "value": ""
+          },
+          {
+            "label": "Allumage automatique des feux",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBA | EBD"
+          },
+          {
+            "label": "Contrôle de pression des pneus",
+            "value": ""
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Radar avant | Système de caméras 540°"
+          },
+          {
+            "label": "Conduite autonome",
+            "value": "Niveau 2"
+          },
+          {
+            "label": "Détecteur de fatigue",
+            "value": ""
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": "Adaptatif (ACC)"
+          },
+          {
+            "label": "Surveillance d’angle mort",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Baguettes extérieures d'encadrement des vitres",
+            "value": "Chrome"
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour | Avant | Arrières"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 18''"
+          },
+          {
+            "label": "Phares",
+            "value": "Matrix LED"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "12 haut-parleurs | Commandes au volant | Sony"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | Android Auto | Apple Carplay | Bluetooth | Commande vocale | Wifi | Chargeur de téléphone sans fil"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 12.3 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Avant | Réfrigéré | Arrière"
+          },
+          {
+            "label": "Appuis têtes arrières",
+            "value": "3"
+          },
+          {
+            "label": "Lumières d'ambiance",
+            "value": "LED"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Cuir perforé"
+          },
+          {
+            "label": "Sièges",
+            "value": "Électriques | Chauffants | Ventilés | Fonction mémoire"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur et passager"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Toit",
+            "value": "Ouvrant | Panoramique"
+          },
+          {
+            "label": "Volant",
+            "value": "Cuir | Chauffant | Multi-fonctions | Avec palettes"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur et en profondeur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Bouton Start & Stop",
+            "value": "Démarrage mains libres"
+          },
+          {
+            "label": "Clé intelligente",
+            "value": "Accès mains libres"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique | Bizone | Ventilation arrière"
+          },
+          {
+            "label": "Détecteur de pluie",
+            "value": ""
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Frein de stationnement",
+            "value": "Éléctrique"
+          },
+          {
+            "label": "Modes de conduite",
+            "value": "Sport | Eco"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Rabattables | Dégivrants | Avec clignotants intégrés"
+          },
+          {
+            "label": "Instrumentation digitale",
+            "value": "12.3 pouces"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
 
 
   {
