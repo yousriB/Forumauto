@@ -23058,7 +23058,7 @@
     "brand": "FORD",
     "model": "Ranger",
     "version": "2.0 L 170 ch 4x4 XLT BVA",
-    "price": 165000,
+    "price": 170000,
     "image": "https://catalogue.automobile.tn/big/2024/02/47095.webp?t=1741183993",
     "fuel": "Diesel",
     "gearbox": "Automatique",
@@ -24160,7 +24160,318 @@
       }
     ]
   },
-
+  {
+    "id": 132,
+    "brand": "FORD",
+    "model": "Ranger",
+    "version": "2.0 L 170 ch 4x4 XLT BVM",
+    "price": 155000,
+    "image": "https://catalogue.automobile.tn/big/2025/09/47432.webp?t=1757931911",
+    "fuel": "Diesel",
+    "gearbox": "Manuelle",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "1 mois"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Pick up"
+          },
+          {
+            "label": "Garantie",
+            "value": "3 ans ou 60.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "4"
+          },
+          {
+            "label": "Energie",
+            "value": "Diesel"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "9 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "170 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "405 nm 1750 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1996 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Manuelle"
+          },
+          {
+            "label": "Nombre de rapports",
+            "value": "6"
+          },
+          {
+            "label": "Transmission",
+            "value": "Intégrale"
+          },
+          {
+            "label": "Différentiel autobloquant",
+            "value": "Arrière"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "5370 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1918 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1884 mm"
+          },
+          {
+            "label": "Charge utile",
+            "value": "1100 KG"
+          },
+          {
+            "label": "Surface de chargement",
+            "value": "2.40 m²"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "11.6 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "180 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation urbaine",
+            "value": "8.2 L/100 km"
+          },
+          {
+            "label": "Consommation extra-urbaine",
+            "value": "7.1 L/100 km"
+          },
+          {
+            "label": "Consommation mixte",
+            "value": "6.5 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux | Genoux | Centraux"
+          },
+          {
+            "label": "Allumage automatique des feux",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Caméra de recul"
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Limiteur de vitesse",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Calandre",
+            "value": "Chromée"
+          },
+          {
+            "label": "Boulons de roues protégés",
+            "value": ""
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 18'' | Roue de secours en Aluminium"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "6 haut-parleurs"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | USB-C | Bluetooth | Commande vocale"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 10.1 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Avant | Arrière"
+          },
+          {
+            "label": "Appuis têtes arrières",
+            "value": "3"
+          },
+          {
+            "label": "Kit rangement",
+            "value": ""
+          },
+          {
+            "label": "Pommeau de levier de vitesse",
+            "value": "Cuir"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur et passager"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Vitres",
+            "value": "Pare-brise en verre feuilleté"
+          },
+          {
+            "label": "Volant",
+            "value": "Cuir | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur et en profondeur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "2 prises 12 V"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Manuelle"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Dégivrants | Avec clignotants intégrés"
+          },
+          {
+            "label": "Instrumentation digitale",
+            "value": "Digital Cockpit | 8 pouces"
+          },
+          {
+            "label": "Version pays chauds",
+            "value": ""
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
   {
     "id": 140,
     "brand": "FORD",
