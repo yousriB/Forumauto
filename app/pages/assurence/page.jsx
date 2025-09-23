@@ -147,14 +147,14 @@ export default function AssurancePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+33123456789"
+                href="tel:+21629421277"
                 className="inline-flex items-center bg-white text-[#E71609] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                216 29 378 089
+                216 29 421 277
               </a>
               <a
-                href="mailto:assurance@showroom.com"
+                href="mailto:contact@forumautogabes.com"
                 className="inline-flex items-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#E71609] transition-colors"
               >
                 <Mail className="mr-2 h-5 w-5" />
