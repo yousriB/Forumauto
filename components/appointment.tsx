@@ -43,6 +43,26 @@ export default function Appointment() {
     message: "",
   });
   const [showSuccess, setShowSuccess] = useState(false);
+   const brands = [
+      { name: "ISUZU", value: "isuzu"},
+      { name: "CHEVROLET", value: "chevrolet" },
+      { name: "CHERY", value: "chery" },
+      { name: "GREAT WALL", value: "gwm" },
+      { name: "HAVAL", value: "haval" },
+      { name: "GAC", value: "gac" },
+      { name: "TOYOTA", value: "toyota" },
+      { name: "SUZUKI", value: "suzuki" },
+      { name: "MG", value: "mg" },
+      { name: "FORD", value: "ford" },
+      { name: "DFSK", value: "dfsk" },
+      { name: "DONGFENG", value: "dongfeng" },
+      { name: "BYD", value: "byd" },
+      { name: "RENAULT", value: "renault" },
+      { name: "DACIA", value: "dacia" },
+      { name: "NISSAN", value: "nissan" },
+      { name: "AUTRE", value: "autre" },
+    ];
+  
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -287,7 +307,12 @@ export default function Appointment() {
                           <SelectValue placeholder="Sélectionner" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="chery">CHERY</SelectItem>
+                          {brands.map((brand) => (
+                            <SelectItem key={brand.value} value={brand.value}>
+                              {brand.name}
+                            </SelectItem>
+                          ))}
+                          {/* <SelectItem value="chery">CHERY</SelectItem>
                           <SelectItem value="gwm">GWM</SelectItem>
                           <SelectItem value="byd">BYD</SelectItem>
                           <SelectItem value="haval">HAVAL</SelectItem>
@@ -297,7 +322,7 @@ export default function Appointment() {
                           <SelectItem value="mg">MG MOTORS</SelectItem>
                           <SelectItem value="ford">FORD</SelectItem>
                           <SelectItem value="dks">DFSK</SelectItem>
-                          <SelectItem value="dofeng">DONGFENG</SelectItem>
+                          <SelectItem value="dofeng">DONGFENG</SelectItem> */}
                         </SelectContent>
                       </Select>
                     </div>
