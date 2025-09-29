@@ -18,6 +18,9 @@ export default function Services() {
     "/testdrive/4.png",
     "/testdrive/5.png",
     "/testdrive/6.png",
+    "https://catalogue.automobile.tn/big/2025/07/47408.webp?t=1758275146",
+    "/testdrive/arrizo5.png",
+    "https://catalogue.automobile.tn/big/2025/06/47403.webp?t=1750093651"
 
     // Add more car images as needed
   ];

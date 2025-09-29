@@ -24,6 +24,9 @@ const carOptions = [
   { brand: "DONGFENG", model: "Forthing T5 EVO" },
   { brand: "GAC", model: "Emzoom" },
   { brand: "SUZUKI", model: "Jimny" },
+  { brand: "CHERY", model: " ARRIZO 8" },
+  { brand: "CHERY", model: " ARRIZO 5" },
+  { brand: "CHERY", model: "TIGGO 7 PRO" },
 ];
 
 export default function TestDrivePage() {
