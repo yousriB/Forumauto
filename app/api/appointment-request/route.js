@@ -16,9 +16,13 @@ export async function POST(request) {
       carChassis,
       serviceType, // array
       message,
-      date,
+      date: dateString,
       time,
     } = body;
+    
+    // Convert the date to a local date string to avoid timezone issues
+    const date = dateString ? new Date(dateString) : null;
+    const localDate = date ? new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0] : null;
 
     const { error } = await supabase.from("appointment_requests").insert([
       {
@@ -31,7 +35,7 @@ export async function POST(request) {
         car_chassis: carChassis,
         service_types: serviceType,
         message,
-        appointment_date: date,
+        appointment_date: localDate,
         appointment_time: time,
       },
     ]);
