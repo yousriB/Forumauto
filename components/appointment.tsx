@@ -345,7 +345,6 @@ export default function Appointment() {
                         value={formData.carChassis}
                         onChange={handleChange}
                         placeholder="Numéro de chassis"
-                        required
                       />
                     </div>
                     <div className="space-y-2">
@@ -409,7 +408,6 @@ export default function Appointment() {
                       disabled={
                         formData.carBrand === "" ||
                         formData.carModel === "" ||
-                        formData.carChassis === "" ||
                         formData.carYear === "" ||
                         formData.serviceType.length === 0
                       }
