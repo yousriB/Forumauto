@@ -60,7 +60,7 @@ export default function Appointment() {
       { name: "RENAULT", value: "renault" },
       { name: "DACIA", value: "dacia" },
       { name: "NISSAN", value: "nissan" },
-      { name: "AUTRE", value: "autre" },
+      { name: "AUTRE MARQUE", value: "autre marque" },
     ];
   
 
