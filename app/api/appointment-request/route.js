@@ -19,10 +19,18 @@ export async function POST(request) {
       date: dateString,
       time,
     } = body;
-    
-    // Convert the date to a local date string to avoid timezone issues
-    const date = dateString ? new Date(dateString) : null;
-    const localDate = date ? new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toISOString().split('T')[0] : null;
+
+    // Handle date conversion to avoid timezone issues
+    let localDate = null;
+    if (dateString) {
+      // Create a date object and format it as YYYY-MM-DD in local timezone
+      const date = new Date(dateString);
+      // Get the local date components to avoid timezone conversion issues
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      localDate = `${year}-${month}-${day}`;
+    }
 
     const { error } = await supabase.from("appointment_requests").insert([
       {
