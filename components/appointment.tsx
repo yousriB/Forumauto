@@ -43,26 +43,25 @@ export default function Appointment() {
     message: "",
   });
   const [showSuccess, setShowSuccess] = useState(false);
-   const brands = [
-      { name: "ISUZU", value: "isuzu"},
-      { name: "CHEVROLET", value: "chevrolet" },
-      { name: "CHERY", value: "chery" },
-      { name: "GREAT WALL", value: "gwm" },
-      { name: "HAVAL", value: "haval" },
-      { name: "GAC", value: "gac" },
-      { name: "TOYOTA", value: "toyota" },
-      { name: "SUZUKI", value: "suzuki" },
-      { name: "MG", value: "mg" },
-      { name: "FORD", value: "ford" },
-      { name: "DFSK", value: "dfsk" },
-      { name: "DONGFENG", value: "dongfeng" },
-      { name: "BYD", value: "byd" },
-      { name: "RENAULT", value: "renault" },
-      { name: "DACIA", value: "dacia" },
-      { name: "NISSAN", value: "nissan" },
-      { name: "AUTRE MARQUE", value: "autre marque" },
-    ];
-  
+  const brands = [
+    { name: "ISUZU", value: "isuzu" },
+    { name: "CHEVROLET", value: "chevrolet" },
+    { name: "CHERY", value: "chery" },
+    { name: "GREAT WALL", value: "gwm" },
+    { name: "HAVAL", value: "haval" },
+    { name: "GAC", value: "gac" },
+    { name: "TOYOTA", value: "toyota" },
+    { name: "SUZUKI", value: "suzuki" },
+    { name: "MG", value: "mg" },
+    { name: "FORD", value: "ford" },
+    { name: "DFSK", value: "dfsk" },
+    { name: "DONGFENG", value: "dongfeng" },
+    { name: "BYD", value: "byd" },
+    { name: "RENAULT", value: "renault" },
+    { name: "DACIA", value: "dacia" },
+    { name: "NISSAN", value: "nissan" },
+    { name: "AUTRE MARQUE", value: "autre marque" },
+  ];
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -86,8 +85,12 @@ export default function Appointment() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    // Prepare form data
-    const appointmentData = { ...formData, date, time };
+    // Prepare form data - format date as YYYY-MM-DD to avoid timezone issues
+    const appointmentData = {
+      ...formData,
+      date: date ? date.toISOString().split("T")[0] : null,
+      time,
+    };
 
     try {
       const response = await fetch("/api/appointment-request", {

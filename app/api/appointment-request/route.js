@@ -20,17 +20,8 @@ export async function POST(request) {
       time,
     } = body;
 
-    // Handle date conversion to avoid timezone issues
-    let localDate = null;
-    if (dateString) {
-      // Create a date object and format it as YYYY-MM-DD in local timezone
-      const date = new Date(dateString);
-      // Get the local date components to avoid timezone conversion issues
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, "0");
-      const day = String(date.getDate()).padStart(2, "0");
-      localDate = `${year}-${month}-${day}`;
-    }
+    // The date is now sent as YYYY-MM-DD string from frontend, so use it directly
+    const localDate = dateString;
 
     const { error } = await supabase.from("appointment_requests").insert([
       {
