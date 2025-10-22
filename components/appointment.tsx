@@ -1,3 +1,5 @@
+// app/appointment/page.tsx (or similar path for your Appointment component)
+
 "use client";
 
 import { useState } from "react";
@@ -8,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
 import { CalendarIcon, Clock, Car, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { format } from "date-fns";
+import { format } from "date-fns"; // Make sure format is imported
 import { fr } from "date-fns/locale";
 import {
   Popover,
@@ -88,7 +90,9 @@ export default function Appointment() {
     // Prepare form data - format date as YYYY-MM-DD to avoid timezone issues
     const appointmentData = {
       ...formData,
-      date: date ? date.toISOString().split("T")[0] : null,
+      // ===> THIS LINE HAS BEEN UPDATED <===
+      date: date ? format(date, "yyyy-MM-dd") : null,
+      // ===================================
       time,
     };
 
