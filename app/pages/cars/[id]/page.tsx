@@ -11,6 +11,7 @@ import Image from "next/image";
 import { useRouter, useParams } from "next/navigation";
 import Technicalinfo from "@/components/technicalinfo";
 import SuccessMessage from "@/components/SuccessMessage";
+import CarBadge from "@/components/ui/car-badge";
 
 // Define the Car interface to match the JSON structure
 interface Car {
@@ -21,6 +22,8 @@ interface Car {
   price: number;
   image: string;
   technicalSpecs: any;
+  new?: boolean;
+  promotion?: boolean;
 }
 
 const CarDetailsPage = () => {
@@ -182,6 +185,7 @@ const CarDetailsPage = () => {
           </div>
           {/* Car Image */}
           <div className="relative h-80 lg:h-[500px] w-full flex justify-center items-center">
+            <CarBadge isNew={car.new} isPromotion={car.promotion} />
             {car.image && !imageError ? (
               <Image
                 src={car.image}

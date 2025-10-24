@@ -1,6 +1,8 @@
 [
   {
     "id": 2,
+    "new":false,
+    "promotion":false,
     "brand": "CHEVROLET",
     "model": "Groove",
     "version": "1.5 L Premier",
@@ -302,6 +304,8 @@
   },
   {
     "id": 3,
+    "new":false,
+    "promotion":false,
     "brand": "CHEVROLET",
     "model": "Captiva",
     "version": "1.5 Turbo CVT 5 places",
@@ -631,6 +635,8 @@
   },
   {
     "id": 4,
+    "new":false,
+    "promotion":false,
     "brand": "CHEVROLET",
     "model": "Captiva",
     "version": "1.5 Turbo CVT 7 places",
@@ -960,6 +966,8 @@
   },
   {
     "id": 5,
+    "new":false,
+    "promotion":false,
     "brand": "CHEVROLET",
     "model": "Equinox",
     "version": "1.5 Turbo AWD BVA",
@@ -1251,6 +1259,8 @@
 
   ,{
     "id": 6,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Tiggo 1X populaire",
     "version": "1.0 L Turbo CVT",
@@ -1556,6 +1566,8 @@
   },
   {
     "id": 131,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Tiggo 3X",
     "version": "1.5 L Comfort BVM",
@@ -1844,6 +1856,8 @@
   },
   {
     "id": 7,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Tiggo 3X",
     "version": "1.0 L Turbo CVT Luxury",
@@ -2157,6 +2171,8 @@
   },
   {
     "id": 8,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Arrizo 5",
     "version": "1.5 L Comfort BVM",
@@ -2442,6 +2458,8 @@
   },
   {
     "id": 9,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Arrizo 5",
     "version": "1.5 L CVT Luxury",
@@ -2747,6 +2765,8 @@
   },
   {
     "id": 10,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Tiggo 4 Pro",
     "version": "1.5 L CVT",
@@ -3068,6 +3088,8 @@
   },
   {
     "id": 11,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Tiggo 7 Pro",
     "version": "1.5 T CVT",
@@ -3408,6 +3430,8 @@
   },
   {
     "id": 134,
+    "new":false,
+    "promotion":false,
     "brand": "CHERY",
     "model": "Arrizo 8",
     "version": "1.6 T-GDi Luxury BVA",
@@ -3746,6 +3770,8 @@
 
   {
     "id": 13,
+    "new":false,
+    "promotion":false,
     "brand": "GREAT WALL",
     "model": "Wingle 5 Simple Cabine",
     "version": "2.0 L Diesel 4x4",
@@ -4003,6 +4029,8 @@
   },
   {
     "id": 14,
+    "new":false,
+    "promotion":false,
     "brand": "GREAT WALL",
     "model": "Wingle 5 Double Cabine",
     "version": "2.0 L Diesel 4x2",
@@ -4264,6 +4292,8 @@
   },
   {
     "id": 15,
+    "new":false,
+    "promotion":false,
     "brand": "GREAT WALL",
     "model": "Poer MT",
     "version": "2.0 L Diesel 4x4",
@@ -4585,6 +4615,8 @@
   },
   {
     "id": 16,
+    "new":false,
+    "promotion":false,
     "brand": "GREAT WALL",
     "model": "Poer AT",
     "version": "2.0 L Diesel 4x4",
@@ -4966,6 +4998,8 @@
   },
   {
     "id":131 ,
+    "new":false,
+    "promotion":false,
     "brand": "GREAT WALL",
     "model": "Tank 300 HEV",
     "version": "2.0 L",
@@ -5330,6 +5364,8 @@
   },
   {
     "id": 132,
+    "new":false,
+    "promotion":false,
     "brand": "GREAT WALL",
     "model": "Tank 500 HEV",
     "version": "2.0 L",
@@ -5700,6 +5736,8 @@
 
   {
     "id": 17,
+    "new":false,
+    "promotion":false,
     "brand": "HAVAL",
     "model": "Jolion",
     "version": "1.5 T",
@@ -6053,6 +6091,8 @@
   },
   {
     "id": 18,
+    "new":false,
+    "promotion":false,
     "brand": "HAVAL",
     "model": "H6 Hybride",
     "version": "1.5 T HEV",
@@ -6449,6 +6489,8 @@
 
   {
     "id": 19,
+    "new":false,
+    "promotion":false,
     "brand": "GAC",
     "model": "Emzoom",
     "version": "1.5T GDI GL BVA",
@@ -6810,6 +6852,8 @@
   },
   {
     "id": 20,
+    "new":false,
+    "promotion":false,
     "brand": "GAC",
     "model": "Emzoom",
     "version": "1.5T GDI R-Style BVA",
@@ -7175,6 +7219,8 @@
   },
   {
     "id": 21,
+    "new":false,
+    "promotion":false,
     "brand": "GAC",
     "model": "Emkoo",
     "version": "1.5T GDI GL BVA",
@@ -7548,6 +7594,8 @@
   },
   {
     "id": 22,
+    "new":false,
+    "promotion":false,
     "brand": "GAC",
     "model": "GA4",
     "version": "1.5 L BVA",
@@ -7847,6 +7895,8 @@
 
   {
     "id": 23,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Yaris Hybride",
     "version": "1.5 L CVT France",
@@ -8160,6 +8210,8 @@
   },
   {
     "id": 25,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Yaris Cross Hybride",
     "version": "1.5 L CVT Bi-ton",
@@ -8469,6 +8521,8 @@
   },
   {
     "id": 26,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Yaris Cross Hybride",
     "version": "1.5 L CVT",
@@ -8774,6 +8828,8 @@
   },
   {
     "id": 27,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Yaris Cross Hybride",
     "version": "1.5 L CVT Bi-ton 2025",
@@ -9079,6 +9135,8 @@
   },
   {
     "id": 28,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Corolla Sedan Hybride",
     "version": "1.8 L",
@@ -9412,6 +9470,8 @@
   },
   {
     "id": 29,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "RAV 4 Hybride",
     "version": "2.5 L",
@@ -9757,6 +9817,8 @@
   },
   {
     "id": 30,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Land Cruiser 76",
     "version": "4.2 l",
@@ -9958,6 +10020,8 @@
   },
   {
     "id": 31,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Fortuner",
     "version": "2.4 L D-4D 7 places BVA",
@@ -10279,6 +10343,8 @@
   },
   {
     "id": 32,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Prado",
     "version": "2.8 L TX Business BVA",
@@ -10588,6 +10654,8 @@
   },
   {
     "id": 33,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Prado",
     "version": "2.8 L WX Adventure BVA",
@@ -10945,6 +11013,8 @@
   },
   {
     "id": 34,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Land Cruiser 300",
     "version": "3.5 L V6 Bi-Turbo Essence 4WD VX",
@@ -11282,6 +11352,8 @@
   },
   {
     "id": 35,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Land Cruiser 300",
     "version": "3.3 L V6 Bi-Turbo Diesel 4WD VX",
@@ -11627,6 +11699,8 @@
   },
   {
     "id": 36,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Land Cruiser 300",
     "version": "3.3 L V6 Bi-Turbo Diesel 4WD GR-Sport",
@@ -11972,6 +12046,8 @@
   },
   {
     "id": 37,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Land Cruiser 79",
     "version": "4.2 l Diesel 4x4 Simple Cabine",
@@ -12161,6 +12237,8 @@
   },
   {
     "id": 38,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Hilux Simple Cabine",
     "version": "2.4 L Diesel D-4D 4x4",
@@ -12402,6 +12480,8 @@
   },
   {
     "id": 39,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Hilux Double Cabine",
     "version": "2.4 L Diesel D-4D 4x4",
@@ -12655,6 +12735,8 @@
   },
   {
     "id": 40,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Hilux Double Cabine",
     "version": "2.4 L Diesel D-4D 4x4 BVA",
@@ -12956,6 +13038,8 @@
   },
   {
     "id": 41,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Hiace",
     "version": "2.5 L Diesel 16 Places",
@@ -13153,6 +13237,8 @@
   },
   {
     "id": 42,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Coaster",
     "version": "4.2 L Diesel 23 places",
@@ -13350,6 +13436,8 @@
   },
   {
     "id": 43,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Hiace Van",
     "version": "3.0 L Diesel",
@@ -13562,6 +13650,8 @@
   },
     {
     "id": 500,
+    "new":false,
+    "promotion":false,
     "brand": "TOYOTA",
     "model": "Hiace Van",
     "version": "9 Places",
@@ -13577,6 +13667,8 @@
 
   {
     "id": 44,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Celerio Populaire",
     "version": "1.0 L GL",
@@ -13829,6 +13921,8 @@
   },
   {
     "id": 45,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Swift",
     "version": "1.2 L GL",
@@ -14082,6 +14176,8 @@
   },
   {
     "id": 46,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Swift",
     "version": "1.2 L CVT GL",
@@ -14327,6 +14423,8 @@
   },
   {
     "id": 47,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Swift",
     "version": "1.2 L GLX",
@@ -14600,6 +14698,8 @@
   },
   {
     "id": 48,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Swift",
     "version": "1.2 L CVT GLX",
@@ -14867,6 +14967,8 @@
 
   {
     "id": 55,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Baleno",
     "version": "1.5 L GL BVM",
@@ -15144,6 +15246,8 @@
   },
   {
     "id": 56,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Baleno",
     "version": "1.5 L GLX BVA",
@@ -15461,6 +15565,8 @@
   },
   {
     "id": 57,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Ertiga",
     "version": "1.5 L GLX 7 places",
@@ -15734,6 +15840,8 @@
   },
   {
     "id": 58,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Ertiga",
     "version": "1.5 L GLX 7 places BVA",
@@ -16007,6 +16115,8 @@
   },
   {
     "id": 59,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Fronx",
     "version": "1.5 L GL BVM",
@@ -16284,6 +16394,8 @@
   },
   {
     "id": 60,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Fronx",
     "version": "1.5 L GLX BVA",
@@ -16597,6 +16709,8 @@
   },
   {
     "id": 61,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Jimny 3 portes",
     "version": "1.5 L 4x4 GL BVA",
@@ -16838,6 +16952,8 @@
   },
   {
     "id": 62,
+    "new":false,
+    "promotion":false,
     "brand": "SUZUKI",
     "model": "Jimny 5 portes",
     "version": "1.5 L 4x4 GLX BVA",
@@ -17148,6 +17264,8 @@
 
   {
     "id": 63,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "3",
     "version": "1.5 L Standard",
@@ -17397,6 +17515,8 @@
   },
   {
     "id": 64,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "3",
     "version": "1.5 L Confort",
@@ -17662,6 +17782,8 @@
   },
   {
     "id": 65,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "3",
     "version": "1.5 L Luxe BVA",
@@ -17959,6 +18081,8 @@
   },
   {
     "id": 66,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "3 Hybride",
     "version": "1.5 L CVT Luxury",
@@ -18288,6 +18412,8 @@
   },
   {
     "id": 67,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "5",
     "version": "1.5 L Confort",
@@ -18549,6 +18675,8 @@
   },
   {
     "id": 68,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "5",
     "version": "1.5 L Confort Plus",
@@ -18814,6 +18942,8 @@
   },
   {
     "id": 69,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "5",
     "version": "1.5 L Luxe Plus BVA",
@@ -19111,6 +19241,8 @@
   },
   {
     "id": 70,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "GT",
     "version": "1.5 l CVT Luxury",
@@ -19392,6 +19524,8 @@
   },
   {
     "id": 71,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "ZS",
     "version": "1.5 L Luxury",
@@ -19677,6 +19811,8 @@
   },
   {
     "id": 72,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "ZS",
     "version": "1.5 L Luxury BVA",
@@ -19974,6 +20110,8 @@
   },
   {
     "id": 73,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "ZS Hybrid+",
     "version": "1.5 L CVT Luxury",
@@ -20311,6 +20449,8 @@
   },
   {
     "id": 74,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "4",
     "version": "64 kWh Luxury+",
@@ -20656,6 +20796,8 @@
   },
   {
     "id": 75,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "One",
     "version": "1.5 L Luxury+ BVA",
@@ -20989,6 +21131,8 @@
   },
   {
     "id": 76,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "7",
     "version": "1.5 L Turbo Luxury BVA",
@@ -21286,6 +21430,8 @@
   },
   {
     "id": 77,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "7",
     "version": "2.0 L Turbo Trophy + BVA",
@@ -21599,6 +21745,8 @@
   },
   {
     "id": 78,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "RX5",
     "version": "1.5 L Performance BVA",
@@ -21945,6 +22093,8 @@
 
   {
     "id": 80,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "RX9",
     "version": "2.0 T Ultimate",
@@ -22258,6 +22408,8 @@
   },
   {
     "id": 81,
+    "new":false,
+    "promotion":false,
     "brand": "MG",
     "model": "Cyberster",
     "version": "77 kWh RWD",
@@ -22616,6 +22768,8 @@
 
   {
     "id": 82,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Everest",
     "version": "2.0 L Bi-Turbo XLT 7 places",
@@ -22997,6 +23151,8 @@
   },
   {
     "id": 83,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Everest",
     "version": "2.0 L Bi-Turbo Limited 7 places",
@@ -23402,6 +23558,8 @@
   },
   {
     "id": 84,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Ranger",
     "version": "2.0 L 170 ch 4x4 XLT BVA",
@@ -23715,6 +23873,8 @@
   },
   {
     "id": 85,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Ranger",
     "version": "2.0 L TDCI 210 ch 4x4 Wildtrak BVA",
@@ -24104,6 +24264,8 @@
   },
   {
     "id": 86,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Ranger Raptor",
     "version": "2.0 L TDCI 210 ch 4x4 BVA",
@@ -24509,6 +24671,8 @@
   },
   {
     "id": 132,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Ranger",
     "version": "2.0 L 170 ch 4x4 XLT BVM",
@@ -24821,6 +24985,8 @@
   },
   {
     "id": 140,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Territory",
     "version": "1.5 L EcoBoost Titanium",
@@ -25205,6 +25371,8 @@
   },
   {
     "id": 141,
+    "new":false,
+    "promotion":false,
     "brand": "FORD",
     "model": "Territory",
     "version": "1.5 L EcoBoost Titanium X",
@@ -25601,6 +25769,8 @@
   },
   {
     "id": 88,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "Glory 500",
     "version": "1.5 MT",
@@ -25906,10 +26076,12 @@
   },
   {
     "id": 89,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "Glory 500",
     "version": "1.5 CVT",
-    "price": 83900,
+    "price": 79900,
     "image": "https://catalogue.automobile.tn/big/2023/12/47055.webp?t=1729085422",
     "fuel": "Essence",
     "gearbox": "Automatique",
@@ -26243,6 +26415,8 @@
   },
   {
     "id": 90,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "Glory 580",
     "version": "1.5 T Luxury CVT",
@@ -26560,6 +26734,8 @@
   },
   {
     "id": 91,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "Glory iX5",
     "version": "1.5 T Deluxe CVT",
@@ -26909,6 +27085,8 @@
   },
   {
     "id": 92,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "K01S",
     "version": "Simple Cabine STD",
@@ -27093,6 +27271,8 @@
   },
   {
     "id": 93,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "K01S",
     "version": "Simple Cabine DLX",
@@ -27285,6 +27465,8 @@
   },
   {
     "id": 94,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "K01H",
     "version": "Large Cabine 1.1 l STD",
@@ -27460,6 +27642,8 @@
   },
   {
     "id": 95,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "K01H",
     "version": "Large Cabine 1.1 l DLX",
@@ -27648,10 +27832,12 @@
   },
   {
     "id": 96,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "K02S",
     "version": "1.0 l Double Cabine STD",
-    "price": 42900,
+    "price": 40900,
     "image": "https://catalogue.automobile.tn/big/2021/04/46574.webp?t=1746632584",
     "fuel": "Essence",
     "gearbox": "Manuelle",
@@ -27832,10 +28018,12 @@
   },
   {
     "id": 97,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "K02S",
     "version": "1.0 l Double Cabine DLX",
-    "price": 44900,
+    "price": 42900,
     "image": "https://catalogue.automobile.tn/big/2021/04/46575.webp?t=1746632604",
     "fuel": "Essence",
     "gearbox": "Manuelle",
@@ -28024,6 +28212,8 @@
   },
   {
     "id": 98,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "C31",
     "version": "1.5 L Simple Cabine DLX",
@@ -28245,6 +28435,8 @@
   },
   {
     "id": 99,
+    "new":false,
+    "promotion":false,
     "brand": "DFSK",
     "model": "C32",
     "version": "1.5 L Double Cabine DLX",
@@ -28472,6 +28664,8 @@
 
   {
     "id": 100,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Rich 6",
     "version": "2.5 Turbo Diesel 4X2",
@@ -28737,10 +28931,12 @@
   },
   {
     "id": 101,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Rich 6",
     "version": "2.5 Turbo Diesel 4X4 Thunder",
-    "price": 112900,
+    "price": 103900,
     "image": "https://catalogue.automobile.tn/big/2025/03/47339.webp?t=1742290840",
     "fuel": "Diesel",
     "gearbox": "Manuelle",
@@ -29034,6 +29230,8 @@
   },
   {
     "id": 102,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Forthing T5 EVO",
     "version": "1.5 L Turbo",
@@ -29407,6 +29605,8 @@
   },
   {
     "id": 142,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Box",
     "version": "31.4 KWH",
@@ -29711,6 +29911,8 @@
   },
   {
     "id": 144,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Box",
     "version": "42.3 KWH Style+",
@@ -30047,6 +30249,8 @@
   },
   {
     "id": 145,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Shine",
     "version": "1.5 Mach Power",
@@ -30339,6 +30543,8 @@
   },
   {
     "id": 146,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Shine",
     "version": "1.5 Mach Power BVA",
@@ -30647,6 +30853,8 @@
   },
   {
     "id": 147,
+    "new":false,
+    "promotion":false,
     "brand": "DONGFENG",
     "model": "Shine Max",
     "version": "1.5 T HEV",
@@ -30978,6 +31186,8 @@
 
   {
     "id": 103,
+    "new":false,
+    "promotion":false,
     "brand": "BYD",
     "model": "Dolphin",
     "version": "44.9 kWh",
@@ -31315,6 +31525,8 @@
   },
   {
     "id": 104,
+    "new":false,
+    "promotion":false,
     "brand": "BYD",
     "model": "King",
     "version": "1.5 L DM-i",
@@ -31668,6 +31880,8 @@
   },
   {
     "id": 105,
+    "new":false,
+    "promotion":false,
     "brand": "BYD",
     "model": "Atto 3",
     "version": "60.48 kWh",
@@ -32037,6 +32251,8 @@
   },
   {
     "id": 106,
+    "new":false,
+    "promotion":false,
     "brand": "BYD",
     "model": "Song Plus",
     "version": "1.5 L DM-i",
@@ -32422,6 +32638,8 @@
   },
   {
     "id": 107,
+    "new":false,
+    "promotion":false,
     "brand": "BYD",
     "model": "Tang EV",
     "version": "108.8 kWh",
@@ -32848,6 +33066,8 @@
 
   {
     "id": 108,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Kwid Populaire",
     "version": "1.0 L",
@@ -33081,6 +33301,8 @@
   },
   {
     "id": 109,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Clio",
     "version": "1.0 L TCe 100 BVM",
@@ -33390,6 +33612,8 @@
   },
   {
     "id": 110,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Clio",
     "version": "1.0 L TCe 100 BVA",
@@ -33715,6 +33939,8 @@
   },
   {
     "id": 111,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Clio",
     "version": "1.0 L TCe 100 Esprit Alpine BVA",
@@ -34052,6 +34278,8 @@
   },
   {
     "id": 112,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Megane",
     "version": "1.3 L TCE 140",
@@ -34397,6 +34625,8 @@
   },
   {
     "id": 113,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Megane Sedan",
     "version": "1.3 L TCE 140",
@@ -34738,6 +34968,8 @@
   },
   {
     "id": 114,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Megane Sedan",
     "version": "1.3 L TCE 140 BVA",
@@ -35079,6 +35311,8 @@
   },
   {
     "id": 115,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Austral",
     "version": "1.3 L",
@@ -35420,6 +35654,8 @@
   },
   {
     "id": 116,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Express Van",
     "version": "1.5 L dCi",
@@ -35649,6 +35885,8 @@
   },
   {
     "id": 117,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Express Combi",
     "version": "1.5 L dCi",
@@ -35886,6 +36124,8 @@
   },
   {
     "id": 118,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Master",
     "version": "2.3 L 8m3",
@@ -36076,6 +36316,8 @@
   },
   {
     "id": 119,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Master",
     "version": "2.3 L 10.8 m3",
@@ -36266,6 +36508,8 @@
   },
   {
     "id": 120,
+    "new":false,
+    "promotion":false,
     "brand": "RENAULT",
     "model": "Master",
     "version": "2.3 L 13 m3",
@@ -36468,6 +36712,8 @@
 
   {
     "id": 121,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Sandero Stepway",
     "version": "1.0 L",
@@ -36697,6 +36943,8 @@
   },
   {
     "id": 122,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Sandero Stepway",
     "version": "1.0 L BVA",
@@ -36946,6 +37194,8 @@
   },
   {
     "id": 123,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Sandero",
     "version": "1.0 L TCE",
@@ -37163,6 +37413,8 @@
   },
   {
     "id": 124,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Logan",
     "version": "1.0 L TCE Écran tactile",
@@ -37376,6 +37628,8 @@
   },
   {
     "id": 125,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Duster",
     "version": "1.5 L dCi 4x2 Confort",
@@ -37685,6 +37939,8 @@
   },
   {
     "id": 126,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Duster",
     "version": "1.5 L dCi 4x4 Confort",
@@ -38006,6 +38262,8 @@
   },
   {
     "id": 127,
+    "new":false,
+    "promotion":false,
     "brand": "DACIA",
     "model": "Duster",
     "version": "1.5 L dCi 4x2 Confort BVA",
@@ -38349,6 +38607,8 @@
 
   {
     "id": 128,
+    "new":false,
+    "promotion":false,
     "brand": "NISSAN",
     "model": "Juke",
     "version": "1.0 L DIG-T DCT Tekna",
@@ -38702,6 +38962,8 @@
   },
   {
     "id": 129,
+    "new":false,
+    "promotion":false,
     "brand": "NISSAN",
     "model": "Juke",
     "version": "1.0 L DIG-T DCT Tekna Perso",
@@ -39055,6 +39317,8 @@
   },
   {
     "id": 130,
+    "new":false,
+    "promotion":false,
     "brand": "NISSAN",
     "model": "Qashqai e-Power",
     "version": "1.5 L N-Connecta",

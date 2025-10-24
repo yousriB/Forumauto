@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import CarBadge from "@/components/ui/car-badge";
 
 const Fallback = () => (
   <div className="container px-4 mx-auto py-12">
@@ -326,6 +327,7 @@ function CarFiltersAndList() {
                       onClick={() => handleCarClick(car)}
                     >
                       <div className="relative h-52 w-full overflow-hidden bg-white flex justify-center items-center">
+                        <CarBadge isNew={car.new} isPromotion={car.promotion} />
                         <Image
                           src={car.image}
                           alt={`${car.brand} ${car.model}`}

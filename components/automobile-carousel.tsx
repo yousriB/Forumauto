@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
+import CarBadge from "@/components/ui/car-badge";
 
 export default function AutomobileCarousel() {
   const router = useRouter();
@@ -175,6 +176,7 @@ export default function AutomobileCarousel() {
                       onClick={() => router.push(`/pages/cars/${car.id}`)}
                     >
                       <div className="relative h-52 w-full overflow-hidden bg-white flex justify-center items-center">
+                        <CarBadge isNew={car.new} isPromotion={car.promotion} />
                         <Image
                           src={car.image}
                           alt={`${car.brand} ${car.model}`}

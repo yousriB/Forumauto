@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import CarBadge from "@/components/ui/car-badge";
 
 export default function VersionSelectionPage() {
   const router = useRouter();
@@ -126,6 +127,7 @@ export default function VersionSelectionPage() {
                   onClick={() => router.push(`/pages/cars/${car.id}`)}
                 >
                   <div className="relative h-52 w-full overflow-hidden bg-white flex justify-center items-center">
+                    <CarBadge isNew={car.new} isPromotion={car.promotion} />
                     <Image
                       src={car.image}
                       alt={`${car.brand} ${car.model} ${car.version}`}
