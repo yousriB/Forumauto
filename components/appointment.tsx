@@ -1,5 +1,3 @@
-// app/appointment/page.tsx (or similar path for your Appointment component)
-
 "use client";
 
 import { useState } from "react";
@@ -470,7 +468,7 @@ export default function Appointment() {
                               const isPastDate =
                                 date <
                                 new Date(new Date().setHours(0, 0, 0, 0));
-                              return day === 0 || day === 6 || isPastDate;
+                              return day === 0 || day === 7 || isPastDate;
                             }}
                           />
                         </PopoverContent>
