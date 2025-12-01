@@ -27631,6 +27631,22 @@
       }
     ]
   },
+
+   {
+    "id": 142,
+    "new":true,
+    "promotion":false,
+    "brand": "FORD",
+    "model": "Transit Bus",
+    "version": "18 Places",
+    "price": 175000,
+    "image": "https://www.ford.mx/content/dam/Ford/website-assets/latam/mx/nameplate/transit/pasajeros/2025/models/ford-transit-18-pasajeros-2025-van-diesel-version-caracteristicas-info.jpg",
+    "fuel": "Diesel",
+    "gearbox": "Manuelle",
+    "technicalSpecs": []
+  },
+
+ 
   {
     "id": 88,
     "new":false,
