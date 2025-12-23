@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
+import { ArrowUpRight } from "lucide-react";
 
 const Page = () => {
   const router = useRouter();
@@ -38,64 +39,85 @@ const Page = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 15 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-slate-800 mb-2">
-            Choisissez votre marque
-          </h2>
-          <h3 className="text-xl font-medium text-slate-600 mb-4">
-            Toutes les marques automobiles
-          </h3>
-          <div className="flex justify-center mt-2">
-            <div className="w-32 h-0.5 bg-red-600 relative">
-              <div className="absolute w-2 h-2 bg-red-600 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+    <section className="py-20 bg-white" id="brand-selection">
+      <div className="container mx-auto px-6 max-w-7xl">
+        
+        {/* Modern Minimalist Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-[2px] bg-red-600"></span>
+              <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Catalogue</span>
             </div>
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-slate-900 leading-none">
+              Choisissez votre <span className="font-bold">Marque</span>
+            </h2>
           </div>
+          <p className="text-slate-500 max-w-xs text-sm md:text-base border-l-2 border-slate-100 pl-4">
+            Explorez notre sélection complète de véhicules neufs par constructeur.
+          </p>
         </div>
 
+        {/* Brand Grid - Replaced old cards with the high-end grid design */}
         <motion.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 max-w-5xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-px bg-slate-100 border border-slate-100 rounded-3xl overflow-hidden shadow-sm shadow-slate-200/50"
         >
           {brands.map((brand, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex flex-col items-center cursor-pointer group"
+              whileHover={{ backgroundColor: "#f8fafc" }}
+              className="group relative aspect-square bg-white flex items-center justify-center p-6 transition-all duration-300 cursor-pointer"
               onClick={() =>
-                router.push(
-                  `/pages/cars?brand=${encodeURIComponent(brand.name)}`
-                )
+                router.push(`/pages/cars?brand=${encodeURIComponent(brand.name)}`)
               }
             >
-              <div className="bg-white rounded-lg shadow-md p-8 h-52 w-full flex items-center justify-center hover:shadow-lg transition-shadow duration-300">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={brand.image}
-                    alt={brand.name}
-                    fill
-                    className="object-contain transition-all duration-300 group-hover:scale-110"
-                  />
-                </div>
+              <div className="relative w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 ease-in-out">
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  fill
+                  className="object-contain p-2"
+                />
               </div>
+
+              {/* Subtle hover label */}
+              <div className="absolute bottom-3 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                  {brand.name}
+                </span>
+              </div>
+
+              {/* Minimalist Red Arrow */}
+              <ArrowUpRight
+                size={14}
+                className="absolute top-4 right-4 text-slate-200 group-hover:text-red-600 opacity-0 group-hover:opacity-100 transition-all"
+              />
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Simple Footer Note */}
+        <div className="mt-12 text-center">
+          <p className="text-slate-400 text-xs tracking-widest uppercase">
+            Plus de 16 constructeurs officiels à votre service
+          </p>
+        </div>
       </div>
     </section>
   );

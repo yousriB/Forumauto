@@ -1,10 +1,7 @@
 "use client";
 
-import { useState, useEffect, SetStateAction } from "react";
+import { useState, useEffect } from "react";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Testimonials() {
@@ -17,163 +14,125 @@ export default function Testimonials() {
       position: "Client fidèle",
       rating: 5,
       text: "Service exceptionnel ! J'ai acheté ma voiture chez Forum Auto Gabès et je suis très satisfait. L'équipe est professionnelle et attentionnée. Le processus d'achat a été simple et transparent. Je recommande vivement.",
-      image: "/images/testimonial-1.jpg",
     },
     {
       name: "Sonia Mansour",
-      position: "Cliente fidèle",
+      position: "Entrepreneuse",
       rating: 5,
-      text: "Je recommande vivement ce garage pour l'entretien de votre véhicule. J'y ai fait réparer ma Toyota plusieurs fois, et le travail est toujours soigné, les prix sont raisonnables et le personnel est très compétent et honnête. Merci pour votre excellent service !",
-      image: "/images/testimonial-2.jpg",
+      text: "Je recommande vivement ce garage pour l'entretien de votre véhicule. J'y ai fait réparer ma Toyota plusieurs fois, et le travail est toujours soigné, les prix sont raisonnables et le personnel est très compétent et honnête.",
     },
     {
       name: "Mohamed Karim",
       position: "Nouveau client",
-      rating: 4,
-      text: "J'ai fait réparer ma voiture chez Forum Auto et je suis très satisfait du résultat. Le service était rapide et efficace. Le diagnostic était précis et les mécaniciens ont identifié le problème immédiatement. Ma voiture fonctionne à nouveau parfaitement.",
-      image: "/images/testimonial-3.jpg",
+      rating: 5,
+      text: "J'ai fait réparer ma voiture chez Forum Auto et je suis très satisfait du résultat. Le service était rapide et efficace. Le diagnostic était précis et les mécaniciens ont identifié le problème immédiatement.",
     },
   ];
 
   useEffect(() => {
     if (!autoplay) return;
-
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 8000);
-
+      setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    }, 6000);
     return () => clearInterval(interval);
   }, [autoplay, testimonials.length]);
 
-  const nextSlide = () => {
-    setAutoplay(false);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setAutoplay(false);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToSlide = (index: SetStateAction<number>) => {
+  const handleManualChange = (index: number) => {
     setAutoplay(false);
     setCurrentIndex(index);
   };
 
   return (
-    <section id="testimonials" className="py-12 bg-gray-50">
-      <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
-            Témoignages
+    <section id="testimonials" className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-6 max-w-7xl">
+        
+        {/* Luxury Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-[2px] bg-[#e71810]"></span>
+              <span className="text-[#e71810] font-bold uppercase tracking-widest text-xs">Avis Clients</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-slate-900 leading-none">
+              Ils nous font <span className="font-bold text-slate-900">Confiance</span>
+            </h2>
           </div>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl mb-4 text-[#E71609]">
-            Ce que disent nos clients
-          </h2>
-          <p className="text-lg text-gray-600">
-            Découvrez les expériences de nos clients satisfaits avec Forum Auto
-            Gabès.
+          <p className="text-slate-500 max-w-xs text-sm md:text-base border-l-2 border-slate-100 pl-4 italic">
+            "Le prestige ne se raconte pas, il se vit à travers l'expérience de nos clients."
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto relative">
+        <div className="max-w-4xl mx-auto relative px-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="relative text-center"
             >
-              <Card className="border-none shadow-xl p-1 bg-white overflow-hidden">
-                <div className="absolute top-10 left-10 text-red-100">
-                  <Quote size={120} className="opacity-20" />
-                </div>
-                <CardContent className="p-0">
-                  <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/3 h-60 md:h-auto relative bg-red-600">
-                      {/* <Image
-                        src={
-                          testimonials[currentIndex].image || "/placeholder.svg"
-                        }
-                        alt={testimonials[currentIndex].name}
-                        fill
-                        className="object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = "/placeholder.svg?height=300&width=200";
-                        }}
-                      /> */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4 text-white">
-                        <h3 className="font-bold text-xl">
-                          {testimonials[currentIndex].name}
-                        </h3>
-                        <p className="text-sm opacity-90">
-                          {testimonials[currentIndex].position}
-                        </p>
-                        <div className="flex mt-2">
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <Star
-                              key={i}
-                              size={18}
-                              className={`${
-                                i < testimonials[currentIndex].rating
-                                  ? "text-yellow-400 fill-yellow-400"
-                                  : "text-white opacity-40"
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
-                      <p className="text-gray-700 text-lg leading-relaxed relative z-10">
-                        {testimonials[currentIndex].text}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Decorative Quote Icon */}
+              <div className="flex justify-center mb-10 text-[#e71810]/10">
+                <Quote size={80} fill="#e71810" />
+              </div>
+
+              {/* Testimonial Text */}
+              <blockquote className="text-2xl md:text-3xl lg:text-3xl font-light leading-snug text-slate-800 mb-12 tracking-tight">
+                "{testimonials[currentIndex].text}"
+              </blockquote>
+
+              {/* Stars */}
+              <div className="flex justify-center gap-1 mb-6">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    size={16}
+                    className={i < testimonials[currentIndex].rating ? "text-[#e71810] fill-[#e71810]" : "text-slate-200"}
+                  />
+                ))}
+              </div>
+
+              {/* Author Details */}
+              <div className="flex flex-col items-center">
+                <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider">
+                  {testimonials[currentIndex].name}
+                </h3>
+                <p className="text-[#e71810] text-xs font-bold uppercase tracking-[0.2em] mt-1">
+                  {testimonials[currentIndex].position}
+                </p>
+              </div>
             </motion.div>
           </AnimatePresence>
 
-          <Button
-            variant="secondary"
-            size="icon"
-            className="absolute -left-6 md:-left-8 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 rounded-full h-12 w-12 shadow-lg z-10"
-            onClick={prevSlide}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
+          {/* Minimalist Navigation Buttons */}
+          <div className="absolute top-1/2 -left-12 -right-12 hidden lg:flex justify-between items-center pointer-events-none">
+            <button
+              onClick={() => handleManualChange(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}
+              className="p-4 rounded-full border border-slate-100 text-slate-400 hover:text-[#e71810] hover:border-[#e71810] transition-all duration-300 pointer-events-auto bg-white/50 backdrop-blur-sm"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={() => handleManualChange(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}
+              className="p-4 rounded-full border border-slate-100 text-slate-400 hover:text-[#e71810] hover:border-[#e71810] transition-all duration-300 pointer-events-auto bg-white/50 backdrop-blur-sm"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
 
-          <Button
-            variant="secondary"
-            size="icon"
-            className="absolute -right-6 md:-right-8 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 rounded-full h-12 w-12 shadow-lg z-10"
-            onClick={nextSlide}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
-
-          <div className="flex justify-center mt-8 gap-2">
+          {/* Progress Indicators */}
+          <div className="flex justify-center mt-16 gap-3">
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`h-3 rounded-full transition-all ${
+                className={`h-1 transition-all duration-500 rounded-full ${
                   currentIndex === index
-                    ? "w-10 bg-red-600"
-                    : "w-3 bg-gray-300 hover:bg-gray-400"
+                    ? "w-12 bg-[#e71810]"
+                    : "w-4 bg-slate-200 hover:bg-slate-300"
                 }`}
-                onClick={() => goToSlide(index)}
-                aria-label={`Go to testimonial ${index + 1}`}
+                onClick={() => handleManualChange(index)}
+                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>

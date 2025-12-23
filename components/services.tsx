@@ -4,222 +4,144 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, ArrowUpRight, Gauge, FileText, Wrench } from "lucide-react";
 
 export default function Services() {
   const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Sample car images array - replace with your actual car images
   const carImages = [
     "/testdrive/7.png",
     "/testdrive/1.png",
     "/testdrive/2.png",
-    "/testdrive/3.png",
-    "/testdrive/4.png",
-    "/testdrive/5.png",
-    "/testdrive/6.png",
     "https://catalogue.automobile.tn/big/2025/07/47408.webp?t=1758275146",
     "/testdrive/arrizo5.png",
-    "https://catalogue.automobile.tn/big/2025/06/47403.webp?t=1750093651"
-
-    // Add more car images as needed
   ];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === carImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? carImages.length - 1 : prevIndex - 1
-    );
-  };
+  const nextImage = () => setCurrentImageIndex((p) => (p === carImages.length - 1 ? 0 : p + 1));
+  const prevImage = () => setCurrentImageIndex((p) => (p === 0 ? carImages.length - 1 : p - 1));
 
   return (
-    <section id="services" className="py-12 min-h-screen">
-      <div className="container h-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-slate-800 mb-2">
-            Nos Services
-          </h2>
-          <h3 className="text-xl font-medium text-slate-600 mb-4">
-            Toutes les services de votre concessionnaire
-          </h3>
-          <div className="flex justify-center mt-2">
-            <div className="w-32 h-0.5 bg-red-600 relative">
-              <div className="absolute w-2 h-2 bg-red-600 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+    <section id="services" className="py-16 md:py-24 bg-white text-slate-900">
+      <div className="container mx-auto px-6 max-w-7xl">
+        
+        {/* Minimalist Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-20 gap-6">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-[2px] bg-red-600"></span>
+              <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Excellence</span>
             </div>
-          </div>
-        </div>
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 md:p-6">
-          {/* Card 1 - spans 2 rows on desktop, 1 row on mobile */}
-          <div
-            className="rounded-3xl p-4 md:p-6 text-gray-50 lg:row-span-2 flex flex-col items-center justify-around cursor-pointer relative"
-            style={{
-              background: "linear-gradient(135deg, #E71609, #000000)",
-            }}
-          >
-            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center">
-              Envie de prendre le volant ?
+            <h2 className="text-4xl md:text-6xl font-light tracking-tight leading-none">
+              Services <span className="font-bold">Premium</span>
             </h2>
-            <div className="flex flex-col justify-center items-center w-full">
-              <div className="relative w-full flex items-center justify-center">
-                {/* Left Arrow */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    prevImage();
-                  }}
-                  className="absolute left-0 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
+          </div>
+          <p className="text-slate-500 max-w-xs text-sm md:text-base leading-relaxed">
+            Une approche minimaliste de l'automobile. La performance rencontre le design pur.
+          </p>
+        </div>
+
+        {/* Responsive Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6">
+          
+          {/* Card 1: Test Drive (Hero Card) */}
+          <div className="md:col-span-12 lg:col-span-8 group relative rounded-2xl bg-slate-50 border border-slate-300 p-8 md:p-12 overflow-hidden flex flex-col justify-between min-h-[400px]">
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 text-red-600 mb-6">
+                <Gauge size={20} />
+                <span className="font-bold text-sm tracking-widest uppercase">Expérience</span>
+              </div>
+              <h3 className="text-3xl md:text-5xl font-bold mb-4 max-w-md">Envie de prendre le volant ?</h3>
+              <button 
+                onClick={() => router.push("/pages/testdrive")}
+                className="flex items-center gap-2 group/btn text-slate-900 font-bold text-lg hover:text-red-600 transition-colors"
+              >
+                Réserver un essai <ArrowUpRight className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+              </button>
+            </div>
+
+            {/* Slider Component */}
+            <div className="relative mt-8 md:mt-0 flex items-center justify-center lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-1/2 h-full">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="w-full h-full flex items-center justify-center p-6"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
+                  <Image
+                    src={carImages[currentImageIndex]}
+                    alt="Car"
+                    width={600}
+                    height={300}
+                    className="object-contain"
+                    priority
+                  />
+                </motion.div>
+              </AnimatePresence>
+              
+              <div className="absolute bottom-4 right-8 flex gap-2">
+                <button onClick={prevImage} className="p-3 bg-white border border-slate-300 rounded-full hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+                  <ChevronLeft size={18} />
                 </button>
-
-                {/* Car Image */}
-                <div className="relative w-[300px] md:w-[280px] h-[280px] flex items-center justify-center overflow-hidden">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={carImages[currentImageIndex]}
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -50 }}
-                      transition={{ duration: 0.4 }}
-                      className="absolute w-full  h-[280px] flex items-center justify-center"
-                    >
-                      <Image
-                        src={carImages[currentImageIndex]}
-                        alt="Car"
-                        width={800}
-                        height={100}
-                        className="filter w-[300px] md:w-[280px]"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-
-                {/* Right Arrow */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    nextImage();
-                  }}
-                  className="absolute right-0 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                <button onClick={nextImage} className="p-3 bg-white border border-slate-300 rounded-full hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+                  <ChevronRight size={18} />
                 </button>
               </div>
             </div>
-            <h1 className="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-white">
-              Test Drive
-            </h1>
-            <a
-              className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md cursor-pointer mt-4"
-              onClick={() => router.push("/pages/testdrive")}
-            >
-              Prendre rendez-vous
-            </a>
           </div>
 
-          {/* Card 4 - spans 2 rows on desktop, 1 row on mobile */}
-          <div
-            className="rounded-3xl p-4 md:p-6 flex flex-col justify-around items-center text-gray-50 lg:row-span-2 cursor-pointer"
-            style={{
-              background: "url('/images/bgbanner.jpg') no-repeat",
-              backgroundSize: "cover",
-            }}
+          {/* Card 2: Marques (Clean/White) */}
+          <div 
+            className="md:col-span-6 lg:col-span-4 rounded-2xl border border-slate-200 bg-[#e71609] p-8 md:p-10 flex flex-col justify-between cursor-pointer  transition-colors"
             onClick={() => router.push("/pages/logos")}
           >
-            <div className="text-center">
-              <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-                Nos marques
-              </h2>
-              <p className="text-gray-50 text-base md:text-lg font-medium">
-                Achetez un véhicule neuf avec
-              </p>
+            <div>
+              <h3 className="text-2xl text-white font-bold mb-2">Nos Marques</h3>
+              <p className="text-white text-sm">Le meilleur de l'ingénierie automobile.</p>
             </div>
-            <Image
-              src="/images/logoo.png"
-              alt="Cupra Leon"
-              width={250}
-              height={160}
-              className="filter brightness-0 invert w-[150px] md:w-[250px]"
-            />
-            <Image
-              src="/images/supercar.png"
-              alt="Cupra Leon"
-              width={300}
-              height={50}
-              className="filter brightness-0 invert w-[200px] md:w-[300px]"
-            />
+            <div className="flex flex-col gap-8 items-center py-8">
+              <Image src="/images/supercar.png" alt="Brand" width={400} height={80} className=" grayscale  transition-all" />
+            </div>
+            <span className="text-sm font-bold text-white uppercase tracking-tighter inline-flex items-center gap-1">Découvrir <ArrowUpRight size={14} /></span>
           </div>
 
-          {/* Card 2 - 1 row */}
-          <div
-            className="rounded-3xl p-4 md:p-6 flex flex-col justify-between items-center text-gray-50 cursor-pointer"
-            style={{ background: "linear-gradient(135deg, #E71609, #000000)" }}
+          {/* Card 3: Devis (Minimalist Red Accent) */}
+          <div 
+            className="md:col-span-6 lg:col-span-6 rounded-2xl bg-white border border-slate-300 p-8 flex items-start justify-between group cursor-pointer hover:shadow-2xl hover:shadow-slate-100 transition-all"
             onClick={() => router.push("/pages/demanderdevis")}
           >
-            <span className="text-2xl md:text-4xl font-semibold mb-2 block text-center">
-              Demandez votre devis personnalisé
-            </span>
-            <h2 className="text-gray-50 text-base md:text-lg font-medium mb-2 text-center">
-              Obtenez une estimation rapide et sur-mesure pour votre véhicule.
-            </h2>
-            <a
-              className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md mt-4"
-              href="#"
-            >
-              Demander mon devis
-            </a>
+            <div className="flex gap-6">
+              <div className="p-4 bg-slate-50 rounded-xl group-hover:bg-red-50 group-hover:text-red-600 transition-colors">
+                <FileText size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">Devis Personnalisé</h3>
+                <p className="text-slate-500 text-sm">Réponse rapide sous 24h.</p>
+              </div>
+            </div>
+            <ArrowUpRight className="text-slate-300 group-hover:text-red-600 transition-colors" />
           </div>
 
-          {/* Card 3 - 1 row */}
-          <div
-            className="rounded-3xl p-4 md:p-6 text-gray-50 relative"
-            style={{ background: "#000000" }}
+          {/* Card 4: Entretien (Minimalist Dark) */}
+          <div 
+            className="md:col-span-12 lg:col-span-6 rounded-2xl bg-[#0a0a0a] p-8 flex items-center justify-between group cursor-pointer hover:bg-black transition-all"
+            onClick={() => router.push("/pages/rendevouz")}
           >
-            <div className="flex flex-col items-center mb-4">
-              <h2 className="text-xl md:text-2xl font-semibold mb-3 text-center mt-4">
-                Prenez rendez-vous <br /> pour l'entretien de votre véhicule
-              </h2>
-              <a
-                className="bg-gray-50 text-gray-900 font-semibold py-2 px-4 rounded-md shadow-md cursor-pointer mt-4"
-                onClick={() => router.push("/pages/rendevouz")}
-              >
-                Cliquez ici
-              </a>
+            <div className="flex items-center gap-6">
+              <div className="p-4 bg-white/10 rounded-xl text-white group-hover:bg-red-600 transition-colors">
+                <Wrench size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1">Service Entretien</h3>
+                <p className="text-slate-400 text-sm">Prenez rendez-vous en ligne.</p>
+              </div>
             </div>
+            <div className="hidden sm:block text-white font-bold border-b border-white/20 pb-1 group-hover:border-red-600">Réserver</div>
           </div>
-        </section>
+
+        </div>
       </div>
     </section>
   );

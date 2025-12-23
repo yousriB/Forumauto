@@ -1,39 +1,31 @@
-import {
-  Building2,
-  Users,
-  MapPin,
-  Clock,
-  Phone,
-  Mail,
-  Camera,
-} from "lucide-react";
+import { Building2, Users, MapPin, Clock, ArrowRight } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 import Contact from "@/components/contact";
 
 const showroomFeatures = [
   {
     icon: Building2,
-    title: "Showroom Spacieux",
-    description:
-      "Un espace de 2500m² dédié aux dernières nouveautés automobiles avec une ambiance lumineuse et moderne.",
+    title: "Volume & Espace",
+    label: "2500m² d'exposition",
+    description: "Une galerie monumentale dédiée aux dernières innovations automobiles, baignée de lumière naturelle.",
   },
   {
     icon: Users,
-    title: "Pièces des rechange d'origines",
-    description:
-      "Vente de pièces de rechange d'origine, toutes marques, avec garantie.",
+    title: "Composants d'Origine",
+    label: "Certification Constructeur",
+    description: "Un département dédié aux pièces de rechange authentiques, garantissant l'intégrité de votre véhicule.",
   },
   {
     icon: MapPin,
-    title: "Accès Facile",
-    description:
-      "Situé en centre-ville avec un parking gratuit de 75 places et proximité des transports publics.",
+    title: "Localisation",
+    label: "Centre-Ville",
+    description: "Un emplacement stratégique avec 75 places de parking privatives pour une visite en toute sérénité.",
   },
   {
     icon: Clock,
-    title: "Horaires Flexibles",
-    description:
-      "Ouvert 6j/7 avec des créneaux adaptés à vos besoins.",
+    title: "Disponibilité",
+    label: "Service 6j/7",
+    description: "Des plages horaires étendues conçues pour s'adapter à l'agenda de notre clientèle exigeante.",
   },
 ];
 
@@ -41,46 +33,81 @@ export default function MagasinPage() {
   return (
     <ServiceLayout
       title="Notre Magasin"
-      description="Plongez dans l'univers de l'automobile avec notre showroom d'exception, offrant une expérience unique et des services premium."
+      description="L'immersion totale dans l'excellence automobile. Un espace conçu pour sublimer la performance et le design."
       icon={Building2}
     >
-      {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block rounded-full bg-[#E71609] px-4 py-2 text-sm font-medium text-white mb-4">
-              Nos Services
+      {/* SECTION 01: THE PHILOSOPHY (Asymmetrical Intro) */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div className="lg:col-span-5">
+              <span className="text-[10px] uppercase tracking-[0.4em] text-[#E71609] font-bold mb-4 block">
+                L'Espace Studio
+              </span>
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-black uppercase leading-[0.9] mb-8">
+                Plus qu'un magasin, <br />
+                <span className="italic font-light text-gray-400">une expérience.</span>
+              </h2>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl mb-4 text-[#E71609]">
-              Pourquoi Nous Choisir ?
-            </h2>
-            <p className="text-lg text-gray-600">
-              Des services et des avantages pensés pour une expérience client
-              exceptionnelle.
-            </p>
+            <div className="lg:col-span-6 lg:col-start-7 pt-4">
+              <p className="text-xl text-gray-600 font-light leading-relaxed mb-6">
+                Notre showroom redéfinit les standards de l'exposition automobile. Chaque mètre carré est pensé pour offrir une perspective unique sur l'ingénierie moderne.
+              </p>
+              <div className="h-[1px] w-24 bg-[#E71609]" />
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        </div>
+      </section>
+
+      {/* SECTION 02: FEATURES GRID (Studio Exhibition Style) */}
+      <section className="py-24 bg-[#fafafa] border-y border-black/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 border border-black/5">
             {showroomFeatures.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="bg-red-100 p-3 rounded-full">
-                    <feature.icon className="h-6 w-6 text-[#E71609]" />
+              <div 
+                key={index} 
+                className="bg-white p-12 md:p-20 flex flex-col justify-between group hover:bg-black transition-all duration-700"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-12">
+                    <span className="text-[10px] font-mono text-gray-400 group-hover:text-[#E71609]">
+                      PRTF_0{index + 1}
+                    </span>
+                    <feature.icon size={24} className="text-black group-hover:text-white stroke-[1px]" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 ml-4">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#E71609] font-bold mb-2 block">
+                    {feature.label}
+                  </span>
+                  <h3 className="text-2xl font-bold text-black uppercase tracking-tighter mb-6 group-hover:text-white">
                     {feature.title}
                   </h3>
+                  <p className="text-gray-500 font-light leading-relaxed group-hover:text-gray-400">
+                    {feature.description}
+                  </p>
                 </div>
-                <p className="text-gray-600">{feature.description}</p>
+                
+                <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-black group-hover:text-white opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
+                  En savoir plus <ArrowRight size={14} className="text-[#E71609]" />
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className=" bg-white">
-        <Contact />
+      {/* SECTION 03: GALLERY / VISUAL (Atmospheric) */}
+      <section className="h-32 relative overflow-hidden bg-black">
+    
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+             <h2 className="text-white text-5xl md:text-8xl font-bold uppercase tracking-[0.2em] opacity-20">
+               FORUM AUTO GABES
+             </h2>
+          </div>
+        </div>
       </section>
+
+  
     </ServiceLayout>
   );
 }

@@ -2,100 +2,120 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Phone, X } from "lucide-react";
+import { MessageSquare, Phone, X, Send, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end">
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 10 }}
-            className="mb-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 w-64 border border-gray-200 dark:border-gray-700"
+            initial={{ opacity: 0, x: 20, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 20, scale: 0.95 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-6 bg-black text-white p-0 w-72 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
           >
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="font-semibold text-gray-900 dark:text-white">
-                Contactez-nous
-              </h3>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-6 w-6"
+            {/* Header Area */}
+            <div className="bg-[#E71609] p-6 flex justify-between items-center">
+              <div>
+                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/80 block mb-1">
+                  Conciergerie
+                </span>
+                <h3 className="text-lg font-bold uppercase tracking-tighter leading-none">
+                  Studio Contact
+                </h3>
+              </div>
+              <button 
                 onClick={() => setIsOpen(false)}
+                className="hover:rotate-90 transition-transform duration-300"
               >
-                <X className="h-4 w-4" />
-              </Button>
+                <X size={20} />
+              </button>
             </div>
-            <div className="space-y-3">
-              <a
-                href="tel:+21629378089"
-                className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              >
-                <Phone className="h-4 w-4 text-[#E71609] dark:text-red-400" />
-                <span className="text-sm dark:text-gray-200">
-                  +216 29 378 089
-                </span>
-              </a>
 
-              <a
-                href="https://wa.me/21629378089" // Update with your real WhatsApp number
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-green-500"
+            {/* Links Area */}
+            <div className="p-2">
+              <div className="space-y-1">
+                <a
+                  href="tel:+21629378089"
+                  className="group flex items-center justify-between p-4 hover:bg-white/5 transition-colors"
                 >
-                  <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
-                  <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
-                  <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
-                  <path d="M9.5 13.5c.5 1 1.5 1 2.5 1s2-.5 2.5-1" />
-                </svg>
-                <span className="text-sm dark:text-gray-200">WhatsApp</span>
-              </a>
+                  <div className="flex items-center gap-4">
+                    <Phone size={16} className="text-[#E71609]" />
+                    <span className="text-[11px] uppercase tracking-widest font-bold">Ligne Directe</span>
+                  </div>
+                  <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </a>
 
-              <a
-                href="mailto:contact@forumautogabes.com"
-                className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              >
-                <MessageSquare className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm dark:text-gray-200">
-                  Envoyer un email
+                <a
+                  href="https://wa.me/21629378089"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between p-4 hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <Send size={16} className="text-[#E71609]" />
+                    <span className="text-[11px] uppercase tracking-widest font-bold">WhatsApp Business</span>
+                  </div>
+                  <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </a>
+
+                <a
+                  href="mailto:contact@forumautogabes.com"
+                  className="group flex items-center justify-between p-4 hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <MessageSquare size={16} className="text-[#E71609]" />
+                    <span className="text-[11px] uppercase tracking-widest font-bold">Demande Email</span>
+                  </div>
+                  <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </a>
+              </div>
+            </div>
+
+            {/* Availability Footer */}
+            <div className="border-t border-white/5 p-4 bg-white/5">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-              </a>
+                <span className="text-[9px] uppercase tracking-widest text-gray-400 font-bold">
+                  Agents disponibles en ligne
+                </span>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <Button
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`rounded-full w-14 h-14 shadow-lg ${
-          isOpen
-            ? "bg-[#E71609] hover:bg-red-800"
-            : "bg-[#E71609] hover:bg-red-700"
-        }`}
+        className="group relative flex items-center justify-center w-16 h-16 bg-black border border-white/10 hover:border-[#E71609] transition-all duration-500"
       >
-        {isOpen ? (
-          <X className="h-6 w-6" />
-        ) : (
-          <MessageSquare className="h-6 w-6" />
+        {/* Animated Background on Hover */}
+        <div className="absolute inset-0 bg-[#E71609] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500" />
+        
+        {/* Icons */}
+        <div className="relative z-10 text-white">
+          {isOpen ? (
+            <X size={24} strokeWidth={1.5} />
+          ) : (
+            <MessageSquare size={24} strokeWidth={1.5} />
+          )}
+        </div>
+
+        {/* Floating Label (Luxury Detail) */}
+        {!isOpen && (
+          <span className="absolute right-20 text-[10px] uppercase tracking-[0.4em] text-black font-bold opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none whitespace-nowrap">
+            Contactez-nous
+          </span>
         )}
-      </Button>
+      </button>
     </div>
   );
 }

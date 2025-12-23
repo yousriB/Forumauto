@@ -10,381 +10,218 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { User } from "lucide-react";
-import { motion } from "framer-motion";
+import { User, ArrowRight, FileText } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { FormEvent, useState } from "react";
 import SuccessMessage from "@/components/SuccessMessage";
 
-// 24 governorates of Tunisia
 const regions = [
-  "Ariana",
-  "Béja",
-  "Ben Arous",
-  "Bizerte",
-  "Gabès",
-  "Gafsa",
-  "Jendouba",
-  "Kairouan",
-  "Kasserine",
-  "Kébili",
-  "Le Kef",
-  "Mahdia",
-  "Manouba",
-  "Medenine",
-  "Monastir",
-  "Nabeul",
-  "Sfax",
-  "Sidi Bouzid",
-  "Siliana",
-  "Sousse",
-  "Tataouine",
-  "Tozeur",
-  "Tunis",
-  "Zaghouan",
+  "Ariana", "Béja", "Ben Arous", "Bizerte", "Gabès", "Gafsa", "Jendouba",
+  "Kairouan", "Kasserine", "Kébili", "Le Kef", "Mahdia", "Manouba",
+  "Medenine", "Monastir", "Nabeul", "Sfax", "Sidi Bouzid", "Siliana",
+  "Sousse", "Tataouine", "Tozeur", "Tunis", "Zaghouan",
 ];
 
-const page = () => {
+const DevisForm = () => {
+  // Assuming cars data is handled via a prop or fetch in a real scenario, 
+  // but keeping your require logic for compatibility.
   const cars = require("../../../data/cars.json");
 
-  // Create a map of brands to their unique models and versions
-  const brandModelsMap = cars.reduce(
-    (
-      acc: {
-        [key: string]: {
-          models: string[];
-          versions: { [key: string]: string[] };
-        };
-      },
-      car: { brand: string; model: string; version: string }
-    ) => {
-      if (!acc[car.brand]) {
-        acc[car.brand] = { models: [], versions: {} };
-      }
-      if (!acc[car.brand].models.includes(car.model)) {
-        acc[car.brand].models.push(car.model);
-      }
-      if (!acc[car.brand].versions[car.model]) {
-        acc[car.brand].versions[car.model] = [];
-      }
-      if (!acc[car.brand].versions[car.model].includes(car.version)) {
-        acc[car.brand].versions[car.model].push(car.version);
-      }
-      return acc;
-    },
-    {}
-  );
+  const brandModelsMap = cars.reduce((acc: any, car: any) => {
+    if (!acc[car.brand]) acc[car.brand] = { models: [], versions: {} };
+    if (!acc[car.brand].models.includes(car.model)) acc[car.brand].models.push(car.model);
+    if (!acc[car.brand].versions[car.model]) acc[car.brand].versions[car.model] = [];
+    if (!acc[car.brand].versions[car.model].includes(car.version)) acc[car.brand].versions[car.model].push(car.version);
+    return acc;
+  }, {});
 
   const brands = Object.keys(brandModelsMap);
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    cinOrNf: "",
-    email: "",
-    marque: "",
-    model: "",
-    version: "",
-    region: "",
+    firstName: "", lastName: "", phoneNumber: "", cinOrNf: "",
+    email: "", marque: "", model: "", version: "", region: "",
   });
 
   const [filteredModels, setFilteredModels] = useState<string[]>([]);
   const [filteredVersions, setFilteredVersions] = useState<string[]>([]);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  // Function to check if all required fields are filled
-  const isFormValid = () => {
-    return (
-      formData.firstName.trim() !== "" &&
-      formData.lastName.trim() !== "" &&
-      formData.phoneNumber.trim() !== "" &&
-      formData.cinOrNf.trim() !== "" &&
-      formData.email.trim() !== "" &&
-      formData.marque !== "" &&
-      formData.model !== "" &&
-      formData.version !== "" &&
-      formData.region !== ""
-    );
-  };
+  const isFormValid = () => Object.values(formData).every(val => val.trim() !== "");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-
-    if (name === "marque") {
-      // Update models when marque is changed
-      setFilteredModels(brandModelsMap[value]?.models || []);
-      setFilteredVersions([]);
-      setFormData((prev) => ({
-        ...prev,
-        model: "",
-        version: "",
-      }));
-    }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/custom-devis-request", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
-      const data = await response.json();
-
       if (response.ok) {
         setShowSuccess(true);
         setFormData({
-          firstName: "",
-          lastName: "",
-          phoneNumber: "",
-          cinOrNf: "",
-          email: "",
-          marque: "",
-          model: "",
-          version: "",
-          region: "",
+          firstName: "", lastName: "", phoneNumber: "", cinOrNf: "",
+          email: "", marque: "", model: "", version: "", region: "",
         });
-        setFilteredModels([]);
-        setFilteredVersions([]);
-      } else {
-        alert(data.error || "Une erreur est survenue lors de l'envoi.");
       }
     } catch (error) {
-      alert("Erreur réseau ou serveur.");
+      console.error("Submit error", error);
     }
   };
 
   return (
-    <section className="bg-white shadow-md">
-      <div className="sm:container p-1">
-        {showSuccess && (
-          <SuccessMessage message="Votre demande a été envoyée avec succès !" />
-        )}
-        <div className="text-center mb-10">
-          <div className="inline-block rounded-lg bg-[#E71609] px-3 py-1 text-sm text-white mb-4">
-            Demande de devis
+    <section className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        
+        {/* HEADER AREA */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-black/5 pb-12 gap-8">
+          <div className="max-w-xl">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-[#E71609] font-bold mb-4 block">
+              Configuration
+            </span>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-black uppercase leading-none">
+              Demande de <br />
+              <span className="italic font-light text-gray-400">devis personnalisé</span>
+            </h2>
           </div>
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-3 text-[#E71609]">
-            Vos Coordonnées
-          </h2>
-          <p className="text-base text-gray-600">
-            Remplissez vos informations pour continuer.
-          </p>
+          <div className="text-right hidden md:block">
+            <p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+              Ref: STUDIO-QUOT-2025
+            </p>
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto bg-white rounded-xl overflow-hidden p-6"
-        >
-          <form onSubmit={handleSubmit}>
-            <div className="space-y-5 p-1 text-start">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <User className="mr-2 h-5 w-5 text-[#E71609]" />
-                Informations Personnelles
-              </h4>
-
-              {/* Marque, Model and Version */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="space-y-2">
-                  <Label htmlFor="marque">Marque</Label>
-                  <Select
-                    value={formData.marque}
-                    onValueChange={(value) => {
-                      setFormData((prev) => ({
-                        ...prev,
-                        marque: value,
-                        model: "",
-                        version: "",
-                      }));
-                      setFilteredModels(brandModelsMap[value]?.models || []);
-                      setFilteredVersions([]);
-                    }}
-                  >
-                    <SelectTrigger id="marque">
-                      <SelectValue placeholder="Sélectionner" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {brands.map((brand: string) => (
-                        <SelectItem key={brand} value={brand}>
-                          {brand}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+        <AnimatePresence>
+          {showSuccess ? (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <SuccessMessage message="Votre demande a été enregistrée. Notre équipe vous contactera sous 24h." />
+            </motion.div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-16">
+              
+              {/* SECTION 01: VÉHICULE */}
+              <div className="space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="h-[1px] w-8 bg-[#E71609]" />
+                  <h4 className="text-[11px] uppercase tracking-[0.3em] font-bold text-black">
+                    01. Sélection du Véhicule
+                  </h4>
                 </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                  <div className="space-y-3">
+                    <Label className="text-[10px] uppercase tracking-widest text-gray-400">Marque</Label>
+                    <Select value={formData.marque} onValueChange={(v) => {
+                        setFormData(prev => ({ ...prev, marque: v, model: "", version: "" }));
+                        setFilteredModels(brandModelsMap[v]?.models || []);
+                        setFilteredVersions([]);
+                    }}>
+                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                        <SelectValue placeholder="Choisir marque" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-none border-black">
+                        {brands.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="model">Modèle</Label>
-                  <Select
-                    value={formData.model}
-                    onValueChange={(value) => {
-                      setFormData((prev) => ({
-                        ...prev,
-                        model: value,
-                        version: "",
-                      }));
-                      setFilteredVersions(
-                        brandModelsMap[formData.marque]?.versions[value] || []
-                      );
-                    }}
-                    disabled={!filteredModels.length}
-                  >
-                    <SelectTrigger id="model">
-                      <SelectValue placeholder="Sélectionner" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {filteredModels.map((model) => (
-                        <SelectItem key={model} value={model}>
-                          {model}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-3">
+                    <Label className="text-[10px] uppercase tracking-widest text-gray-400">Modèle</Label>
+                    <Select value={formData.model} disabled={!formData.marque} onValueChange={(v) => {
+                        setFormData(prev => ({ ...prev, model: v, version: "" }));
+                        setFilteredVersions(brandModelsMap[formData.marque]?.versions[v] || []);
+                    }}>
+                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                        <SelectValue placeholder="Choisir modèle" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-none border-black">
+                        {filteredModels.map(m => <SelectItem key={m} value={m}>{m}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="version">Version</Label>
-                  <Select
-                    value={formData.version}
-                    onValueChange={(value) => {
-                      setFormData((prev) => ({ ...prev, version: value }));
-                    }}
-                    disabled={!filteredVersions.length}
-                  >
-                    <SelectTrigger id="version">
-                      <SelectValue placeholder="Sélectionner" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {filteredVersions.map((version) => (
-                        <SelectItem key={version} value={version}>
-                          {version}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="space-y-3">
+                    <Label className="text-[10px] uppercase tracking-widest text-gray-400">Version</Label>
+                    <Select value={formData.version} disabled={!formData.model} onValueChange={(v) => setFormData(p => ({ ...p, version: v }))}>
+                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                        <SelectValue placeholder="Choisir version" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-none border-black">
+                        {filteredVersions.map(v => <SelectItem key={v} value={v}>{v}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
               </div>
 
-              {/* Personal info */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="space-y-1.5">
-                  <Label htmlFor="firstName">Prénom</Label>
-                  <Input
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    placeholder="Votre prénom"
-                    required
-                    className="border-gray-300 focus:border-red-500 focus:ring-red-500"
-                  />
+              {/* SECTION 02: COORDONNÉES */}
+              <div className="space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="h-[1px] w-8 bg-[#E71609]" />
+                  <h4 className="text-[11px] uppercase tracking-[0.3em] font-bold text-black">
+                    02. Informations Client
+                  </h4>
                 </div>
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="lastName">Nom</Label>
-                  <Input
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    placeholder="Votre nom de famille"
-                    required
-                    className="border-gray-300 focus:border-red-500 focus:ring-red-500"
-                  />
-                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                  {[
+                    { id: "firstName", label: "Prénom", name: "firstName", type: "text" },
+                    { id: "lastName", label: "Nom", name: "lastName", type: "text" },
+                    { id: "phoneNumber", label: "Téléphone", name: "phoneNumber", type: "tel" },
+                    { id: "email", label: "Email", name: "email", type: "email" },
+                    { id: "cinOrNf", label: "CIN / N° Fiscal", name: "cinOrNf", type: "text" },
+                  ].map((field) => (
+                    <div key={field.id} className="space-y-2 group">
+                      <Label htmlFor={field.id} className="text-[10px] uppercase tracking-widest text-gray-400 group-focus-within:text-[#E71609] transition-colors">
+                        {field.label}
+                      </Label>
+                      <Input
+                        id={field.id}
+                        name={field.name}
+                        type={field.type}
+                        value={(formData as any)[field.name]}
+                        onChange={handleChange}
+                        required
+                        className="border-0 border-b border-black/10 rounded-none px-0 focus-visible:ring-0 focus-visible:border-black transition-all bg-transparent placeholder:text-gray-200 italic"
+                      />
+                    </div>
+                  ))}
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="phoneNumber">Téléphone</Label>
-                  <Input
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    type="tel"
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
-                    placeholder="Votre numéro de téléphone"
-                    required
-                    className="border-gray-300 focus:border-red-500 focus:ring-red-500"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Votre email"
-                    required
-                    className="border-gray-300 focus:border-red-500 focus:ring-red-500"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="region">Région de Tunisie</Label>
-                  <Select
-                    value={formData.region}
-                    onValueChange={(value) => {
-                      setFormData((prev) => ({ ...prev, region: value }));
-                    }}
-                  >
-                    <SelectTrigger id="region">
-                      <SelectValue placeholder="Sélectionner" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {regions.map((region) => (
-                        <SelectItem key={region} value={region}>
-                          {region}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="cinOrNf">CIN / N°Fiscal</Label>
-                  <Input
-                    id="cinOrNf"
-                    name="cinOrNf"
-                    value={formData.cinOrNf}
-                    onChange={handleChange}
-                    placeholder="Votre CIN ou N°Fiscal"
-                    required
-                    className="border-gray-300 focus:border-red-500 focus:ring-red-500"
-                  />
+                  <div className="space-y-3">
+                    <Label className="text-[10px] uppercase tracking-widest text-gray-400">Région</Label>
+                    <Select value={formData.region} onValueChange={(v) => setFormData(p => ({ ...p, region: v }))}>
+                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                        <SelectValue placeholder="Sélectionner région" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-none border-black">
+                        {regions.map(r => <SelectItem key={r} value={r}>{r}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
               </div>
 
-              {/* Submit button */}
-              <div className="pt-4 flex justify-end space-x-4">
+              {/* SUBMIT BUTTON */}
+              <div className="pt-12 flex justify-center md:justify-end">
                 <Button
                   type="submit"
-                  className="bg-[#E71609] hover:bg-[#E71609]/90 px-6 py-2.5"
                   disabled={!isFormValid()}
+                  className="group relative bg-black hover:bg-[#E71609] text-white rounded-none px-12 py-8 text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-500 overflow-hidden"
                 >
-                  Envoyer la demande
+                  <span className="relative z-10 flex items-center gap-3">
+                    Soumettre la demande <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
               </div>
-            </div>
-          </form>
-        </motion.div>
+            </form>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
 };
 
-export default page;
+export default DevisForm;
