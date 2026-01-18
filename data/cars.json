@@ -5718,11 +5718,11 @@
   {
     "id": 18,
     "new": false,
-    "promotion": false,
+    "promotion": true,
     "brand": "HAVAL",
     "model": "Jolion",
     "version": "1.5 T",
-    "price": 102900,
+    "price": 98900,
     "image": "https://catalogue.automobile.tn/big/2024/09/47233.webp?t=1748444410",
     "fuel": "Essence",
     "gearbox": "Automatique",
@@ -15736,7 +15736,7 @@
     "brand": "SUZUKI",
     "model": "Baleno",
     "version": "1.5 L GL BVM",
-    "price": 66900,
+    "price": 67900,
     "image": "https://catalogue.automobile.tn/big/2023/10/47013.webp?t=1697702204",
     "fuel": "Essence",
     "gearbox": "Manuelle",
@@ -34270,360 +34270,6 @@
     ]
   },
   {
-    "id": 114,
-    "new": false,
-    "promotion": false,
-    "brand": "BYD",
-    "model": "King",
-    "version": "1.5 L DM-i",
-    "price": 105990,
-    "image": "https://catalogue.automobile.tn/big/2024/06/47173.webp?t=1745242922",
-    "fuel": "Essence | Hybride rechargeable",
-    "gearbox": "Automatique",
-    "technicalSpecs": [
-      {
-        "title": "Caractéristiques",
-        "specs": [
-          {
-            "label": "Carrosserie",
-            "value": "Berline"
-          },
-          {
-            "label": "Garantie",
-            "value": "6 ans ou 150.000 km | Batterie garantie 8 ans ou 200.000 km"
-          },
-          {
-            "label": "Nombre de places",
-            "value": "5"
-          },
-          {
-            "label": "Nombre de portes",
-            "value": "4"
-          }
-        ]
-      },
-      {
-        "title": "Motorisation",
-        "specs": [
-          {
-            "label": "Nombre de cylindres",
-            "value": "4"
-          },
-          {
-            "label": "Energie",
-            "value": "Essence | Hybride rechargeable"
-          },
-          {
-            "label": "Puissance fiscale",
-            "value": "5 CV"
-          },
-          {
-            "label": "Puissance (ch.din)",
-            "value": "187 CH"
-          },
-          {
-            "label": "Puissance thermique (ch.din)",
-            "value": "106 CH"
-          },
-          {
-            "label": "Puissance électrique",
-            "value": "81 CH"
-          },
-          {
-            "label": "Batterie",
-            "value": "8.3 kWh"
-          },
-          {
-            "label": "Couple",
-            "value": "130 nm 4500 tr/min"
-          },
-          {
-            "label": "Couple électrique",
-            "value": "316 nm"
-          },
-          {
-            "label": "Cylindrée",
-            "value": "1498 CM³"
-          }
-        ]
-      },
-      {
-        "title": "Transmission",
-        "specs": [
-          {
-            "label": "Boîte",
-            "value": "Automatique"
-          },
-          {
-            "label": "Transmission",
-            "value": "Traction"
-          }
-        ]
-      },
-      {
-        "title": "Dimensions",
-        "specs": [
-          {
-            "label": "Longueur",
-            "value": "4765 mm"
-          },
-          {
-            "label": "Largeur",
-            "value": "1837 mm"
-          },
-          {
-            "label": "Hauteur",
-            "value": "1495 mm"
-          },
-          {
-            "label": "Volume du coffre",
-            "value": "450 L"
-          }
-        ]
-      },
-      {
-        "title": "Performances",
-        "specs": [
-          {
-            "label": "0-100 Km/h",
-            "value": "7.9 s"
-          },
-          {
-            "label": "Vitesse maxi",
-            "value": "185 KM/H"
-          },
-          {
-            "label": "Autonomie électrique (WLTP)",
-            "value": "55 km"
-          },
-          {
-            "label": "Autonomie électrique (NEDC)",
-            "value": "1175 km"
-          }
-        ]
-      },
-      {
-        "title": "Consommation",
-        "specs": [
-          {
-            "label": "Consommation mixte",
-            "value": "3.9 L/100 km"
-          }
-        ]
-      },
-      {
-        "title": "Equipements de sécurité",
-        "specs": [
-          {
-            "label": "ABS",
-            "value": ""
-          },
-          {
-            "label": "Airbags",
-            "value": "Frontaux | Latéraux | Rideaux"
-          },
-          {
-            "label": "Alarme antivol",
-            "value": ""
-          },
-          {
-            "label": "Allumage automatique des feux",
-            "value": ""
-          },
-          {
-            "label": "Anti-démarrage électronique",
-            "value": ""
-          },
-          {
-            "label": "Contrôle de pression des pneus",
-            "value": "TPMS"
-          },
-          {
-            "label": "Fixations ISOFIX",
-            "value": ""
-          },
-          {
-            "label": "Kit sécurité",
-            "value": "Triangle de présignalisation"
-          }
-        ]
-      },
-      {
-        "title": "Aides à la conduite",
-        "specs": [
-          {
-            "label": "Anti-patinage",
-            "value": "ESC | TCS"
-          },
-          {
-            "label": "Aide au démarrage en côte",
-            "value": "HHC"
-          },
-          {
-            "label": "Aide au stationnement",
-            "value": "Radar de recul | Radar avant | Système de caméras 360"
-          },
-          {
-            "label": "Assistance au freinage",
-            "value": "EBD | HBA | VDC"
-          },
-          {
-            "label": "Direction assistée",
-            "value": ""
-          },
-          {
-            "label": "Régulateur de vitesse",
-            "value": ""
-          }
-        ]
-      },
-      {
-        "title": "Equipements extérieurs",
-        "specs": [
-          {
-            "label": "Baguettes extérieures d'encadrement des vitres",
-            "value": "Chrome"
-          },
-          {
-            "label": "Calandre",
-            "value": "Chromée"
-          },
-          {
-            "label": "Boulons de roues protégés",
-            "value": ""
-          },
-          {
-            "label": "Eléments extérieurs couleur carrosserie",
-            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
-          },
-          {
-            "label": "Feux à LED",
-            "value": "Feux de jour | Avant | Arrières | Clignotants à défilement"
-          },
-          {
-            "label": "Jantes",
-            "value": "En aluminium | 17''"
-          },
-          {
-            "label": "Peinture",
-            "value": "Métallisée"
-          },
-          {
-            "label": "Phares",
-            "value": "LED"
-          }
-        ]
-      },
-      {
-        "title": "Audio et communication",
-        "specs": [
-          {
-            "label": "Autoradio",
-            "value": "6 haut-parleurs | Commandes au volant"
-          },
-          {
-            "label": "Connectivité",
-            "value": "2 USB | 2 USB-C | Android Auto | Apple Carplay | Bluetooth | Commande vocale | Chargeur de téléphone sans fil"
-          },
-          {
-            "label": "Ecran central",
-            "value": "Tactile | 12.8 pouces | Rotatif"
-          }
-        ]
-      },
-      {
-        "title": "Equipements intérieurs",
-        "specs": [
-          {
-            "label": "Accoudoirs",
-            "value": "Avant | Arrière"
-          },
-          {
-            "label": "Appuis têtes arrières",
-            "value": "3"
-          },
-          {
-            "label": "Kit rangement",
-            "value": "Poches aumônières | Porte-lunettes"
-          },
-          {
-            "label": "Sellerie",
-            "value": "Similicuir"
-          },
-          {
-            "label": "Sièges",
-            "value": "Conducteur à réglage électrique | 6 directions | Avec Appuie-tête intégrés"
-          },
-          {
-            "label": "Sièges réglables en hauteur",
-            "value": "Conducteur"
-          },
-          {
-            "label": "Tapis de sol",
-            "value": ""
-          },
-          {
-            "label": "Volant",
-            "value": "Similicuir | 3 branches | Multi-fonctions"
-          },
-          {
-            "label": "Volant réglable",
-            "value": "En hauteur et en profondeur"
-          }
-        ]
-      },
-      {
-        "title": "Equipements fonctionnels",
-        "specs": [
-          {
-            "label": "Alimentation électrique",
-            "value": "1 prise 12 V"
-          },
-          {
-            "label": "Bouton Start & Stop",
-            "value": "Démarrage mains libres"
-          },
-          {
-            "label": "Clé intelligente",
-            "value": "Accès mains libres | Démarrage à distance"
-          },
-          {
-            "label": "Climatisation",
-            "value": "Automatique | Bizone | Ventilation arrière"
-          },
-          {
-            "label": "Fermeture centralisée",
-            "value": "À distance"
-          },
-          {
-            "label": "Frein de stationnement",
-            "value": "Éléctrique"
-          },
-          {
-            "label": "Modes de conduite",
-            "value": "Normal | Sport | Eco"
-          },
-          {
-            "label": "Ordinateur de bord",
-            "value": ""
-          },
-          {
-            "label": "Rétroviseurs extérieurs",
-            "value": "Électriques | Rabattables | Éclairage d'accueil à LED"
-          },
-          {
-            "label": "Instrumentation digitale",
-            "value": "8.8\""
-          },
-          {
-            "label": "Vitres électriques",
-            "value": "Avant/Arrière"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": 115,
     "new": false,
     "promotion": false,
@@ -42372,6 +42018,1060 @@
           {
             "label": "Instrumentation digitale",
             "value": "12.3''"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "new": true,
+    "promotion": false,
+    "brand": "BYD",
+    "model": "Dolphin Surf",
+    "version": "30.08 KWH",
+    "price": 51000,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47558.webp?t=1768582632",
+    "fuel": "Electrique",
+    "gearbox": "Automatique",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "1 mois | En pré-commande"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Citadine"
+          },
+          {
+            "label": "Garantie",
+            "value": "6 ans ou 150.000 km | Batterie garantie 8 ans ou 200.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "4"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de moteurs électriques",
+            "value": "1"
+          },
+          {
+            "label": "Energie",
+            "value": "Electrique"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "2 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "75 CH"
+          },
+          {
+            "label": "Batterie",
+            "value": "30.08 kWh"
+          },
+          {
+            "label": "Type de batterie",
+            "value": "LFP"
+          },
+          {
+            "label": "Couple",
+            "value": "135 nm 0 tr/min"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Automatique"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "3780 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1715 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1580 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "230 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "13.5 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "130 KM/H"
+          },
+          {
+            "label": "Autonomie électrique (WLTP)",
+            "value": "230 km"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation électrique (WLTP)",
+            "value": "9.8 kWh/100 km"
+          },
+          {
+            "label": "Capacité de recharge maximale (AC)",
+            "value": "7 kwh"
+          },
+          {
+            "label": "Temps de recharge normale (AC)",
+            "value": "3.5 heures"
+          },
+          {
+            "label": "Temps de recharge rapide (DC)",
+            "value": "30 minutes"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Rideaux"
+          },
+          {
+            "label": "Allumage automatique des feux",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP | TCS"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBA | EBD | HBA | VDC"
+          },
+          {
+            "label": "Contrôle de pression des pneus",
+            "value": "TPMS"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul"
+          },
+          {
+            "label": "Alerte de circulation transversale",
+            "value": ""
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          },
+          {
+            "label": "Système de descente en côte",
+            "value": "HDC"
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Boulons de roues protégés",
+            "value": ""
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour | Avant | Arrières | Clignotants à défilement"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 16''"
+          },
+          {
+            "label": "Peinture",
+            "value": "Métallisée"
+          },
+          {
+            "label": "Phares",
+            "value": "LED"
+          },
+          {
+            "label": "Spoiler arrière",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "4 haut-parleurs | Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | USB-C | Android Auto | Apple Carplay | Bluetooth | Commande vocale"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 10.1 pouces | Rotatif"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Avant"
+          },
+          {
+            "label": "Appuis têtes arrières",
+            "value": "2"
+          },
+          {
+            "label": "Kit rangement",
+            "value": "Poches aumônières"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Similicuir"
+          },
+          {
+            "label": "Sièges",
+            "value": "Conducteur à réglage électrique | 4 directions"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur et en profondeur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V | Chargeur inversé (V2L)"
+          },
+          {
+            "label": "Bouton Start & Stop",
+            "value": "Démarrage mains libres"
+          },
+          {
+            "label": "Clé intelligente",
+            "value": "Accès mains libres | Démarrage à distance"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Frein de stationnement",
+            "value": "EPB"
+          },
+          {
+            "label": "Modes de conduite",
+            "value": "Normal | Sport | Eco | Neige"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Dégivrants"
+          },
+          {
+            "label": "Rétroviseur intérieur",
+            "value": "Anti-éblouissement"
+          },
+          {
+            "label": "Instrumentation digitale",
+            "value": "7 pouces"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "new": true,
+    "promotion": false,
+    "brand": "BYD",
+    "model": "Dolphin Surf",
+    "version": "38.88 KWH",
+    "price": 55000,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47558.webp?t=1768582632",
+    "fuel": "Electrique",
+    "gearbox": "Automatique",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "1 mois | En pré-commande"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Citadine"
+          },
+          {
+            "label": "Garantie",
+            "value": "6 ans ou 150.000 km | Batterie garantie 8 ans ou 200.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "4"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de moteurs électriques",
+            "value": "1"
+          },
+          {
+            "label": "Energie",
+            "value": "Electrique"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "2 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "75 CH"
+          },
+          {
+            "label": "Batterie",
+            "value": "38.88 kWh"
+          },
+          {
+            "label": "Type de batterie",
+            "value": "LFP"
+          },
+          {
+            "label": "Couple",
+            "value": "135 nm 0 tr/min"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Automatique"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "3780 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1715 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1580 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "230 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "13.5 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "130 KM/H"
+          },
+          {
+            "label": "Autonomie électrique (WLTP)",
+            "value": "300 km"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation électrique (WLTP)",
+            "value": "9.8 kWh/100 km"
+          },
+          {
+            "label": "Capacité de recharge maximale (AC)",
+            "value": "7 kwh"
+          },
+          {
+            "label": "Temps de recharge normale (AC)",
+            "value": "4.5 heures"
+          },
+          {
+            "label": "Temps de recharge rapide (DC)",
+            "value": "30 minutes"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux"
+          },
+          {
+            "label": "Allumage automatique des feux",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP | TCS"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBA | EBD | HBA | VDC"
+          },
+          {
+            "label": "Contrôle de pression des pneus",
+            "value": "TPMS"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul"
+          },
+          {
+            "label": "Alerte de circulation transversale",
+            "value": ""
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          },
+          {
+            "label": "Système de descente en côte",
+            "value": "HDC"
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Boulons de roues protégés",
+            "value": ""
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour | Avant | Arrières | Clignotants à défilement"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 16''"
+          },
+          {
+            "label": "Peinture",
+            "value": "Métallisée"
+          },
+          {
+            "label": "Phares",
+            "value": "LED"
+          },
+          {
+            "label": "Spoiler arrière",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "4 haut-parleurs | Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | USB-C | Android Auto | Apple Carplay | Bluetooth | Commande vocale | Chargeur de téléphone sans fil"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 10.1 pouces | Rotatif"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Avant"
+          },
+          {
+            "label": "Appuis têtes arrières",
+            "value": "2"
+          },
+          {
+            "label": "Kit rangement",
+            "value": "Poches aumônières"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Similicuir"
+          },
+          {
+            "label": "Sièges",
+            "value": "Conducteur à réglage électrique | 6 directions"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "Similicuir | 3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur et en profondeur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V | Chargeur inversé (V2L)"
+          },
+          {
+            "label": "Bouton Start & Stop",
+            "value": "Démarrage mains libres"
+          },
+          {
+            "label": "Clé intelligente",
+            "value": "Accès mains libres | Démarrage à distance"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Frein de stationnement",
+            "value": "EPB"
+          },
+          {
+            "label": "Modes de conduite",
+            "value": "Normal | Sport | Eco | Neige"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Dégivrants"
+          },
+          {
+            "label": "Rétroviseur intérieur",
+            "value": "Anti-éblouissement"
+          },
+          {
+            "label": "Instrumentation digitale",
+            "value": "7 pouces"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "new": true,
+    "promotion": false,
+    "brand": "BYD",
+    "model": "Qin Plus",
+    "version": "1.5 L DM-i",
+    "price": 69990,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47528.webp?t=1767728284",
+    "fuel": "Essence | Hybride rechargeable",
+    "gearbox": "Automatique",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "Disponible"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Berline"
+          },
+          {
+            "label": "Garantie",
+            "value": "6 ans ou 150.000 km | Batterie garantie 8 ans ou 200.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "4"
+          },
+          {
+            "label": "Energie",
+            "value": "Essence | Hybride rechargeable"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "5 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "187 CH"
+          },
+          {
+            "label": "Puissance thermique (ch.din)",
+            "value": "106 CH"
+          },
+          {
+            "label": "Puissance électrique",
+            "value": "81 CH"
+          },
+          {
+            "label": "Batterie",
+            "value": "8.1 kWh"
+          },
+          {
+            "label": "Couple",
+            "value": "135 nm 4500 tr/min"
+          },
+          {
+            "label": "Couple électrique",
+            "value": "316 nm"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1498 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Automatique"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "4765 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1837 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1495 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "450 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "9 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "185 KM/H"
+          },
+          {
+            "label": "Autonomie électrique (WLTP)",
+            "value": "55 km"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation mixte",
+            "value": "4.3 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux"
+          },
+          {
+            "label": "Alarme antivol",
+            "value": ""
+          },
+          {
+            "label": "Allumage automatique des feux",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESC | TCS"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBD | HBA | VDC"
+          },
+          {
+            "label": "Contrôle de pression des pneus",
+            "value": "TPMS"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Caméra de recul"
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Calandre",
+            "value": "Chromée"
+          },
+          {
+            "label": "Boulons de roues protégés",
+            "value": ""
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour | Avant | Arrières | Clignotants à défilement"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 16''"
+          },
+          {
+            "label": "Peinture",
+            "value": "Métallisée"
+          },
+          {
+            "label": "Phares",
+            "value": "LED"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "4 haut-parleurs | Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "2 USB | Android Auto | Apple Carplay | Bluetooth | Commande vocale"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 8.8 pouces | Rotatif"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Avant"
+          },
+          {
+            "label": "Appuis têtes arrières",
+            "value": "3"
+          },
+          {
+            "label": "Kit rangement",
+            "value": "Poches aumônières | Porte-lunettes"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Sièges",
+            "value": "Conducteur à réglage électrique | 6 directions | Avec Appuie-tête intégrés"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "Similicuir | 3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur et en profondeur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V"
+          },
+          {
+            "label": "Bouton Start & Stop",
+            "value": "Démarrage mains libres"
+          },
+          {
+            "label": "Clé intelligente",
+            "value": "Accès mains libres | Démarrage à distance"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique | Ventilation arrière"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Frein de stationnement",
+            "value": "Éléctrique"
+          },
+          {
+            "label": "Modes de conduite",
+            "value": "Normal | Sport | Eco"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques"
+          },
+          {
+            "label": "Instrumentation digitale",
+            "value": "5 pouces"
           },
           {
             "label": "Vitres électriques",
