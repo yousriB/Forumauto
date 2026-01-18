@@ -109,9 +109,26 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] uppercase tracking-widest text-white/30">
+          {/* <p className="text-[10px] uppercase tracking-widest text-white/30">
             &copy; {currentYear} Forum Auto Gabès. {t("footer.rights", language)}
-          </p>
+          </p> */}
+          <div className="space-y-1 text-center md:text-left">
+  <p className="text-[10px] uppercase tracking-widest text-white/30">
+    &copy; {currentYear} Forum Auto Gabès. {t("footer.rights", language)}
+  </p>
+
+  <p className="text-[9px] tracking-widest text-white/20">
+    Built by{" "}
+    <a
+      href="https://yousribnl.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-white transition-colors"
+    >
+      Yousri Ben Ali
+    </a>
+  </p>
+</div>
           
           <div className="flex gap-8">
             <a href="#" className="text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors">
