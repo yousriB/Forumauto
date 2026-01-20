@@ -17,9 +17,11 @@ export default function VersionSelectionPage() {
   const decodedBrand = decodeURIComponent(brand as string);
   const decodedModel = decodeURIComponent(model as string);
 
-  const versions = cars.filter(
-    (car: any) => car.brand === decodedBrand && car.model.trim() === decodedModel
-  );
+  const versions = cars
+    .filter(
+      (car: any) => car.brand === decodedBrand && car.model.trim() === decodedModel
+    )
+    .sort((a: any, b: any) => a.price - b.price);
 
   const formatPrice = (price: number) => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");

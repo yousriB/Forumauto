@@ -40,11 +40,13 @@ function CarFiltersAndList() {
   // Raw data for version checking
   const carsData = require("../../../data/cars.json");
   
-  // Unique cars for display
+  // Unique cars for display - always pick the one with the lowest price
   const uniqueCars = Object.values(
     carsData.reduce((acc: any, car: any) => {
       const key = `${car.brand}-${car.model.trim()}`;
-      if (!acc[key]) acc[key] = car;
+      if (!acc[key] || car.price < acc[key].price) {
+        acc[key] = car;
+      }
       return acc;
     }, {})
   ) as any[];
