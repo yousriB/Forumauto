@@ -17,6 +17,7 @@ export async function POST(request) {
         email: formData.email,
         phone_number: formData.phoneNumber,
         cin_or_nf: formData.cinOrNf,
+        payment_mode: formData.paymentMode,
       },
     ]);
 

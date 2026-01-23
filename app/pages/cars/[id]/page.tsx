@@ -8,6 +8,13 @@ import { useInView } from "react-intersection-observer";
 import { User, Loader2, ArrowLeft, Send, X, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Technicalinfo from "@/components/technicalinfo";
@@ -46,6 +53,7 @@ const CarDetailsPage = () => {
     lastName: "",
     phoneNumber: "",
     cinOrNf: "",
+    paymentMode: "",
   });
 
   useEffect(() => {
@@ -84,7 +92,7 @@ const CarDetailsPage = () => {
       if (response.ok) {
         setShowSuccess(true);
         setShowForm(false);
-        setFormData({ email: "", firstName: "", lastName: "", phoneNumber: "", cinOrNf: "" });
+        setFormData({ email: "", firstName: "", lastName: "", phoneNumber: "", cinOrNf: "" , paymentMode: ""});
       }
     } catch (error) {
       alert("Une erreur est survenue.");
@@ -217,9 +225,22 @@ const CarDetailsPage = () => {
                   <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">CIN / N° Fiscal</Label>
                   <Input name="cinOrNf" value={formData.cinOrNf} onChange={handleChange} required className="rounded-xl border-slate-300 h-12 focus:ring-slate-900" />
                 </div>
-                <div className="space-y-2 md:col-span-2">
+                <div className="space-y-2 ">
                   <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Email Professionnel</Label>
                   <Input name="email" type="email" value={formData.email} onChange={handleChange} required className="rounded-xl border-slate-300 h-12 focus:ring-slate-900" />
+                </div>
+                <div className="space-y-2 ">
+                  <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Mode de paiement</Label>
+                  <Select value={formData.paymentMode}  onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
+                    <SelectTrigger className="rounded-xl border-slate-300 h-12 focus:ring-slate-900">
+                      <SelectValue placeholder="Sélectionner un mode de paiement" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="comptant">Comptant</SelectItem>
+                      <SelectItem value="leasing">Leasing</SelectItem>
+                      <SelectItem value="bank">Bank</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 
                 <div className="md:col-span-2 pt-6 flex items-center justify-between">

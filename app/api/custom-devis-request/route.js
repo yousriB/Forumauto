@@ -14,6 +14,7 @@ export async function POST(request) {
       model,
       version,
       region,
+      paymentMode,
     } = body;
 
     const { error } = await supabase.from("custom_devis_requests").insert([
@@ -27,6 +28,7 @@ export async function POST(request) {
         car_model: model,
         car_version: version,
         region,
+        payment_mode: paymentMode,
         status:"pending",
       },
     ]);

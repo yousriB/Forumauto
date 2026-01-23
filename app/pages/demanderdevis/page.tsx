@@ -40,6 +40,7 @@ const DevisForm = () => {
   const [formData, setFormData] = useState({
     firstName: "", lastName: "", phoneNumber: "", cinOrNf: "",
     email: "", marque: "", model: "", version: "", region: "",
+    paymentMode: "",
   });
 
   const [filteredModels, setFilteredModels] = useState<string[]>([]);
@@ -65,6 +66,7 @@ const DevisForm = () => {
         setFormData({
           firstName: "", lastName: "", phoneNumber: "", cinOrNf: "",
           email: "", marque: "", model: "", version: "", region: "",
+          paymentMode: "",
         });
       }
     } catch (error) {
@@ -201,6 +203,19 @@ const DevisForm = () => {
                       </SelectContent>
                     </Select>
                   </div>
+                  <div className="space-y-2 ">
+                  <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Mode de paiement</Label>
+                  <Select value={formData.paymentMode}  onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
+                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                      <SelectValue placeholder="Sélectionner un mode de paiement" />
+                    </SelectTrigger>
+                    <SelectContent  className="rounded-none border-black">
+                      <SelectItem value="comptant">Comptant</SelectItem>
+                      <SelectItem value="leasing">Leasing</SelectItem>
+                      <SelectItem value="bank">Bank</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
                 </div>
               </div>
 
