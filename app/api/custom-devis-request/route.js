@@ -15,6 +15,8 @@ export async function POST(request) {
       version,
       region,
       paymentMode,
+      bankName,
+      leasingName,
     } = body;
 
     const { error } = await supabase.from("custom_devis_requests").insert([
@@ -29,6 +31,8 @@ export async function POST(request) {
         car_version: version,
         region,
         payment_mode: paymentMode,
+        bank_name: bankName,
+        leasing_name: leasingName,
         status:"pending",
       },
     ]);

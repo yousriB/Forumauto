@@ -18,6 +18,8 @@ export async function POST(request) {
         phone_number: formData.phoneNumber,
         cin_or_nf: formData.cinOrNf,
         payment_mode: formData.paymentMode,
+        bank_name: formData.bankName,
+        leasing_name: formData.leasingName,
       },
     ]);
 

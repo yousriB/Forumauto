@@ -41,13 +41,25 @@ const DevisForm = () => {
     firstName: "", lastName: "", phoneNumber: "", cinOrNf: "",
     email: "", marque: "", model: "", version: "", region: "",
     paymentMode: "",
+    bankName: "",
+    leasingName: "",
   });
 
   const [filteredModels, setFilteredModels] = useState<string[]>([]);
   const [filteredVersions, setFilteredVersions] = useState<string[]>([]);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const isFormValid = () => Object.values(formData).every(val => val.trim() !== "");
+  const isFormValid = () => {
+    const { bankName, leasingName, paymentMode, ...rest } = formData;
+    const baseFieldsValid = Object.values(rest).every(val => val.trim() !== "") && paymentMode !== "";
+    if (paymentMode === "bank") {
+      return baseFieldsValid && bankName.trim() !== "";
+    }
+    if (paymentMode === "leasing") {
+      return baseFieldsValid && leasingName.trim() !== "";
+    }
+    return baseFieldsValid;
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -67,6 +79,8 @@ const DevisForm = () => {
           firstName: "", lastName: "", phoneNumber: "", cinOrNf: "",
           email: "", marque: "", model: "", version: "", region: "",
           paymentMode: "",
+          bankName: "",
+          leasingName: "",
         });
       }
     } catch (error) {
@@ -204,19 +218,67 @@ const DevisForm = () => {
                     </Select>
                   </div>
                   <div className="space-y-2 ">
-                  <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Mode de paiement</Label>
-                  <Select value={formData.paymentMode}  onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
-                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
-                      <SelectValue placeholder="Sélectionner un mode de paiement" />
-                    </SelectTrigger>
-                    <SelectContent  className="rounded-none border-black">
-                      <SelectItem value="comptant">Comptant</SelectItem>
-                      <SelectItem value="leasing">Leasing</SelectItem>
-                      <SelectItem value="bank">Bank</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Mode de paiement</Label>
+                    <Select value={formData.paymentMode}  onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
+                        <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                        <SelectValue placeholder="Sélectionner un mode de paiement" />
+                      </SelectTrigger>
+                      <SelectContent  className="rounded-none border-black">
+                        <SelectItem value="comptant">Comptant</SelectItem>
+                        <SelectItem value="leasing">Leasing</SelectItem>
+                        <SelectItem value="bank">Bank</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
-                </div>
+
+
+                <AnimatePresence mode="wait">
+                  {formData.paymentMode === "bank" && (
+                    <motion.div
+                      key="bank-field"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="space-y-2 group overflow-hidden"
+                    >
+                      <Label htmlFor="bankName" className="text-[10px] uppercase tracking-widest text-gray-400 group-focus-within:text-[#E71609] transition-colors">
+                        Nom de la banque
+                      </Label>
+                      <Input
+                        id="bankName"
+                        name="bankName"
+                        type="text"
+                        value={formData.bankName}
+                        onChange={handleChange}
+                        required
+                        className="border-0 border-b border-black/10 rounded-none px-0 focus-visible:ring-0 focus-visible:border-black transition-all bg-transparent placeholder:text-gray-200 italic"
+                      />
+                    </motion.div>
+                  )}
+                  {formData.paymentMode === "leasing" && (
+                    <motion.div
+                      key="leasing-field"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="space-y-2 group overflow-hidden"
+                    >
+                      <Label htmlFor="leasingName" className="text-[10px] uppercase tracking-widest text-gray-400 group-focus-within:text-[#E71609] transition-colors">
+                        Nom du leasing
+                      </Label>
+                      <Input
+                        id="leasingName"
+                        name="leasingName"
+                        type="text"
+                        value={formData.leasingName}
+                        onChange={handleChange}
+                        required
+                        className="border-0 border-b border-black/10 rounded-none px-0 focus-visible:ring-0 focus-visible:border-black transition-all bg-transparent placeholder:text-gray-200 italic"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* SUBMIT BUTTON */}

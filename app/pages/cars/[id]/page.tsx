@@ -54,6 +54,8 @@ const CarDetailsPage = () => {
     phoneNumber: "",
     cinOrNf: "",
     paymentMode: "",
+    bankName: "",
+    leasingName: "",
   });
 
   useEffect(() => {
@@ -92,11 +94,23 @@ const CarDetailsPage = () => {
       if (response.ok) {
         setShowSuccess(true);
         setShowForm(false);
-        setFormData({ email: "", firstName: "", lastName: "", phoneNumber: "", cinOrNf: "" , paymentMode: ""});
+        setFormData({ email: "", firstName: "", lastName: "", phoneNumber: "", cinOrNf: "", paymentMode: "", bankName: "", leasingName: "" });
       }
     } catch (error) {
       alert("Une erreur est survenue.");
     }
+  };
+
+  const isFormValid = () => {
+    const { bankName, leasingName, paymentMode, ...rest } = formData;
+    const baseFieldsValid = Object.values(rest).every((val) => val.trim() !== "") && paymentMode !== "";
+    if (paymentMode === "bank") {
+      return baseFieldsValid && bankName.trim() !== "";
+    }
+    if (paymentMode === "leasing") {
+      return baseFieldsValid && leasingName.trim() !== "";
+    }
+    return baseFieldsValid;
   };
 
   if (loading) return (
@@ -242,13 +256,60 @@ const CarDetailsPage = () => {
                     </SelectContent>
                   </Select>
                 </div>
+
+                <AnimatePresence mode="wait">
+                  {formData.paymentMode === "bank" && (
+                    <motion.div
+                      key="bank-field"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="space-y-2 group overflow-hidden md:col-span-2"
+                    >
+                      <Label htmlFor="bankName" className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">
+                        Nom de la banque
+                      </Label>
+                      <Input
+                        id="bankName"
+                        name="bankName"
+                        type="text"
+                        value={formData.bankName}
+                        onChange={handleChange}
+                        required
+                        className="rounded-xl border-slate-300 h-12 focus:ring-slate-900"
+                      />
+                    </motion.div>
+                  )}
+                  {formData.paymentMode === "leasing" && (
+                    <motion.div
+                      key="leasing-field"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="space-y-2 group overflow-hidden md:col-span-2"
+                    >
+                      <Label htmlFor="leasingName" className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">
+                        Nom du leasing
+                      </Label>
+                      <Input
+                        id="leasingName"
+                        name="leasingName"
+                        type="text"
+                        value={formData.leasingName}
+                        onChange={handleChange}
+                        required
+                        className="rounded-xl border-slate-300 h-12 focus:ring-slate-900"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 
                 <div className="md:col-span-2 pt-6 flex items-center justify-between">
                   <div className="flex items-center gap-2 text-slate-700">
                     <ShieldCheck size={16} />
                     <span className="text-[10px] font-medium">Vos données sont sécurisées et confidentielles</span>
                   </div>
-                  <Button type="submit" className="bg-[#E71609] hover:bg-red-700 rounded-xl px-10 h-12 flex gap-2 items-center">
+                  <Button type="submit" disabled={!isFormValid()} className="bg-[#E71609] hover:bg-red-700 rounded-xl px-10 h-12 flex gap-2 items-center disabled:opacity-50 disabled:cursor-not-allowed">
                     <Send size={16} />
                     Confirmer la demande
                   </Button>
