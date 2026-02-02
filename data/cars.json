@@ -26919,19 +26919,328 @@
       }
     ]
   },
-  {
-    "id": 89,
-    "new": true,
-    "promotion": false,
-    "brand": "FORD",
-    "model": "Transit Bus",
-    "version": "18 Places",
-    "price": 175000,
-    "image": "https://www.ford.mx/content/dam/Ford/website-assets/latam/mx/nameplate/transit/pasajeros/2025/models/ford-transit-18-pasajeros-2025-van-diesel-version-caracteristicas-info.jpg",
-    "fuel": "Diesel",
-    "gearbox": "Manuelle",
-    "technicalSpecs": []
-  },
+{
+  "id": 89,
+  "new": true,
+  "promotion":false,
+  "brand": "FORD",
+  "model": "Transit Minibus",
+  "version": "2.0 l D 18 Places",
+  "price": 175000,
+  "image": "https://catalogue.automobile.tn/big/2026/01/47585.webp?t=1770024951",
+  "fuel": "Diesel",
+  "gearbox": "Manuelle",
+  "technicalSpecs": [
+    {
+      "title": "Caractéristiques",
+      "specs": [
+        {
+          "label": "Disponibilité",
+          "value": "1 mois"
+        },
+        {
+          "label": "Garantie",
+          "value": "2 ans"
+        },
+        {
+          "label": "Carrosserie",
+          "value": "Minibus"
+        },
+        {
+          "label": "Nombre de places",
+          "value": "18"
+        },
+        {
+          "label": "Nombre de portes",
+          "value": "5 | 1 porte latérale coulissante | 2 portes arrières battantes vitrées"
+        }
+      ]
+    },
+    {
+      "title": "Motorisation",
+      "specs": [
+        {
+          "label": "Nombre de cylindres",
+          "value": "4"
+        },
+        {
+          "label": "Energie",
+          "value": "Diesel"
+        },
+        {
+          "label": "Puissance fiscale",
+          "value": "5 CV"
+        },
+        {
+          "label": "Puissance (ch.din)",
+          "value": "165 CH"
+        },
+        {
+          "label": "Couple",
+          "value": "390 nm 1750 tr/min"
+        },
+        {
+          "label": "Cylindrée",
+          "value": "1996 CM³"
+        }
+      ]
+    },
+    {
+      "title": "Transmission",
+      "specs": [
+        {
+          "label": "Boîte",
+          "value": "Manuelle"
+        },
+        {
+          "label": "Nombre de rapports",
+          "value": "6"
+        },
+        {
+          "label": "Transmission",
+          "value": "Propulsion"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "specs": [
+        {
+          "label": "Longueur",
+          "value": "6704 mm"
+        },
+        {
+          "label": "Largeur",
+          "value": "2126 mm"
+        },
+        {
+          "label": "Hauteur",
+          "value": "2757 mm"
+        }
+      ]
+    },
+    {
+      "title": "Performances",
+      "specs": [
+        {
+          "label": "0-100 Km/h",
+          "value": "N.C"
+        },
+        {
+          "label": "Vitesse maxi",
+          "value": "155 KM/H"
+        }
+      ]
+    },
+    {
+      "title": "Consommation",
+      "specs": [
+        {
+          "label": "Consommation urbaine",
+          "value": "11.8 L/100 km"
+        },
+        {
+          "label": "Consommation extra-urbaine",
+          "value": "8.5 L/100 km"
+        },
+        {
+          "label": "Consommation mixte",
+          "value": "9.7 L/100 km"
+        }
+      ]
+    },
+    {
+      "title": "Equipements de sécurité",
+      "specs": [
+        {
+          "label": "ABS",
+          "value": ""
+        },
+        {
+          "label": "Airbags",
+          "value": "Frontaux"
+        },
+        {
+          "label": "Alerte de franchissement de ligne",
+          "value": ""
+        },
+        {
+          "label": "Alerte de risque de collision",
+          "value": "FCW"
+        },
+        {
+          "label": "Allumage automatique des feux",
+          "value": ""
+        },
+        {
+          "label": "Anti-démarrage électronique",
+          "value": ""
+        },
+        {
+          "label": "Anti-patinage",
+          "value": "ESP"
+        },
+        {
+          "label": "Assistance au freinage",
+          "value": "AFU | Freinage automatique anti-collision (AEB)"
+        },
+        {
+          "label": "Contrôle adaptatif de la charge",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "title": "Aides à la conduite",
+      "specs": [
+        {
+          "label": "Aide au maintien dans la voie",
+          "value": ""
+        },
+        {
+          "label": "Aide au stationnement",
+          "value": "Radar de recul | Radar avant | Système de caméras 360"
+        },
+        {
+          "label": "Contrôle de stabilité anti-retournement",
+          "value": "RSC"
+        },
+        {
+          "label": "Direction assistée",
+          "value": "Électrique"
+        },
+        {
+          "label": "Limiteur de vitesse",
+          "value": ""
+        },
+        {
+          "label": "Régulateur de vitesse",
+          "value": "Adaptatif (ACC)"
+        }
+      ]
+    },
+    {
+      "title": "Equipements extérieurs",
+      "specs": [
+        {
+          "label": "Antibrouillards",
+          "value": ""
+        },
+        {
+          "label": "Calandre",
+          "value": "Noire"
+        },
+        {
+          "label": "Feux à LED",
+          "value": "Feux de jour"
+        },
+        {
+          "label": "Jantes",
+          "value": "16''"
+        },
+        {
+          "label": "Marchepieds latéraux",
+          "value": "Coté passagers | Escamotables électriquement"
+        }
+      ]
+    },
+    {
+      "title": "Audio et communication",
+      "specs": [
+        {
+          "label": "Autoradio",
+          "value": "6 haut-parleurs | Commandes au volant"
+        },
+        {
+          "label": "Connectivité",
+          "value": "USB | USB-C | Android Auto | Apple Carplay | Bluetooth | Commande vocale"
+        },
+        {
+          "label": "Ecran central",
+          "value": "Tactile | 12.3 pouces"
+        }
+      ]
+    },
+    {
+      "title": "Equipements intérieurs",
+      "specs": [
+        {
+          "label": "Accoudoirs",
+          "value": "Avant"
+        },
+        {
+          "label": "Kit rangement",
+          "value": ""
+        },
+        {
+          "label": "Pommeau de levier de vitesse",
+          "value": "Cuir"
+        },
+        {
+          "label": "Sellerie",
+          "value": "Tissu"
+        },
+        {
+          "label": "Sièges réglables en hauteur",
+          "value": "Conducteur"
+        },
+        {
+          "label": "Tapis de sol",
+          "value": "Plastique antidérapant"
+        },
+        {
+          "label": "Vitres",
+          "value": "Pare-brise en verre feuilleté"
+        },
+        {
+          "label": "Volant",
+          "value": "Cuir | Multi-fonctions"
+        },
+        {
+          "label": "Volant réglable",
+          "value": "En hauteur et en profondeur"
+        }
+      ]
+    },
+    {
+      "title": "Equipements fonctionnels",
+      "specs": [
+        {
+          "label": "Alimentation électrique",
+          "value": "2 prises 12 V"
+        },
+        {
+          "label": "Climatisation",
+          "value": "Automatique | Ventilation arrière"
+        },
+        {
+          "label": "Fermeture centralisée",
+          "value": "À distance"
+        },
+        {
+          "label": "Ordinateur de bord",
+          "value": ""
+        },
+        {
+          "label": "Instrumentation digitale",
+          "value": "8 pouces"
+        },
+        {
+          "label": "Rétroviseurs extérieurs",
+          "value": "Électriques | Rabattables | Dégivrants | Avec clignotants intégrés"
+        },
+        {
+          "label": "Version pays chauds",
+          "value": ""
+        },
+        {
+          "label": "Vitres électriques",
+          "value": "Avant"
+        }
+      ]
+    }
+  ]
+},
   {
     "id": 90,
     "new": false,
