@@ -56,6 +56,7 @@ const CarDetailsPage = () => {
     paymentMode: "",
     bankName: "",
     leasingName: "",
+    isFirstSale: null as boolean | null,
   });
 
   useEffect(() => {
@@ -66,7 +67,7 @@ const CarDetailsPage = () => {
         const carsData = dataModule.default || dataModule;
         const carId = parseInt(carIdParam as string, 10);
         const foundCar = carsData.find((c: Car) => c.id === carId);
-        
+
         if (foundCar) setCar(foundCar);
         else setError("Véhicule introuvable");
       } catch (err) {
@@ -94,7 +95,7 @@ const CarDetailsPage = () => {
       if (response.ok) {
         setShowSuccess(true);
         setShowForm(false);
-        setFormData({ email: "", firstName: "", lastName: "", phoneNumber: "", cinOrNf: "", paymentMode: "", bankName: "", leasingName: "" });
+        setFormData({ email: "", firstName: "", lastName: "", phoneNumber: "", cinOrNf: "", paymentMode: "", bankName: "", leasingName: "", isFirstSale: null as boolean | null });
       }
     } catch (error) {
       alert("Une erreur est survenue.");
@@ -102,8 +103,8 @@ const CarDetailsPage = () => {
   };
 
   const isFormValid = () => {
-    const { bankName, leasingName, paymentMode, ...rest } = formData;
-    const baseFieldsValid = Object.values(rest).every((val) => val.trim() !== "") && paymentMode !== "";
+    const { bankName, leasingName, paymentMode, isFirstSale, ...rest } = formData;
+    const baseFieldsValid = Object.values(rest).every((val) => val.trim() !== "") && paymentMode !== "" && isFirstSale !== null;
     if (paymentMode === "bank") {
       return baseFieldsValid && bankName.trim() !== "";
     }
@@ -135,10 +136,10 @@ const CarDetailsPage = () => {
       <div className="container mx-auto px-6">
         {/* Main Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center mb-24">
-          
+
           {/* Left: Product Info */}
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="order-2 lg:order-1"
           >
@@ -146,14 +147,14 @@ const CarDetailsPage = () => {
               <span className="w-8 h-[2px] bg-[#e71810]"></span>
               <span className="text-[#e71810] font-bold uppercase tracking-[0.3em] text-[10px]">Présentation Exclusive</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-light tracking-tighter text-slate-900 mb-4 leading-[0.9]">
               {car.brand} <br />
               <span className="font-bold">{car.model}</span>
             </h1>
-            
+
             <p className="text-slate-700 text-lg font-light mb-8 max-w-md">
-              Configuration <span className="text-slate-900 font-medium">{car.version}</span>. 
+              Configuration <span className="text-slate-900 font-medium">{car.version}</span>.
               Une alliance parfaite entre ingénierie de pointe et confort absolu.
             </p>
 
@@ -165,7 +166,7 @@ const CarDetailsPage = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button 
+              <Button
                 onClick={() => setShowForm(true)}
                 className="bg-slate-900 hover:bg-black text-white px-10 py-7 rounded-2xl text-xs font-bold uppercase tracking-widest transition-all hover:shadow-2xl hover:shadow-slate-200"
               >
@@ -175,7 +176,7 @@ const CarDetailsPage = () => {
           </motion.div>
 
           {/* Right: Studio Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="relative order-1 lg:order-2 aspect-square lg:aspect-auto lg:h-[600px] bg-white rounded-[3rem] overflow-hidden flex items-center justify-center group"
@@ -183,7 +184,7 @@ const CarDetailsPage = () => {
             <div className="absolute top-8 right-8 scale-150">
               <CarBadge isNew={car.new} isPromotion={car.promotion} />
             </div>
-            
+
             <Image
               src={car.image}
               alt={`${car.brand} ${car.model}`}
@@ -206,7 +207,7 @@ const CarDetailsPage = () => {
         {/* Form Modal/Section */}
         <AnimatePresence>
           {showForm && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
@@ -245,7 +246,7 @@ const CarDetailsPage = () => {
                 </div>
                 <div className="space-y-2 ">
                   <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Mode de paiement</Label>
-                  <Select value={formData.paymentMode}  onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
+                  <Select value={formData.paymentMode} onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
                     <SelectTrigger className="rounded-xl border-slate-300 h-12 focus:ring-slate-900">
                       <SelectValue placeholder="Sélectionner un mode de paiement" />
                     </SelectTrigger>
@@ -303,7 +304,39 @@ const CarDetailsPage = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
-                
+
+                <div className="md:col-span-2 space-y-2">
+                  <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1 mb-3 block">Type de voiture</Label>
+                  <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        id="isFirstCar"
+                        name="isFirstCar"
+                        checked={formData.isFirstSale === true}
+                        onChange={() => setFormData(p => ({ ...p, isFirstSale: true }))}
+                        className="w-4 h-4 text-[#E71609] border-slate-300 rounded focus:ring-slate-900"
+                      />
+                      <Label htmlFor="isFirstCar" className="text-sm text-slate-700 cursor-pointer font-normal">
+                        Première voiture
+                      </Label>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        id="isSecondCar"
+                        name="isSecondCar"
+                        checked={formData.isFirstSale === false}
+                        onChange={() => setFormData(p => ({ ...p, isFirstSale: false }))}
+                        className="w-4 h-4 text-[#E71609] border-slate-300 rounded focus:ring-slate-900"
+                      />
+                      <Label htmlFor="isSecondCar" className="text-sm text-slate-700 cursor-pointer font-normal">
+                        Deuxième voiture
+                      </Label>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="md:col-span-2 pt-6 flex items-center justify-between">
                   <div className="flex items-center gap-2 text-slate-700">
                     <ShieldCheck size={16} />

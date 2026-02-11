@@ -43,6 +43,7 @@ const DevisForm = () => {
     paymentMode: "",
     bankName: "",
     leasingName: "",
+    isFirstSale: null as boolean | null,
   });
 
   const [filteredModels, setFilteredModels] = useState<string[]>([]);
@@ -50,8 +51,8 @@ const DevisForm = () => {
   const [showSuccess, setShowSuccess] = useState(false);
 
   const isFormValid = () => {
-    const { bankName, leasingName, paymentMode, ...rest } = formData;
-    const baseFieldsValid = Object.values(rest).every(val => val.trim() !== "") && paymentMode !== "";
+    const { bankName, leasingName, paymentMode, isFirstSale, ...rest } = formData;
+    const baseFieldsValid = Object.values(rest).every(val => val.trim() !== "") && paymentMode !== "" && isFirstSale !== null;
     if (paymentMode === "bank") {
       return baseFieldsValid && bankName.trim() !== "";
     }
@@ -81,6 +82,7 @@ const DevisForm = () => {
           paymentMode: "",
           bankName: "",
           leasingName: "",
+          isFirstSale: null as boolean | null,
         });
       }
     } catch (error) {
@@ -91,7 +93,7 @@ const DevisForm = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
-        
+
         {/* HEADER AREA */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-black/5 pb-12 gap-8">
           <div className="max-w-xl">
@@ -117,7 +119,7 @@ const DevisForm = () => {
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-16">
-              
+
               {/* SECTION 01: VÉHICULE */}
               <div className="space-y-8">
                 <div className="flex items-center gap-4">
@@ -126,14 +128,14 @@ const DevisForm = () => {
                     01. Sélection du Véhicule
                   </h4>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                   <div className="space-y-3">
                     <Label className="text-[10px] uppercase tracking-widest text-gray-400">Marque</Label>
                     <Select value={formData.marque} onValueChange={(v) => {
-                        setFormData(prev => ({ ...prev, marque: v, model: "", version: "" }));
-                        setFilteredModels(brandModelsMap[v]?.models || []);
-                        setFilteredVersions([]);
+                      setFormData(prev => ({ ...prev, marque: v, model: "", version: "" }));
+                      setFilteredModels(brandModelsMap[v]?.models || []);
+                      setFilteredVersions([]);
                     }}>
                       <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
                         <SelectValue placeholder="Choisir marque" />
@@ -147,8 +149,8 @@ const DevisForm = () => {
                   <div className="space-y-3">
                     <Label className="text-[10px] uppercase tracking-widest text-gray-400">Modèle</Label>
                     <Select value={formData.model} disabled={!formData.marque} onValueChange={(v) => {
-                        setFormData(prev => ({ ...prev, model: v, version: "" }));
-                        setFilteredVersions(brandModelsMap[formData.marque]?.versions[v] || []);
+                      setFormData(prev => ({ ...prev, model: v, version: "" }));
+                      setFilteredVersions(brandModelsMap[formData.marque]?.versions[v] || []);
                     }}>
                       <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
                         <SelectValue placeholder="Choisir modèle" />
@@ -219,11 +221,11 @@ const DevisForm = () => {
                   </div>
                   <div className="space-y-2 ">
                     <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1">Mode de paiement</Label>
-                    <Select value={formData.paymentMode}  onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
-                        <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
+                    <Select value={formData.paymentMode} onValueChange={(v) => setFormData(p => ({ ...p, paymentMode: v }))} required>
+                      <SelectTrigger className="border-0 border-b border-black/10 rounded-none px-0 focus:ring-0 italic text-base">
                         <SelectValue placeholder="Sélectionner un mode de paiement" />
                       </SelectTrigger>
-                      <SelectContent  className="rounded-none border-black">
+                      <SelectContent className="rounded-none border-black">
                         <SelectItem value="comptant">Comptant</SelectItem>
                         <SelectItem value="leasing">Leasing</SelectItem>
                         <SelectItem value="bank">Bank</SelectItem>
@@ -279,6 +281,38 @@ const DevisForm = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
+
+                <div className="space-y-3 md:col-span-2">
+                  <Label className="text-[10px] uppercase tracking-widest text-gray-400">Type de voiture</Label>
+                  <div className="flex items-center gap-8">
+                    <div className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        id="isFirstCar"
+                        name="isFirstCar"
+                        checked={formData.isFirstSale === true}
+                        onChange={() => setFormData(p => ({ ...p, isFirstSale: true }))}
+                        className="w-4 h-4 text-[#E71609] border-gray-300 rounded focus:ring-[#E71609]"
+                      />
+                      <Label htmlFor="isFirstCar" className="text-base text-black cursor-pointer font-normal italic">
+                        Première voiture
+                      </Label>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <input
+                        type="checkbox"
+                        id="isSecondCar"
+                        name="isSecondCar"
+                        checked={formData.isFirstSale === false}
+                        onChange={() => setFormData(p => ({ ...p, isFirstSale: false }))}
+                        className="w-4 h-4 text-[#E71609] border-gray-300 rounded focus:ring-[#E71609]"
+                      />
+                      <Label htmlFor="isSecondCar" className="text-base text-black cursor-pointer font-normal italic">
+                        Deuxième voiture
+                      </Label>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* SUBMIT BUTTON */}

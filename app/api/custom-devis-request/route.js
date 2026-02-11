@@ -17,6 +17,7 @@ export async function POST(request) {
       paymentMode,
       bankName,
       leasingName,
+      isFirstSale,
     } = body;
 
     const { error } = await supabase.from("custom_devis_requests").insert([
@@ -33,6 +34,7 @@ export async function POST(request) {
         payment_mode: paymentMode,
         bank_name: bankName,
         leasing_name: leasingName,
+        is_first_sale: isFirstSale,
         status:"pending",
       },
     ]);

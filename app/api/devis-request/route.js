@@ -20,6 +20,7 @@ export async function POST(request) {
         payment_mode: formData.paymentMode,
         bank_name: formData.bankName,
         leasing_name: formData.leasingName,
+        is_first_sale: formData.isFirstSale,
       },
     ]);
 
