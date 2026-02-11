@@ -318,7 +318,7 @@ const CarDetailsPage = () => {
                         className="w-4 h-4 text-[#E71609] border-slate-300 rounded focus:ring-slate-900"
                       />
                       <Label htmlFor="isFirstCar" className="text-sm text-slate-700 cursor-pointer font-normal">
-                        Première voiture
+                        Oui
                       </Label>
                     </div>
                     <div className="flex items-center gap-3">
@@ -331,7 +331,7 @@ const CarDetailsPage = () => {
                         className="w-4 h-4 text-[#E71609] border-slate-300 rounded focus:ring-slate-900"
                       />
                       <Label htmlFor="isSecondCar" className="text-sm text-slate-700 cursor-pointer font-normal">
-                        Deuxième voiture
+                        Non
                       </Label>
                     </div>
                   </div>

@@ -295,7 +295,7 @@ const DevisForm = () => {
                         className="w-4 h-4 text-[#E71609] border-gray-300 rounded focus:ring-[#E71609]"
                       />
                       <Label htmlFor="isFirstCar" className="text-base text-black cursor-pointer font-normal italic">
-                        Première voiture
+                        Oui
                       </Label>
                     </div>
                     <div className="flex items-center gap-3">
@@ -308,7 +308,7 @@ const DevisForm = () => {
                         className="w-4 h-4 text-[#E71609] border-gray-300 rounded focus:ring-[#E71609]"
                       />
                       <Label htmlFor="isSecondCar" className="text-base text-black cursor-pointer font-normal italic">
-                        Deuxième voiture
+                        Non
                       </Label>
                     </div>
                   </div>
