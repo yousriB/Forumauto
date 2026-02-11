@@ -283,7 +283,7 @@ const DevisForm = () => {
                 </AnimatePresence>
 
                 <div className="space-y-3 md:col-span-2">
-                  <Label className="text-[10px] uppercase tracking-widest text-gray-400">Type de voiture</Label>
+                  <Label className="text-[10px] uppercase tracking-widest text-gray-400">S'agit-il de votre premier achat automobile ?</Label>
                   <div className="flex items-center gap-8">
                     <div className="flex items-center gap-3">
                       <input

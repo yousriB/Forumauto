@@ -306,7 +306,7 @@ const CarDetailsPage = () => {
                 </AnimatePresence>
 
                 <div className="md:col-span-2 space-y-2">
-                  <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1 mb-3 block">Type de voiture</Label>
+                  <Label className="text-[10px] uppercase font-bold tracking-widest text-slate-700 ml-1 mb-3 block">S'agit-il de votre premier achat automobile ?</Label>
                   <div className="flex items-center gap-6">
                     <div className="flex items-center gap-3">
                       <input
