@@ -7282,7 +7282,7 @@
     "brand": "GAC",
     "model": "Emzoom",
     "version": "1.5T GDI R-Style BVA",
-    "price": 108900,
+    "price": 98900,
     "image": "https://catalogue.automobile.tn/big/2025/01/47267.webp?t=1",
     "fuel": "Essence",
     "gearbox": "Automatique",
@@ -7648,7 +7648,7 @@
     "brand": "GAC",
     "model": "Emzoom",
     "version": "1.5T GDI Lifestyle BVA",
-    "price": 95900,
+    "price": 94900,
     "image": "https://catalogue.automobile.tn/big/2025/11/47496.webp?t=1762248570",
     "fuel": "Essence",
     "gearbox": "Automatique",
@@ -8022,7 +8022,7 @@
     "brand": "GAC",
     "model": "Emkoo",
     "version": "1.5T GDI GL BVA",
-    "price": 118900,
+    "price": 106900,
     "image": "https://catalogue.automobile.tn/big/2025/01/47268.webp?t=1748250149",
     "fuel": "Essence",
     "gearbox": "Automatique",
@@ -8396,7 +8396,7 @@
     "brand": "GAC",
     "model": "GA4",
     "version": "1.5 L BVA",
-    "price": 69900,
+    "price": 62900,
     "image": "https://catalogue.automobile.tn/big/2022/07/46781.webp?t=1735984509",
     "fuel": "Essence",
     "gearbox": "Automatique",
@@ -26919,328 +26919,328 @@
       }
     ]
   },
-{
-  "id": 89,
-  "new": true,
-  "promotion":false,
-  "brand": "FORD",
-  "model": "Transit Minibus",
-  "version": "2.0 l D 18 Places",
-  "price": 175000,
-  "image": "https://catalogue.automobile.tn/big/2026/01/47585.webp?t=1770024951",
-  "fuel": "Diesel",
-  "gearbox": "Manuelle",
-  "technicalSpecs": [
-    {
-      "title": "Caractéristiques",
-      "specs": [
-        {
-          "label": "Disponibilité",
-          "value": "1 mois"
-        },
-        {
-          "label": "Garantie",
-          "value": "2 ans"
-        },
-        {
-          "label": "Carrosserie",
-          "value": "Minibus"
-        },
-        {
-          "label": "Nombre de places",
-          "value": "18"
-        },
-        {
-          "label": "Nombre de portes",
-          "value": "5 | 1 porte latérale coulissante | 2 portes arrières battantes vitrées"
-        }
-      ]
-    },
-    {
-      "title": "Motorisation",
-      "specs": [
-        {
-          "label": "Nombre de cylindres",
-          "value": "4"
-        },
-        {
-          "label": "Energie",
-          "value": "Diesel"
-        },
-        {
-          "label": "Puissance fiscale",
-          "value": "5 CV"
-        },
-        {
-          "label": "Puissance (ch.din)",
-          "value": "165 CH"
-        },
-        {
-          "label": "Couple",
-          "value": "390 nm 1750 tr/min"
-        },
-        {
-          "label": "Cylindrée",
-          "value": "1996 CM³"
-        }
-      ]
-    },
-    {
-      "title": "Transmission",
-      "specs": [
-        {
-          "label": "Boîte",
-          "value": "Manuelle"
-        },
-        {
-          "label": "Nombre de rapports",
-          "value": "6"
-        },
-        {
-          "label": "Transmission",
-          "value": "Propulsion"
-        }
-      ]
-    },
-    {
-      "title": "Dimensions",
-      "specs": [
-        {
-          "label": "Longueur",
-          "value": "6704 mm"
-        },
-        {
-          "label": "Largeur",
-          "value": "2126 mm"
-        },
-        {
-          "label": "Hauteur",
-          "value": "2757 mm"
-        }
-      ]
-    },
-    {
-      "title": "Performances",
-      "specs": [
-        {
-          "label": "0-100 Km/h",
-          "value": "N.C"
-        },
-        {
-          "label": "Vitesse maxi",
-          "value": "155 KM/H"
-        }
-      ]
-    },
-    {
-      "title": "Consommation",
-      "specs": [
-        {
-          "label": "Consommation urbaine",
-          "value": "11.8 L/100 km"
-        },
-        {
-          "label": "Consommation extra-urbaine",
-          "value": "8.5 L/100 km"
-        },
-        {
-          "label": "Consommation mixte",
-          "value": "9.7 L/100 km"
-        }
-      ]
-    },
-    {
-      "title": "Equipements de sécurité",
-      "specs": [
-        {
-          "label": "ABS",
-          "value": ""
-        },
-        {
-          "label": "Airbags",
-          "value": "Frontaux"
-        },
-        {
-          "label": "Alerte de franchissement de ligne",
-          "value": ""
-        },
-        {
-          "label": "Alerte de risque de collision",
-          "value": "FCW"
-        },
-        {
-          "label": "Allumage automatique des feux",
-          "value": ""
-        },
-        {
-          "label": "Anti-démarrage électronique",
-          "value": ""
-        },
-        {
-          "label": "Anti-patinage",
-          "value": "ESP"
-        },
-        {
-          "label": "Assistance au freinage",
-          "value": "AFU | Freinage automatique anti-collision (AEB)"
-        },
-        {
-          "label": "Contrôle adaptatif de la charge",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Aides à la conduite",
-      "specs": [
-        {
-          "label": "Aide au maintien dans la voie",
-          "value": ""
-        },
-        {
-          "label": "Aide au stationnement",
-          "value": "Radar de recul | Radar avant | Système de caméras 360"
-        },
-        {
-          "label": "Contrôle de stabilité anti-retournement",
-          "value": "RSC"
-        },
-        {
-          "label": "Direction assistée",
-          "value": "Électrique"
-        },
-        {
-          "label": "Limiteur de vitesse",
-          "value": ""
-        },
-        {
-          "label": "Régulateur de vitesse",
-          "value": "Adaptatif (ACC)"
-        }
-      ]
-    },
-    {
-      "title": "Equipements extérieurs",
-      "specs": [
-        {
-          "label": "Antibrouillards",
-          "value": ""
-        },
-        {
-          "label": "Calandre",
-          "value": "Noire"
-        },
-        {
-          "label": "Feux à LED",
-          "value": "Feux de jour"
-        },
-        {
-          "label": "Jantes",
-          "value": "16''"
-        },
-        {
-          "label": "Marchepieds latéraux",
-          "value": "Coté passagers | Escamotables électriquement"
-        }
-      ]
-    },
-    {
-      "title": "Audio et communication",
-      "specs": [
-        {
-          "label": "Autoradio",
-          "value": "6 haut-parleurs | Commandes au volant"
-        },
-        {
-          "label": "Connectivité",
-          "value": "USB | USB-C | Android Auto | Apple Carplay | Bluetooth | Commande vocale"
-        },
-        {
-          "label": "Ecran central",
-          "value": "Tactile | 12.3 pouces"
-        }
-      ]
-    },
-    {
-      "title": "Equipements intérieurs",
-      "specs": [
-        {
-          "label": "Accoudoirs",
-          "value": "Avant"
-        },
-        {
-          "label": "Kit rangement",
-          "value": ""
-        },
-        {
-          "label": "Pommeau de levier de vitesse",
-          "value": "Cuir"
-        },
-        {
-          "label": "Sellerie",
-          "value": "Tissu"
-        },
-        {
-          "label": "Sièges réglables en hauteur",
-          "value": "Conducteur"
-        },
-        {
-          "label": "Tapis de sol",
-          "value": "Plastique antidérapant"
-        },
-        {
-          "label": "Vitres",
-          "value": "Pare-brise en verre feuilleté"
-        },
-        {
-          "label": "Volant",
-          "value": "Cuir | Multi-fonctions"
-        },
-        {
-          "label": "Volant réglable",
-          "value": "En hauteur et en profondeur"
-        }
-      ]
-    },
-    {
-      "title": "Equipements fonctionnels",
-      "specs": [
-        {
-          "label": "Alimentation électrique",
-          "value": "2 prises 12 V"
-        },
-        {
-          "label": "Climatisation",
-          "value": "Automatique | Ventilation arrière"
-        },
-        {
-          "label": "Fermeture centralisée",
-          "value": "À distance"
-        },
-        {
-          "label": "Ordinateur de bord",
-          "value": ""
-        },
-        {
-          "label": "Instrumentation digitale",
-          "value": "8 pouces"
-        },
-        {
-          "label": "Rétroviseurs extérieurs",
-          "value": "Électriques | Rabattables | Dégivrants | Avec clignotants intégrés"
-        },
-        {
-          "label": "Version pays chauds",
-          "value": ""
-        },
-        {
-          "label": "Vitres électriques",
-          "value": "Avant"
-        }
-      ]
-    }
-  ]
-},
+  {
+    "id": 89,
+    "new": true,
+    "promotion": false,
+    "brand": "FORD",
+    "model": "Transit Minibus",
+    "version": "2.0 l D 18 Places",
+    "price": 175000,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47585.webp?t=1770024951",
+    "fuel": "Diesel",
+    "gearbox": "Manuelle",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "1 mois"
+          },
+          {
+            "label": "Garantie",
+            "value": "2 ans"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Minibus"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "18"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "5 | 1 porte latérale coulissante | 2 portes arrières battantes vitrées"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "4"
+          },
+          {
+            "label": "Energie",
+            "value": "Diesel"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "5 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "165 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "390 nm 1750 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1996 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Manuelle"
+          },
+          {
+            "label": "Nombre de rapports",
+            "value": "6"
+          },
+          {
+            "label": "Transmission",
+            "value": "Propulsion"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "6704 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "2126 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "2757 mm"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "N.C"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "155 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation urbaine",
+            "value": "11.8 L/100 km"
+          },
+          {
+            "label": "Consommation extra-urbaine",
+            "value": "8.5 L/100 km"
+          },
+          {
+            "label": "Consommation mixte",
+            "value": "9.7 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux"
+          },
+          {
+            "label": "Alerte de franchissement de ligne",
+            "value": ""
+          },
+          {
+            "label": "Alerte de risque de collision",
+            "value": "FCW"
+          },
+          {
+            "label": "Allumage automatique des feux",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "AFU | Freinage automatique anti-collision (AEB)"
+          },
+          {
+            "label": "Contrôle adaptatif de la charge",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au maintien dans la voie",
+            "value": ""
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Radar avant | Système de caméras 360"
+          },
+          {
+            "label": "Contrôle de stabilité anti-retournement",
+            "value": "RSC"
+          },
+          {
+            "label": "Direction assistée",
+            "value": "Électrique"
+          },
+          {
+            "label": "Limiteur de vitesse",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": "Adaptatif (ACC)"
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Antibrouillards",
+            "value": ""
+          },
+          {
+            "label": "Calandre",
+            "value": "Noire"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour"
+          },
+          {
+            "label": "Jantes",
+            "value": "16''"
+          },
+          {
+            "label": "Marchepieds latéraux",
+            "value": "Coté passagers | Escamotables électriquement"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "6 haut-parleurs | Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | USB-C | Android Auto | Apple Carplay | Bluetooth | Commande vocale"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 12.3 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Avant"
+          },
+          {
+            "label": "Kit rangement",
+            "value": ""
+          },
+          {
+            "label": "Pommeau de levier de vitesse",
+            "value": "Cuir"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": "Plastique antidérapant"
+          },
+          {
+            "label": "Vitres",
+            "value": "Pare-brise en verre feuilleté"
+          },
+          {
+            "label": "Volant",
+            "value": "Cuir | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur et en profondeur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "2 prises 12 V"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique | Ventilation arrière"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Instrumentation digitale",
+            "value": "8 pouces"
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Rabattables | Dégivrants | Avec clignotants intégrés"
+          },
+          {
+            "label": "Version pays chauds",
+            "value": ""
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant"
+          }
+        ]
+      }
+    ]
+  },
   {
     "id": 90,
     "new": false,
@@ -42779,1149 +42779,1149 @@
     ]
   },
   {
-  "id": 144,
-  "new":true,
-  "promotion":false,
-  "brand": "SUZUKI",
-  "model": "Dzire",
-  "version": "1.2 L GL+",
-  "price": 56900,
-  "image": "https://catalogue.automobile.tn/big/2026/01/47567.webp?t=1768838658",
-  "fuel": "Essence",
-  "gearbox": "Manuelle",
-  "technicalSpecs": [
-    {
-      "title": "Caractéristiques",
-      "specs": [
-        {
-          "label": "Disponibilité",
-          "value": "En pré-commande"
-        },
-        {
-          "label": "Carrosserie",
-          "value": "Berline"
-        },
-        {
-          "label": "Garantie",
-          "value": "3 ans ou 100.000 km"
-        },
-        {
-          "label": "Nombre de places",
-          "value": "5"
-        },
-        {
-          "label": "Nombre de portes",
-          "value": "4"
-        }
-      ]
-    },
-    {
-      "title": "Motorisation",
-      "specs": [
-        {
-          "label": "Nombre de cylindres",
-          "value": "3"
-        },
-        {
-          "label": "Energie",
-          "value": "Essence"
-        },
-        {
-          "label": "Puissance fiscale",
-          "value": "4 CV"
-        },
-        {
-          "label": "Puissance (ch.din)",
-          "value": "82 CH"
-        },
-        {
-          "label": "Couple",
-          "value": "112 nm 4300 tr/min"
-        },
-        {
-          "label": "Cylindrée",
-          "value": "1197 CM³"
-        }
-      ]
-    },
-    {
-      "title": "Transmission",
-      "specs": [
-        {
-          "label": "Boîte",
-          "value": "Manuelle"
-        },
-        {
-          "label": "Nombre de rapports",
-          "value": "5"
-        },
-        {
-          "label": "Transmission",
-          "value": "Traction"
-        }
-      ]
-    },
-    {
-      "title": "Dimensions",
-      "specs": [
-        {
-          "label": "Longueur",
-          "value": "3995 mm"
-        },
-        {
-          "label": "Largeur",
-          "value": "1765 mm"
-        },
-        {
-          "label": "Hauteur",
-          "value": "1550 mm"
-        },
-        {
-          "label": "Volume du coffre",
-          "value": "382 L"
-        }
-      ]
-    },
-    {
-      "title": "Performances",
-      "specs": [
-        {
-          "label": "0-100 Km/h",
-          "value": "13.5 s"
-        },
-        {
-          "label": "Vitesse maxi",
-          "value": "160 KM/H"
-        }
-      ]
-    },
-    {
-      "title": "Consommation",
-      "specs": [
-        {
-          "label": "Consommation urbaine",
-          "value": "5.3 L/100 km"
-        },
-        {
-          "label": "Consommation extra-urbaine",
-          "value": "3.9 L/100 km"
-        },
-        {
-          "label": "Consommation mixte",
-          "value": "4.3 L/100 km"
-        }
-      ]
-    },
-    {
-      "title": "Equipements de sécurité",
-      "specs": [
-        {
-          "label": "ABS",
-          "value": ""
-        },
-        {
-          "label": "Airbags",
-          "value": "Frontaux | Latéraux | Rideaux"
-        },
-        {
-          "label": "Alarme antivol",
-          "value": ""
-        },
-        {
-          "label": "Anti-démarrage électronique",
-          "value": ""
-        },
-        {
-          "label": "Anti-patinage",
-          "value": "ESP"
-        },
-        {
-          "label": "Assistance au freinage",
-          "value": "EBD"
-        },
-        {
-          "label": "Fixations ISOFIX",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Aides à la conduite",
-      "specs": [
-        {
-          "label": "Aide au démarrage en côte",
-          "value": "HHC"
-        },
-        {
-          "label": "Aide au stationnement",
-          "value": "Radar de recul | Caméra de recul"
-        },
-        {
-          "label": "Direction assistée",
-          "value": ""
-        },
-        {
-          "label": "Régulateur de vitesse",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Equipements extérieurs",
-      "specs": [
-        {
-          "label": "Calandre",
-          "value": "Noire"
-        },
-        {
-          "label": "Eléments extérieurs couleur carrosserie",
-          "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
-        },
-        {
-          "label": "Jantes",
-          "value": "En aluminium | 15''"
-        }
-      ]
-    },
-    {
-      "title": "Audio et communication",
-      "specs": [
-        {
-          "label": "Autoradio",
-          "value": "Commandes au volant"
-        },
-        {
-          "label": "Connectivité",
-          "value": "USB | Bluetooth"
-        },
-        {
-          "label": "Ecran central",
-          "value": "Tactile | 7 pouces"
-        }
-      ]
-    },
-    {
-      "title": "Equipements intérieurs",
-      "specs": [
-        {
-          "label": "Accoudoirs",
-          "value": "Arrière"
-        },
-        {
-          "label": "Sellerie",
-          "value": "Tissu"
-        },
-        {
-          "label": "Tapis de sol",
-          "value": ""
-        },
-        {
-          "label": "Volant",
-          "value": "3 branches | Multi-fonctions"
-        },
-        {
-          "label": "Volant réglable",
-          "value": "En hauteur"
-        }
-      ]
-    },
-    {
-      "title": "Equipements fonctionnels",
-      "specs": [
-        {
-          "label": "Alimentation électrique",
-          "value": "1 prise 12 V"
-        },
-        {
-          "label": "Climatisation",
-          "value": "Automatique"
-        },
-        {
-          "label": "Fermeture centralisée",
-          "value": "À distance"
-        },
-        {
-          "label": "Ordinateur de bord",
-          "value": ""
-        },
-        {
-          "label": "Rétroviseurs extérieurs",
-          "value": "Électriques | Avec clignotants intégrés"
-        },
-        {
-          "label": "Vitres électriques",
-          "value": "Avant/Arrière"
-        }
-      ]
-    }
-  ]
-},
-{
-  "id": 145,
-  "new":true,
-  "promotion":false,
-  "brand": "SUZUKI",
-  "model": "Dzire",
-  "version": "1.2 L GLX",
-  "price": 60400,
-  "image": "https://catalogue.automobile.tn/big/2026/01/47569.webp?t=1768838792",
-  "fuel": "Essence",
-  "gearbox": "Manuelle",
-  "technicalSpecs": [
-    {
-      "title": "Caractéristiques",
-      "specs": [
-        {
-          "label": "Disponibilité",
-          "value": "En pré-commande"
-        },
-        {
-          "label": "Carrosserie",
-          "value": "Berline"
-        },
-        {
-          "label": "Garantie",
-          "value": "3 ans ou 100.000 km"
-        },
-        {
-          "label": "Nombre de places",
-          "value": "5"
-        },
-        {
-          "label": "Nombre de portes",
-          "value": "4"
-        }
-      ]
-    },
-    {
-      "title": "Motorisation",
-      "specs": [
-        {
-          "label": "Nombre de cylindres",
-          "value": "3"
-        },
-        {
-          "label": "Energie",
-          "value": "Essence"
-        },
-        {
-          "label": "Puissance fiscale",
-          "value": "4 CV"
-        },
-        {
-          "label": "Puissance (ch.din)",
-          "value": "82 CH"
-        },
-        {
-          "label": "Couple",
-          "value": "112 nm 4300 tr/min"
-        },
-        {
-          "label": "Cylindrée",
-          "value": "1197 CM³"
-        }
-      ]
-    },
-    {
-      "title": "Transmission",
-      "specs": [
-        {
-          "label": "Boîte",
-          "value": "Manuelle"
-        },
-        {
-          "label": "Nombre de rapports",
-          "value": "5"
-        },
-        {
-          "label": "Transmission",
-          "value": "Traction"
-        }
-      ]
-    },
-    {
-      "title": "Dimensions",
-      "specs": [
-        {
-          "label": "Longueur",
-          "value": "3995 mm"
-        },
-        {
-          "label": "Largeur",
-          "value": "1765 mm"
-        },
-        {
-          "label": "Hauteur",
-          "value": "1550 mm"
-        },
-        {
-          "label": "Volume du coffre",
-          "value": "382 L"
-        }
-      ]
-    },
-    {
-      "title": "Performances",
-      "specs": [
-        {
-          "label": "0-100 Km/h",
-          "value": "13.5 s"
-        },
-        {
-          "label": "Vitesse maxi",
-          "value": "160 KM/H"
-        }
-      ]
-    },
-    {
-      "title": "Consommation",
-      "specs": [
-        {
-          "label": "Consommation urbaine",
-          "value": "5.3 L/100 km"
-        },
-        {
-          "label": "Consommation extra-urbaine",
-          "value": "3.9 L/100 km"
-        },
-        {
-          "label": "Consommation mixte",
-          "value": "4.3 L/100 km"
-        }
-      ]
-    },
-    {
-      "title": "Equipements de sécurité",
-      "specs": [
-        {
-          "label": "ABS",
-          "value": ""
-        },
-        {
-          "label": "Airbags",
-          "value": "Frontaux | Latéraux | Rideaux"
-        },
-        {
-          "label": "Alarme antivol",
-          "value": ""
-        },
-        {
-          "label": "Anti-démarrage électronique",
-          "value": ""
-        },
-        {
-          "label": "Anti-patinage",
-          "value": "ESP"
-        },
-        {
-          "label": "Assistance au freinage",
-          "value": "EBD"
-        },
-        {
-          "label": "Fixations ISOFIX",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Aides à la conduite",
-      "specs": [
-        {
-          "label": "Aide au démarrage en côte",
-          "value": "HHC"
-        },
-        {
-          "label": "Aide au stationnement",
-          "value": "Radar de recul | Caméra de recul"
-        },
-        {
-          "label": "Direction assistée",
-          "value": "Électrique"
-        },
-        {
-          "label": "Régulateur de vitesse",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Equipements extérieurs",
-      "specs": [
-        {
-          "label": "Antibrouillards",
-          "value": ""
-        },
-        {
-          "label": "Calandre",
-          "value": "Noire"
-        },
-        {
-          "label": "Eléments extérieurs couleur carrosserie",
-          "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
-        },
-        {
-          "label": "Feux à LED",
-          "value": "Feux de jour"
-        },
-        {
-          "label": "Jantes",
-          "value": "En aluminium | 15''"
-        }
-      ]
-    },
-    {
-      "title": "Audio et communication",
-      "specs": [
-        {
-          "label": "Autoradio",
-          "value": "Commandes au volant"
-        },
-        {
-          "label": "Connectivité",
-          "value": "USB | Bluetooth"
-        },
-        {
-          "label": "Ecran central",
-          "value": "Tactile | 9 pouces"
-        }
-      ]
-    },
-    {
-      "title": "Equipements intérieurs",
-      "specs": [
-        {
-          "label": "Accoudoirs",
-          "value": "Arrière"
-        },
-        {
-          "label": "Sellerie",
-          "value": "Tissu"
-        },
-        {
-          "label": "Tapis de sol",
-          "value": ""
-        },
-        {
-          "label": "Volant",
-          "value": "Cuir | 3 branches | Multi-fonctions"
-        },
-        {
-          "label": "Volant réglable",
-          "value": "En hauteur"
-        }
-      ]
-    },
-    {
-      "title": "Equipements fonctionnels",
-      "specs": [
-        {
-          "label": "Alimentation électrique",
-          "value": "1 prise 12 V"
-        },
-        {
-          "label": "Bouton Start & Stop",
-          "value": "Démarrage mains libres"
-        },
-        {
-          "label": "Climatisation",
-          "value": "Automatique"
-        },
-        {
-          "label": "Fermeture centralisée",
-          "value": "À distance"
-        },
-        {
-          "label": "Ordinateur de bord",
-          "value": ""
-        },
-        {
-          "label": "Système Start & Stop",
-          "value": ""
-        },
-        {
-          "label": "Rétroviseurs extérieurs",
-          "value": "Électriques | Avec clignotants intégrés"
-        },
-        {
-          "label": "Vitres électriques",
-          "value": "Avant/Arrière"
-        }
-      ]
-    }
-  ]
-},
-{
-  "id": 146,
-  "new":true,
-  "promotion":false,
-  "brand": "SUZUKI",
-  "model": "Dzire",
-  "version": "1.2 L CVT GL+",
-  "price": 61400,
-  "image": "https://catalogue.automobile.tn/big/2026/01/47568.webp?t=1768838738",
-  "fuel": "Essence",
-  "gearbox": "Automatique",
-  "technicalSpecs": [
-    {
-      "title": "Caractéristiques",
-      "specs": [
-        {
-          "label": "Disponibilité",
-          "value": "En pré-commande"
-        },
-        {
-          "label": "Carrosserie",
-          "value": "Berline"
-        },
-        {
-          "label": "Garantie",
-          "value": "3 ans ou 100.000 km"
-        },
-        {
-          "label": "Nombre de places",
-          "value": "5"
-        },
-        {
-          "label": "Nombre de portes",
-          "value": "4"
-        }
-      ]
-    },
-    {
-      "title": "Motorisation",
-      "specs": [
-        {
-          "label": "Nombre de cylindres",
-          "value": "3"
-        },
-        {
-          "label": "Energie",
-          "value": "Essence"
-        },
-        {
-          "label": "Puissance fiscale",
-          "value": "4 CV"
-        },
-        {
-          "label": "Puissance (ch.din)",
-          "value": "82 CH"
-        },
-        {
-          "label": "Couple",
-          "value": "112 nm 4300 tr/min"
-        },
-        {
-          "label": "Cylindrée",
-          "value": "1197 CM³"
-        }
-      ]
-    },
-    {
-      "title": "Transmission",
-      "specs": [
-        {
-          "label": "Boîte",
-          "value": "Automatique"
-        },
-        {
-          "label": "Transmission",
-          "value": "Traction"
-        }
-      ]
-    },
-    {
-      "title": "Dimensions",
-      "specs": [
-        {
-          "label": "Longueur",
-          "value": "3995 mm"
-        },
-        {
-          "label": "Largeur",
-          "value": "1765 mm"
-        },
-        {
-          "label": "Hauteur",
-          "value": "1550 mm"
-        },
-        {
-          "label": "Volume du coffre",
-          "value": "382 L"
-        }
-      ]
-    },
-    {
-      "title": "Performances",
-      "specs": [
-        {
-          "label": "0-100 Km/h",
-          "value": "13.5 s"
-        },
-        {
-          "label": "Vitesse maxi",
-          "value": "160 KM/H"
-        }
-      ]
-    },
-    {
-      "title": "Consommation",
-      "specs": [
-        {
-          "label": "Consommation urbaine",
-          "value": "5.3 L/100 km"
-        },
-        {
-          "label": "Consommation extra-urbaine",
-          "value": "4 L/100 km"
-        },
-        {
-          "label": "Consommation mixte",
-          "value": "4.5 L/100 km"
-        }
-      ]
-    },
-    {
-      "title": "Equipements de sécurité",
-      "specs": [
-        {
-          "label": "ABS",
-          "value": ""
-        },
-        {
-          "label": "Airbags",
-          "value": "Frontaux | Latéraux | Rideaux"
-        },
-        {
-          "label": "Alarme antivol",
-          "value": ""
-        },
-        {
-          "label": "Anti-démarrage électronique",
-          "value": ""
-        },
-        {
-          "label": "Anti-patinage",
-          "value": "ESP"
-        },
-        {
-          "label": "Assistance au freinage",
-          "value": "EBD"
-        },
-        {
-          "label": "Fixations ISOFIX",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Aides à la conduite",
-      "specs": [
-        {
-          "label": "Aide au démarrage en côte",
-          "value": "HHC"
-        },
-        {
-          "label": "Aide au stationnement",
-          "value": "Radar de recul | Caméra de recul"
-        },
-        {
-          "label": "Direction assistée",
-          "value": ""
-        },
-        {
-          "label": "Régulateur de vitesse",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Equipements extérieurs",
-      "specs": [
-        {
-          "label": "Calandre",
-          "value": "Noire"
-        },
-        {
-          "label": "Eléments extérieurs couleur carrosserie",
-          "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
-        },
-        {
-          "label": "Jantes",
-          "value": "En aluminium | 15''"
-        }
-      ]
-    },
-    {
-      "title": "Audio et communication",
-      "specs": [
-        {
-          "label": "Autoradio",
-          "value": "Commandes au volant"
-        },
-        {
-          "label": "Connectivité",
-          "value": "USB | Bluetooth"
-        },
-        {
-          "label": "Ecran central",
-          "value": "Tactile | 7 pouces"
-        }
-      ]
-    },
-    {
-      "title": "Equipements intérieurs",
-      "specs": [
-        {
-          "label": "Accoudoirs",
-          "value": "Arrière"
-        },
-        {
-          "label": "Sellerie",
-          "value": "Tissu"
-        },
-        {
-          "label": "Tapis de sol",
-          "value": ""
-        },
-        {
-          "label": "Volant",
-          "value": "3 branches | Multi-fonctions"
-        },
-        {
-          "label": "Volant réglable",
-          "value": "En hauteur"
-        }
-      ]
-    },
-    {
-      "title": "Equipements fonctionnels",
-      "specs": [
-        {
-          "label": "Alimentation électrique",
-          "value": "1 prise 12 V"
-        },
-        {
-          "label": "Climatisation",
-          "value": "Automatique"
-        },
-        {
-          "label": "Fermeture centralisée",
-          "value": "À distance"
-        },
-        {
-          "label": "Ordinateur de bord",
-          "value": ""
-        },
-        {
-          "label": "Rétroviseurs extérieurs",
-          "value": "Électriques | Avec clignotants intégrés"
-        },
-        {
-          "label": "Vitres électriques",
-          "value": "Avant/Arrière"
-        }
-      ]
-    }
-  ]
-},
-{
-  "id": 147,
-  "brand": "SUZUKI",
-  "model": "Dzire",
-  "version": "1.2 L CVT GLX",
-  "price": 65400,
-  "image": "https://catalogue.automobile.tn/big/2026/01/47570.webp?t=1768843100",
-  "fuel": "Essence",
-  "gearbox": "Automatique",
-  "technicalSpecs": [
-    {
-      "title": "Caractéristiques",
-      "specs": [
-        {
-          "label": "Disponibilité",
-          "value": "En pré-commande"
-        },
-        {
-          "label": "Carrosserie",
-          "value": "Berline"
-        },
-        {
-          "label": "Garantie",
-          "value": "3 ans ou 100.000 km"
-        },
-        {
-          "label": "Nombre de places",
-          "value": "5"
-        },
-        {
-          "label": "Nombre de portes",
-          "value": "4"
-        }
-      ]
-    },
-    {
-      "title": "Motorisation",
-      "specs": [
-        {
-          "label": "Nombre de cylindres",
-          "value": "3"
-        },
-        {
-          "label": "Energie",
-          "value": "Essence"
-        },
-        {
-          "label": "Puissance fiscale",
-          "value": "4 CV"
-        },
-        {
-          "label": "Puissance (ch.din)",
-          "value": "82 CH"
-        },
-        {
-          "label": "Couple",
-          "value": "112 nm 4300 tr/min"
-        },
-        {
-          "label": "Cylindrée",
-          "value": "1197 CM³"
-        }
-      ]
-    },
-    {
-      "title": "Transmission",
-      "specs": [
-        {
-          "label": "Boîte",
-          "value": "Automatique"
-        },
-        {
-          "label": "Transmission",
-          "value": "Traction"
-        }
-      ]
-    },
-    {
-      "title": "Dimensions",
-      "specs": [
-        {
-          "label": "Longueur",
-          "value": "3995 mm"
-        },
-        {
-          "label": "Largeur",
-          "value": "1765 mm"
-        },
-        {
-          "label": "Hauteur",
-          "value": "1550 mm"
-        },
-        {
-          "label": "Volume du coffre",
-          "value": "382 L"
-        }
-      ]
-    },
-    {
-      "title": "Performances",
-      "specs": [
-        {
-          "label": "0-100 Km/h",
-          "value": "13.5 s"
-        },
-        {
-          "label": "Vitesse maxi",
-          "value": "160 KM/H"
-        }
-      ]
-    },
-    {
-      "title": "Consommation",
-      "specs": [
-        {
-          "label": "Consommation urbaine",
-          "value": "5.3 L/100 km"
-        },
-        {
-          "label": "Consommation extra-urbaine",
-          "value": "4 L/100 km"
-        },
-        {
-          "label": "Consommation mixte",
-          "value": "4.5 L/100 km"
-        }
-      ]
-    },
-    {
-      "title": "Equipements de sécurité",
-      "specs": [
-        {
-          "label": "ABS",
-          "value": ""
-        },
-        {
-          "label": "Airbags",
-          "value": "Frontaux | Latéraux | Rideaux"
-        },
-        {
-          "label": "Alarme antivol",
-          "value": ""
-        },
-        {
-          "label": "Anti-démarrage électronique",
-          "value": ""
-        },
-        {
-          "label": "Anti-patinage",
-          "value": "ESP"
-        },
-        {
-          "label": "Assistance au freinage",
-          "value": "EBD"
-        },
-        {
-          "label": "Fixations ISOFIX",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Aides à la conduite",
-      "specs": [
-        {
-          "label": "Aide au démarrage en côte",
-          "value": "HHC"
-        },
-        {
-          "label": "Aide au stationnement",
-          "value": "Radar de recul | Caméra de recul"
-        },
-        {
-          "label": "Direction assistée",
-          "value": "Électrique"
-        },
-        {
-          "label": "Régulateur de vitesse",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "title": "Equipements extérieurs",
-      "specs": [
-        {
-          "label": "Antibrouillards",
-          "value": ""
-        },
-        {
-          "label": "Calandre",
-          "value": "Noire"
-        },
-        {
-          "label": "Eléments extérieurs couleur carrosserie",
-          "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
-        },
-        {
-          "label": "Feux à LED",
-          "value": "Feux de jour"
-        },
-        {
-          "label": "Jantes",
-          "value": "En aluminium | 15''"
-        }
-      ]
-    },
-    {
-      "title": "Audio et communication",
-      "specs": [
-        {
-          "label": "Autoradio",
-          "value": "Commandes au volant"
-        },
-        {
-          "label": "Connectivité",
-          "value": "USB | Bluetooth"
-        },
-        {
-          "label": "Ecran central",
-          "value": "Tactile | 9 pouces"
-        }
-      ]
-    },
-    {
-      "title": "Equipements intérieurs",
-      "specs": [
-        {
-          "label": "Accoudoirs",
-          "value": "Arrière"
-        },
-        {
-          "label": "Finition intérieure",
-          "value": "Effet bois"
-        },
-        {
-          "label": "Sellerie",
-          "value": "Tissu"
-        },
-        {
-          "label": "Sièges réglables en hauteur",
-          "value": "Conducteur"
-        },
-        {
-          "label": "Tapis de sol",
-          "value": ""
-        },
-        {
-          "label": "Volant",
-          "value": "Cuir | 3 branches | Multi-fonctions"
-        },
-        {
-          "label": "Volant réglable",
-          "value": "En hauteur"
-        }
-      ]
-    },
-    {
-      "title": "Equipements fonctionnels",
-      "specs": [
-        {
-          "label": "Alimentation électrique",
-          "value": "1 prise 12 V"
-        },
-        {
-          "label": "Bouton Start & Stop",
-          "value": "Démarrage mains libres"
-        },
-        {
-          "label": "Clé intelligente",
-          "value": "Accès mains libres"
-        },
-        {
-          "label": "Climatisation",
-          "value": "Automatique"
-        },
-        {
-          "label": "Fermeture centralisée",
-          "value": "À distance"
-        },
-        {
-          "label": "Ordinateur de bord",
-          "value": ""
-        },
-        {
-          "label": "Système Start & Stop",
-          "value": ""
-        },
-        {
-          "label": "Rétroviseurs extérieurs",
-          "value": "Électriques | Avec clignotants intégrés"
-        },
-        {
-          "label": "Vitres électriques",
-          "value": "Avant/Arrière"
-        }
-      ]
-    }
-  ]
-}
+    "id": 144,
+    "new": true,
+    "promotion": false,
+    "brand": "SUZUKI",
+    "model": "Dzire",
+    "version": "1.2 L GL+",
+    "price": 56900,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47567.webp?t=1768838658",
+    "fuel": "Essence",
+    "gearbox": "Manuelle",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "En pré-commande"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Berline"
+          },
+          {
+            "label": "Garantie",
+            "value": "3 ans ou 100.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "3"
+          },
+          {
+            "label": "Energie",
+            "value": "Essence"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "4 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "82 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "112 nm 4300 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1197 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Manuelle"
+          },
+          {
+            "label": "Nombre de rapports",
+            "value": "5"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "3995 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1765 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1550 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "382 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "13.5 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "160 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation urbaine",
+            "value": "5.3 L/100 km"
+          },
+          {
+            "label": "Consommation extra-urbaine",
+            "value": "3.9 L/100 km"
+          },
+          {
+            "label": "Consommation mixte",
+            "value": "4.3 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux"
+          },
+          {
+            "label": "Alarme antivol",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBD"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Caméra de recul"
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Calandre",
+            "value": "Noire"
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 15''"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | Bluetooth"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 7 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Arrière"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Avec clignotants intégrés"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "new": true,
+    "promotion": false,
+    "brand": "SUZUKI",
+    "model": "Dzire",
+    "version": "1.2 L GLX",
+    "price": 60400,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47569.webp?t=1768838792",
+    "fuel": "Essence",
+    "gearbox": "Manuelle",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "En pré-commande"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Berline"
+          },
+          {
+            "label": "Garantie",
+            "value": "3 ans ou 100.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "3"
+          },
+          {
+            "label": "Energie",
+            "value": "Essence"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "4 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "82 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "112 nm 4300 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1197 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Manuelle"
+          },
+          {
+            "label": "Nombre de rapports",
+            "value": "5"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "3995 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1765 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1550 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "382 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "13.5 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "160 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation urbaine",
+            "value": "5.3 L/100 km"
+          },
+          {
+            "label": "Consommation extra-urbaine",
+            "value": "3.9 L/100 km"
+          },
+          {
+            "label": "Consommation mixte",
+            "value": "4.3 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux"
+          },
+          {
+            "label": "Alarme antivol",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBD"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Caméra de recul"
+          },
+          {
+            "label": "Direction assistée",
+            "value": "Électrique"
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Antibrouillards",
+            "value": ""
+          },
+          {
+            "label": "Calandre",
+            "value": "Noire"
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 15''"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | Bluetooth"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 9 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Arrière"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "Cuir | 3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V"
+          },
+          {
+            "label": "Bouton Start & Stop",
+            "value": "Démarrage mains libres"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Système Start & Stop",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Avec clignotants intégrés"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "new": true,
+    "promotion": false,
+    "brand": "SUZUKI",
+    "model": "Dzire",
+    "version": "1.2 L CVT GL+",
+    "price": 61400,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47568.webp?t=1768838738",
+    "fuel": "Essence",
+    "gearbox": "Automatique",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "En pré-commande"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Berline"
+          },
+          {
+            "label": "Garantie",
+            "value": "3 ans ou 100.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "3"
+          },
+          {
+            "label": "Energie",
+            "value": "Essence"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "4 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "82 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "112 nm 4300 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1197 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Automatique"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "3995 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1765 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1550 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "382 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "13.5 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "160 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation urbaine",
+            "value": "5.3 L/100 km"
+          },
+          {
+            "label": "Consommation extra-urbaine",
+            "value": "4 L/100 km"
+          },
+          {
+            "label": "Consommation mixte",
+            "value": "4.5 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux"
+          },
+          {
+            "label": "Alarme antivol",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBD"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Caméra de recul"
+          },
+          {
+            "label": "Direction assistée",
+            "value": ""
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Calandre",
+            "value": "Noire"
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 15''"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | Bluetooth"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 7 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Arrière"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Avec clignotants intégrés"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "brand": "SUZUKI",
+    "model": "Dzire",
+    "version": "1.2 L CVT GLX",
+    "price": 65400,
+    "image": "https://catalogue.automobile.tn/big/2026/01/47570.webp?t=1768843100",
+    "fuel": "Essence",
+    "gearbox": "Automatique",
+    "technicalSpecs": [
+      {
+        "title": "Caractéristiques",
+        "specs": [
+          {
+            "label": "Disponibilité",
+            "value": "En pré-commande"
+          },
+          {
+            "label": "Carrosserie",
+            "value": "Berline"
+          },
+          {
+            "label": "Garantie",
+            "value": "3 ans ou 100.000 km"
+          },
+          {
+            "label": "Nombre de places",
+            "value": "5"
+          },
+          {
+            "label": "Nombre de portes",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "title": "Motorisation",
+        "specs": [
+          {
+            "label": "Nombre de cylindres",
+            "value": "3"
+          },
+          {
+            "label": "Energie",
+            "value": "Essence"
+          },
+          {
+            "label": "Puissance fiscale",
+            "value": "4 CV"
+          },
+          {
+            "label": "Puissance (ch.din)",
+            "value": "82 CH"
+          },
+          {
+            "label": "Couple",
+            "value": "112 nm 4300 tr/min"
+          },
+          {
+            "label": "Cylindrée",
+            "value": "1197 CM³"
+          }
+        ]
+      },
+      {
+        "title": "Transmission",
+        "specs": [
+          {
+            "label": "Boîte",
+            "value": "Automatique"
+          },
+          {
+            "label": "Transmission",
+            "value": "Traction"
+          }
+        ]
+      },
+      {
+        "title": "Dimensions",
+        "specs": [
+          {
+            "label": "Longueur",
+            "value": "3995 mm"
+          },
+          {
+            "label": "Largeur",
+            "value": "1765 mm"
+          },
+          {
+            "label": "Hauteur",
+            "value": "1550 mm"
+          },
+          {
+            "label": "Volume du coffre",
+            "value": "382 L"
+          }
+        ]
+      },
+      {
+        "title": "Performances",
+        "specs": [
+          {
+            "label": "0-100 Km/h",
+            "value": "13.5 s"
+          },
+          {
+            "label": "Vitesse maxi",
+            "value": "160 KM/H"
+          }
+        ]
+      },
+      {
+        "title": "Consommation",
+        "specs": [
+          {
+            "label": "Consommation urbaine",
+            "value": "5.3 L/100 km"
+          },
+          {
+            "label": "Consommation extra-urbaine",
+            "value": "4 L/100 km"
+          },
+          {
+            "label": "Consommation mixte",
+            "value": "4.5 L/100 km"
+          }
+        ]
+      },
+      {
+        "title": "Equipements de sécurité",
+        "specs": [
+          {
+            "label": "ABS",
+            "value": ""
+          },
+          {
+            "label": "Airbags",
+            "value": "Frontaux | Latéraux | Rideaux"
+          },
+          {
+            "label": "Alarme antivol",
+            "value": ""
+          },
+          {
+            "label": "Anti-démarrage électronique",
+            "value": ""
+          },
+          {
+            "label": "Anti-patinage",
+            "value": "ESP"
+          },
+          {
+            "label": "Assistance au freinage",
+            "value": "EBD"
+          },
+          {
+            "label": "Fixations ISOFIX",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Aides à la conduite",
+        "specs": [
+          {
+            "label": "Aide au démarrage en côte",
+            "value": "HHC"
+          },
+          {
+            "label": "Aide au stationnement",
+            "value": "Radar de recul | Caméra de recul"
+          },
+          {
+            "label": "Direction assistée",
+            "value": "Électrique"
+          },
+          {
+            "label": "Régulateur de vitesse",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "title": "Equipements extérieurs",
+        "specs": [
+          {
+            "label": "Antibrouillards",
+            "value": ""
+          },
+          {
+            "label": "Calandre",
+            "value": "Noire"
+          },
+          {
+            "label": "Eléments extérieurs couleur carrosserie",
+            "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+          },
+          {
+            "label": "Feux à LED",
+            "value": "Feux de jour"
+          },
+          {
+            "label": "Jantes",
+            "value": "En aluminium | 15''"
+          }
+        ]
+      },
+      {
+        "title": "Audio et communication",
+        "specs": [
+          {
+            "label": "Autoradio",
+            "value": "Commandes au volant"
+          },
+          {
+            "label": "Connectivité",
+            "value": "USB | Bluetooth"
+          },
+          {
+            "label": "Ecran central",
+            "value": "Tactile | 9 pouces"
+          }
+        ]
+      },
+      {
+        "title": "Equipements intérieurs",
+        "specs": [
+          {
+            "label": "Accoudoirs",
+            "value": "Arrière"
+          },
+          {
+            "label": "Finition intérieure",
+            "value": "Effet bois"
+          },
+          {
+            "label": "Sellerie",
+            "value": "Tissu"
+          },
+          {
+            "label": "Sièges réglables en hauteur",
+            "value": "Conducteur"
+          },
+          {
+            "label": "Tapis de sol",
+            "value": ""
+          },
+          {
+            "label": "Volant",
+            "value": "Cuir | 3 branches | Multi-fonctions"
+          },
+          {
+            "label": "Volant réglable",
+            "value": "En hauteur"
+          }
+        ]
+      },
+      {
+        "title": "Equipements fonctionnels",
+        "specs": [
+          {
+            "label": "Alimentation électrique",
+            "value": "1 prise 12 V"
+          },
+          {
+            "label": "Bouton Start & Stop",
+            "value": "Démarrage mains libres"
+          },
+          {
+            "label": "Clé intelligente",
+            "value": "Accès mains libres"
+          },
+          {
+            "label": "Climatisation",
+            "value": "Automatique"
+          },
+          {
+            "label": "Fermeture centralisée",
+            "value": "À distance"
+          },
+          {
+            "label": "Ordinateur de bord",
+            "value": ""
+          },
+          {
+            "label": "Système Start & Stop",
+            "value": ""
+          },
+          {
+            "label": "Rétroviseurs extérieurs",
+            "value": "Électriques | Avec clignotants intégrés"
+          },
+          {
+            "label": "Vitres électriques",
+            "value": "Avant/Arrière"
+          }
+        ]
+      }
+    ]
+  }
 ]
