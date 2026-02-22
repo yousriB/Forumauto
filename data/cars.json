@@ -8688,6 +8688,376 @@
     ]
   },
   {
+  "id": 148,
+  "new": true,
+  "promotion": false,
+  "brand": "GAC",
+  "model": "Emzoom",
+  "version": "1.5T GDI CityStyle BVA",
+  "price": 76900,
+  "image": "",
+  "fuel": "Essence",
+  "gearbox": "Automatique",
+  "technicalSpecs": [
+    {
+      "title": "Caractéristiques",
+      "specs": [
+        {
+          "label": "Disponibilité",
+          "value": "Disponible"
+        },
+        {
+          "label": "Carrosserie",
+          "value": "SUV"
+        },
+        {
+          "label": "Garantie",
+          "value": "5 ans ou 150000 km"
+        },
+        {
+          "label": "Nombre de places",
+          "value": "5"
+        },
+        {
+          "label": "Nombre de portes",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "title": "Motorisation",
+      "specs": [
+        {
+          "label": "Nombre de cylindres",
+          "value": "4"
+        },
+        {
+          "label": "Energie",
+          "value": "Essence"
+        },
+        {
+          "label": "Puissance fiscale",
+          "value": "9 CV"
+        },
+        {
+          "label": "Puissance (ch.din)",
+          "value": "170 CH"
+        },
+        {
+          "label": "Couple",
+          "value": "240 nm 1400 tr/min"
+        },
+        {
+          "label": "Cylindrée",
+          "value": "1497 CM³"
+        }
+      ]
+    },
+    {
+      "title": "Transmission",
+      "specs": [
+        {
+          "label": "Boîte",
+          "value": "Automatique"
+        },
+        {
+          "label": "Nombre de rapports",
+          "value": "7"
+        },
+        {
+          "label": "Transmission",
+          "value": "Traction"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "specs": [
+        {
+          "label": "Longueur",
+          "value": "4410 mm"
+        },
+        {
+          "label": "Largeur",
+          "value": "1850 mm"
+        },
+        {
+          "label": "Hauteur",
+          "value": "1600 mm"
+        },
+        {
+          "label": "Volume du coffre",
+          "value": "341 L"
+        },
+        {
+          "label": "Volume du coffre maximal",
+          "value": "1271 L"
+        }
+      ]
+    },
+    {
+      "title": "Performances",
+      "specs": [
+        {
+          "label": "0-100 Km/h",
+          "value": "8 s"
+        },
+        {
+          "label": "Vitesse maxi",
+          "value": "190 KM/H"
+        }
+      ]
+    },
+    {
+      "title": "Consommation",
+      "specs": [
+        {
+          "label": "Consommation mixte",
+          "value": "5.9 L/100 km"
+        }
+      ]
+    },
+    {
+      "title": "Equipements de sécurité",
+      "specs": [
+        {
+          "label": "ABS",
+          "value": ""
+        },
+        {
+          "label": "Airbags",
+          "value": "Frontaux | Latéraux | Rideaux"
+        },
+        {
+          "label": "Alarme antivol",
+          "value": "Périmétrique"
+        },
+        {
+          "label": "Alerte de franchissement de ligne",
+          "value": ""
+        },
+        {
+          "label": "Alerte de risque de collision",
+          "value": "FCW"
+        },
+        {
+          "label": "Allumage automatique des feux",
+          "value": ""
+        },
+        {
+          "label": "Anti-démarrage électronique",
+          "value": ""
+        },
+        {
+          "label": "Anti-patinage",
+          "value": "ESP"
+        },
+        {
+          "label": "Assistance au freinage",
+          "value": "Freinage automatique anti-collision (AEB)"
+        },
+        {
+          "label": "Barre stabilisatrice",
+          "value": "Avant | Arrière"
+        },
+        {
+          "label": "Contrôle de pression des pneus",
+          "value": ""
+        },
+        {
+          "label": "Fixations ISOFIX",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "title": "Aides à la conduite",
+      "specs": [
+        {
+          "label": "Aide au démarrage en côte",
+          "value": ""
+        },
+        {
+          "label": "Aide au maintien dans la voie",
+          "value": "LKA"
+        },
+        {
+          "label": "Aide au stationnement",
+          "value": "Radar de recul | Radar avant | Caméra de recul"
+        },
+        {
+          "label": "Conduite autonome",
+          "value": "Niveau 2"
+        },
+        {
+          "label": "Direction assistée",
+          "value": "Électrique"
+        },
+        {
+          "label": "Régulateur de vitesse",
+          "value": "Adaptatif (ACC)"
+        },
+        {
+          "label": "Reconnaissance des panneaux",
+          "value": "TSR"
+        },
+        {
+          "label": "Système de descente en côte",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "title": "Equipements extérieurs",
+      "specs": [
+        {
+          "label": "Antibrouillards",
+          "value": ""
+        },
+        {
+          "label": "Barres de toit",
+          "value": ""
+        },
+        {
+          "label": "Eléments extérieurs couleur carrosserie",
+          "value": "Pare-chocs | Poignées de portes | Rétroviseurs"
+        },
+        {
+          "label": "Feux à LED",
+          "value": "Feux de jour | Avant | Arrières"
+        },
+        {
+          "label": "Jantes",
+          "value": "En aluminium | 18''"
+        },
+        {
+          "label": "Peinture",
+          "value": "Métallisée"
+        },
+        {
+          "label": "Phares",
+          "value": "Full LED | Adaptatifs"
+        },
+        {
+          "label": "Poignées de portes",
+          "value": "Escamotables"
+        },
+        {
+          "label": "Spoiler arrière",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "title": "Audio et communication",
+      "specs": [
+        {
+          "label": "Autoradio",
+          "value": ""
+        },
+        {
+          "label": "Connectivité",
+          "value": "USB-C | 2 USB | Android Auto | Apple Carplay | Bluetooth | Chargeur de téléphone sans fil"
+        },
+        {
+          "label": "Ecran central",
+          "value": "Tactile | 14.6 pouces"
+        }
+      ]
+    },
+    {
+      "title": "Equipements intérieurs",
+      "specs": [
+        {
+          "label": "Accoudoirs",
+          "value": "Avant"
+        },
+        {
+          "label": "Kit rangement",
+          "value": ""
+        },
+        {
+          "label": "Pommeau de levier de vitesse",
+          "value": "Cristal"
+        },
+        {
+          "label": "Sellerie",
+          "value": "Similicuir"
+        },
+        {
+          "label": "Sièges",
+          "value": "Sport"
+        },
+        {
+          "label": "Sièges réglables en hauteur",
+          "value": "Conducteur"
+        },
+        {
+          "label": "Tapis de sol",
+          "value": ""
+        },
+        {
+          "label": "Vitres",
+          "value": "Lunette et vitres arrières sur-teintées"
+        },
+        {
+          "label": "Volant",
+          "value": "Cuir | Multi-fonctions"
+        },
+        {
+          "label": "Volant réglable",
+          "value": "En hauteur et en profondeur"
+        }
+      ]
+    },
+    {
+      "title": "Equipements fonctionnels",
+      "specs": [
+        {
+          "label": "Alimentation électrique",
+          "value": "1 prise 12 V"
+        },
+        {
+          "label": "Bouton Start & Stop",
+          "value": "Démarrage mains libres"
+        },
+        {
+          "label": "Clé intelligente",
+          "value": "Démarrage à distance | Accès mains libres"
+        },
+        {
+          "label": "Climatisation",
+          "value": "Automatique"
+        },
+        {
+          "label": "Fermeture centralisée",
+          "value": "À distance"
+        },
+        {
+          "label": "Frein de stationnement",
+          "value": "Éléctrique"
+        },
+        {
+          "label": "Modes de conduite",
+          "value": "Normal | Sport | Eco"
+        },
+        {
+          "label": "Ordinateur de bord",
+          "value": ""
+        },
+        {
+          "label": "Rétroviseurs extérieurs",
+          "value": "Électriques"
+        },
+        {
+          "label": "Vitres électriques",
+          "value": "Avant/Arrière"
+        }
+      ]
+    }
+  ]
+},
+  {
     "id": 26,
     "new": false,
     "promotion": false,
