@@ -33679,7 +33679,7 @@
   {
     "id": 112,
     "new": false,
-    "promotion": false,
+    "promotion": true,
     "brand": "DONGFENG",
     "model": "Shine Max",
     "version": "1.5 T HEV",
